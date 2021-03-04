@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form Đơn Giản</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        th{
+            color: black;
+        }
+
+
+    </style>
+
+</head>
+<body style="background-color: aquamarine">
+<form action="tao-form-don-gian.html" >
+    <h2>SỞ THÍCH CỦA BẠN</h2>
+    <label>Họ và tên:</label>
+    <input type="text" name="name" ><br><br>
+    <label>Email:</label>
+    <input  type="email" name="email" style="margin-left: 26px" ><br><br>
+
+    <div style="color: orange">
+        <label style="color: black" >Sở thích:</label>
+    <input name="interests"  type="checkbox"style="margin-left: 20px">Thể thao
+    <input name="interests"  type="checkbox"style="margin-left: 11px">Âm nhạc
+    <input name="interests"  type="checkbox"style="margin-left: 16px">Đọc sách<br>
+    <input name="interests" type="checkbox"style="margin-left: 76px">Lướt web
+    <input name="interests" type="checkbox">Chơi game
+    <input name="interests" type="checkbox">Điện ảnh<br>
+    <input name="interests" type="checkbox" style="margin-left: 76px"><lable>Du lịch</lable>
+    </div><br>
+
+    <input type="submit" value="Gửi thông điệp" style="margin-left: 68px">
+    <input type="reset" value="reset">
+</form><br><br>
+
+
+<div style="margin-left: 50px;width: 500px">
+    <form action="form-lay-survey-khach-hang.html">
+        <div>
+            <div style="background-color: orange">
+                <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+            </div>
+            <label><b>Họ và tên:</b></label>
+            <input type="text" name="name" style="margin-left: 6px"><br><br>
+            <label><b>Ngày sinh:</b></label>
+            <input type="date" name="date" style="margin-left: 3px"><br><br>
+            <label><b>Giới tính:</b></label>
+            <input type="radio" name="sex" value="Made" style="margin-left: 9px">Nam
+            <input type="radio" name="sex" value="Femade">Nữ<br><br>
+            <label><b>Địa chỉ:</b></label>
+            <input type="text" name="adress" style="height: 50px;margin-left: 22px"><br><br>
+            <label><b>Lớp:</b></label>
+            <select name="class" style="margin-left: 42px">
+                <option value="lớp">-Chọn lớp-</option>
+                <option value="2">-Lớp A-</option>
+                <option value="3">-Lớp B-</option>
+                <option value="4">-Lớp C-</option>
+            </select><br><br>
+            <label><b>Email:</b></label>
+            <input type="email" name="email" style="margin-left: 30px" ><br><br>
+            <label><b>Điện thoại:</b></label>
+            <input type="number" name="tele"><br><br>
+            <input type="submit" value="Đăng ký" style="margin-left: 80px">
+            <input type="reset" value="Nhập lại">
+
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

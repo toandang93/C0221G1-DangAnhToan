@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39254ac1-a4ef-4baa-a86b-4d810767e36d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai-tap-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-tap2-taoCV.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuc-hanh/thuc-hanh-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +61,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614666723670</updated>
-      <workItem from="1614666724920" duration="3908000" />
+      <workItem from="1614666724920" duration="4506000" />
+      <workItem from="1614690201340" duration="759000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1614692764711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614692764711" />
   </component>
 </project>
