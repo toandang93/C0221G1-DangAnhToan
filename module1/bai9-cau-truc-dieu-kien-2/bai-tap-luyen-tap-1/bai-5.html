@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực học sinh</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt('Nhập điểm kiểm tra 1 tiết'))
+    let b=parseInt(prompt('Nhập điểm kiểm tra giữa kỳ'))
+    let c=parseInt(prompt('Nhập điểm kiểm tra cuối kỳ'))
+    tb=(a+b+c)/3
+    if(tb>=8){
+        alert('loại Giỏi')
+    }else
+        if(tb>=5){
+            alert('loại Khá')
+        }else
+            if(tb>=3) {
+                alert('loại Trung Bình')
+            }else
+                alert('loại Kém')
+</script>
+</body>
+</html>

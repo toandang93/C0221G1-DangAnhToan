@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập 1</title>
+</head>
+<body>
+<form>
+    <h3>Kiểm tra bội số của 2 số bất kỳ</h3>
+    <input type="number" name="Name1" placeholder="Nhập số a" id="soA">
+    <input type="number" name="Name2" placeholder="Nhập số b" id="soB">
+    <input type="button" value="Kiểm tra" onclick="kiemtra()"><br><br>
+    <label id="dapAn">Đáp án :</label>
+</form>
+<script>
+    function kiemtra() {
+        let a=parseInt(document.getElementById('soA').value);
+        let b=parseInt(document.getElementById('soB').value);
+        if(a%b==0){
+            document.getElementById('dapAn').innerText= 'a là bội số của b'
+        }else {
+            document.getElementById('dapAn').innerText= 'a không phải bội số của b'
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+<h2>Ứng Dụng Chuyển Đổi Tiền Tệ</h2>
+<form action="ung-dung-chuyen-doi-tien-te.html">
+
+    <label><b>Amount</b></label>
+    <label style="margin-left: 100px"><b>From Currency</b></label>
+    <label style="margin-left: 50px"><b>To Currency</b></label><br>
+
+    <input type="text"name="amount" placeholder="Nhập giá trị" style="width: 100px" id="ipSotien">
+    <select style="margin-left: 45px" id="ipFrom">
+        <option>VND</option>
+        <option>USD</option>
+    </select>
+    <select style="margin-left: 105px" id="ipTo">
+        <option>USD</option>
+        <option>VND</option>
+    </select>
+    <input type="button" value="Convet" style="margin-left: 40px" onclick="doiTien()"><br><br>
+    <label id="ketqua">Value:</label>
+
+    <script>
+        function doiTien() {
+
+            let soTien=parseInt(document.getElementById("ipSotien").value);
+            let from=document.getElementById('ipFrom').value;
+            let to=document.getElementById('ipTo').value;
+            let T=parseInt(soTien)
+
+            if(from==('VND') && to==('VND')) {
+               document.getElementById('ketqua').innerText='Result=' +T + 'VND'
+            }
+            if(from=='VND' && to=='USD')
+            {
+                document.getElementById('ketqua').innerText='Result=' + T / 23000 +'$'
+            }
+            if(from=='USD' && to=='USD'){
+                document.getElementById('ketqua').innerText='Result =' +T +'$'
+            }
+            if(from=='USD'&& to=='VND'){
+                document.getElementById('ketqua').innerText='Result='+T*23000+'VND'
+            }
+        }
+    </script>
+</form>
+
+</body>
+</html>

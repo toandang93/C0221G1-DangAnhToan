@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu Lệnh Switch-case</title>
+</head>
+<body>
+<form>
+    <h2>Tính số ngày của các tháng trong năm</h2>
+    <input type="number" name="Name" id="soNgay" >
+    <input type="button" value="Tính số ngày" onclick="tinhToan();"><br><br>
+    <label id="ketQua">Kết Quả:</label>
+</form>
+
+<script>
+
+    function tinhToan(){
+        let thang =parseInt(document.getElementById('soNgay').value)
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 10:
+            case 12:
+                document.getElementById('ketQua').innerText='Tháng' + thang  + 'có 31 ngày'
+                break;
+            case 2:
+                document.getElementById('ketQua').innerText='Tháng 2 có 28 hoặc 29 ngày'
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 9:
+            case 11:
+                document.getElementById('ketQua').innerText='Tháng' + thang ' có 30 ngày'
+                break;
+            default:
+                document.getElementById('ketQua').innerText='tháng không hợp lệ'
+
+
+
+        }
+    }
+</script>
+</body>
+</html>

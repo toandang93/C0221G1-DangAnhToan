@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất</title>
+</head>
+<body>
+<form>
+    <input type="number" name="soNguyen1" placeholder="nhập số a" id="soA"><br>
+    <input type="number" name="soNguyen2" placeholder="nhập số b" id="soB"><br>
+    <input type="number" name="soNguyen3" placeholder="nhập số c" id="soC"><br>
+    <input type="button" value="Kiểm tra" onclick="kiemTra3so()">
+    <label  id="kiemtra"></label>
+</form>
+<script>
+    function kiemTra3so() {
+        let a=parseInt(document.getElementById('soA').value);
+        let b=parseInt(document.getElementById('soB').value);
+        let c=parseInt(document.getElementById('soC').value);
+        if(a>b && a>c){
+            document.getElementById('kiemtra').innerText= a + 'là số lớn nhất'
+        }else
+            if(b>c){
+                document.getElementById('kiemtra').innerText= b + 'là số lớn nhất'
+            }else
+                document.getElementById('kiemtra').innerText=c + 'là số lớn nhất'
+
+    }
+</script>
+</body>
+</html>

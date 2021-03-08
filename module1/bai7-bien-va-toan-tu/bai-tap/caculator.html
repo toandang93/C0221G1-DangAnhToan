@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+
+<h3>Caculator</h3>
+
+<input type='number' name="name1" id="hop1" >
+<input type="number" name="name2"  id="hop2"><br><br>
+<input type="button" value="Audition(+)" onclick="phepCong()">
+<input type="button" value="Subtration(-)" onclick="phepTru()">
+<input type="button" value="Mutiplication(x)" onclick="phepNhan()">
+<input type="button" value="Divison(/)" onclick="phepChia()"><br><br>
+<label id="ketqua">Result Division:</label>
+
+<script>
+    function phepCong() {
+        let cong1=parseInt(document.getElementById('hop1').value)
+        let cong2=parseInt(document.getElementById('hop2').value)
+
+        document.getElementById('ketqua').innerText ="Result Division:" + (cong1+cong2);
+
+    }
+    function phepTru() {
+        let tru1=parseInt(document.getElementById('hop1').value)
+        let tru2=parseInt(document.getElementById('hop2').value)
+        document.getElementById('ketqua').innerText="Result Division:"+(tru1-tru2)
+
+    }
+    function phepNhan() {
+        let nhan1=parseInt(document.getElementById('hop1').value)
+        let nhan2=parseInt(document.getElementById('hop2').value)
+        document.getElementById('ketqua').innerText='Result Division:'+(nhan1*nhan2)
+
+    }
+    function phepChia() {
+        let chia1=parseInt(document.getElementById('hop1').value)
+        let chia2=parseInt(document.getElementById('hop2').value)
+        document.getElementById('ketqua').innerText='Result Division:'+(chia1/chia2)
+
+    }
+</script>
+
+
+</body>
+</html>

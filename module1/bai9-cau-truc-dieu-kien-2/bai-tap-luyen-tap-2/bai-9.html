@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra a,b,c có phải cạnh của 1 tam giác</title>
+</head>
+<body>
+<script>
+    alert('kiểm tra a,b,c có phải là cạnh của tam giác:')
+    let a=parseInt(prompt('nhập a'))
+    let b=parseInt(prompt('nhập b'))
+    let c=parseInt(prompt('nhập c'))
+    if(a>0 && b>0 && c>0){
+        if(a+b>c && b+c>a && a+c>b){
+            alert(a+','+b+','+c+'là 3 cạnh của tam giác')
+        }else
+            alert(a+','+b+','+c+'không phải 3 cạnh của tam giác')
+
+    }else
+        alert('nhập vào 3 số dương')
+</script>
+</body>
+</html>

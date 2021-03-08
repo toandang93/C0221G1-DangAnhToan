@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dangnhap=prompt('Ten dang nhap');
+    if(dangnhap=='Admin'){
+        let matkhau=prompt('Nhap mat khau');
+        if(matkhau=='TheMaster'){
+            alert('Welcome')
+        }else{
+            if(matkhau == null){
+                alert('cancel')
+            }else {
+                alert('Wrong password')
+            }
+        }
+    }else {
+        alert("I don't know you")
+    }
+</script>
+</body>
+</html>
