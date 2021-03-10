@@ -2,12 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Máy Tính Đơn Giản</title>
+    <title>Calculate</title>
+    <style>
+        input {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <form>
-    <input type="text" name="so1" disabled><br><br>
-    <input type="button"
+    <table border="1">
+        <tr>
+            <td colspan="4"><input disabled type="text" value="0" id='display' style="width: 168px; text-align: right"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1"></td>
+            <td><input type="button" value="2"></td>
+            <td><input type="button" value="3"></td>
+            <td><input type="button" value="+"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4"></td>
+            <td><input type="button" value="5"></td>
+            <td><input type="button" value="6"></td>
+            <td><input type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7"></td>
+            <td><input type="button" value="8"></td>
+            <td><input type="button" value="9"></td>
+            <td><input type="button" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C"></td>
+            <td><input type="button" value="0"></td>
+            <td><input type="button" value="="></td>
+            <td><input type="button" value="/"></td>
+        </tr>
+    </table>
 </form>
+
+<script>
+    let inputElements = document.querySelectorAll('input[type="button"]');
+    let result = '';
+    for (let i = 0; i < inputElements.length; i++) {
+        inputElements[i].onclick = function (s) {
+            let value = s.target.value;
+            if (value === "=") {
+                result = eval(result);
+            }else if (value === 'C') {
+                result = '';
+            }else {
+                result += value;
+            }
+            document.getElementById('display').value = result;
+        }
+    }
+</script>
 </body>
 </html>

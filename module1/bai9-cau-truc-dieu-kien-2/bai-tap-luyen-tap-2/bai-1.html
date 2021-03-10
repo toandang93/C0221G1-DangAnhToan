@@ -8,7 +8,13 @@
 <script>
     let C=parseInt(prompt('nhập độ C'))
     F=C*9/5 + 32
-    alert(F)
+    if(C!=NaN){
+        alert(F)
+    }
+    if(isNaN(C)){
+        alert('bạn nhập số không hợp lệ')
+    }
+
 </script>
 </body>
 </html>

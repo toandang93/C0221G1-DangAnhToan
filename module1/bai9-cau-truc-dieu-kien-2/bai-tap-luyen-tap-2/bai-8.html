@@ -6,11 +6,13 @@
 </head>
 <body>
 <script>
-    let a=parseInt(prompt('nhập vào số cần kiểm tra'))
-    if(a>0 && a<120){
-        alert(a +"là số tuổi con người")
-    }else
-        alert(a +'không phải là số tuổi con người')
+ let a=prompt('nhập số kiểm tra');
+ if(a!=NaN && a==parseInt(a) && a>=0 && a<=120 ){
+     alert('a là số tuổi con người');
+ }else {
+     alert('không phải tuổi con người')
+ }
+
 </script>
 </body>
 </html>

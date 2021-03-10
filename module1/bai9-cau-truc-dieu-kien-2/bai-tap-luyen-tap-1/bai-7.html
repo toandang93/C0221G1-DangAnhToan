@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giá Cước Điện Thoại</title>
+</head>
+<body>
+<h3>Tính Giá Cước Điện Thoại</h3>
+<input type="number" name="name1" placeholder="Nhập số phút gọi" id="ipPhut">
+<input type="button" value="Tính tiền" onclick="tinhTien()">
+<script>
+    function tinhTien() {
+        let phut=parseInt(document.getElementById('ipPhut').value);
+        const CUOC=25000;
+        if(phut==0){
+            alert('số tiền phải trả'+CUOC);
+        }else if(phut<=50){
+            alert('số tiền phải trả'+(CUOC+600*phut));
+        }else if(phut<=200){
+            alert('số tiền phải trả'+ (CUOC+ 600*50 + (phut-50)*400));
+        }else {
+            alert('số tiền phải trả'+ (CUOC+ 600*50 + 400*150+ (phut-200)*200));
+        }
+
+    }
+
+</script>
+</body>
+</html>

@@ -7,10 +7,20 @@
 <body>
 <script>
     alert('Giải phương trình bậc 2: ax^2 + bx +c = 0')
-    let a=parseInt(prompt('nhập a'))
-    let b=parseInt(prompt('nhập b'))
-    let c=parseInt(prompt('nhập c'))
+    let a=parseInt(prompt('nhập a'));
+    let b=parseInt(prompt('nhập b'));
+    let c=parseInt(prompt('nhập c'));
+    let x1,x2;
     D=(b*b)-(4*a*c)
+    if (D<0){
+        alert("phuong trinh vo nghiem")
+    }else if(D=0){
+
+        x1=x2=(-b)/(2*a)
+    }else{
+        x1=(-b + Math.sqrt(D))/(2*a)
+        x2=(-b - Math.sqrt(D))/(2*a)
+    }
 
 </script>
 </body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Lãi Suất Ngân Hàng</title>
+</head>
+<body>
+<h3>Tính Lãi Suất Ngân Hàng</h3>
+<input type="number" name="name1" placeholder="Nhập số tiền vay ban đầu" id="ipTien">
+<input type="number" name="name2" placeholder="Nhập số tháng vay" id="ipThang">
+<input type="number" name="name3" placeholder="Nhập lãi suất mỗi tháng" id="ipLai">
+<input type="button" value="Tính Lãi Suất" onclick="tinhLai()"><br><br>
+<label id="ketQua">Kết Quả:</label>
+<script>
+    function tinhLai() {
+        let a=parseFloat(document.getElementById('ipTien').value)
+        let b=parseInt(document.getElementById('ipThang').value)
+        let c=parseFloat(document.getElementById('ipLai').value)
+        for(let i=1;i<=b;i++){
+            a= a + (a*c);
+            document.getElementById('ketQua').innerText= 'Số tiền phải trả :' + a;
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

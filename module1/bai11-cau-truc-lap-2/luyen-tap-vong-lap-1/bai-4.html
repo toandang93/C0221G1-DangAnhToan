@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu Trúc Vòng Lặp</title>
+</head>
+<body>
+<script>
+    let i=0;
+    while (true) {
+        let a = fibonacci(i)
+        if (a != 0 && a % 5 === 0) {
+            alert(a);
+            break;
+        }
+        i++;
+    }
+
+    function fibonacci(so) {
+        if (so < 0) {
+            return -1;
+        } else if (so == 0 || so == 1) {
+            return so;
+        } else {
+            return fibonacci(so - 1) + fibonacci(so - 2);
+        }
+
+    }
+</script>
+
+</body>
+</html>

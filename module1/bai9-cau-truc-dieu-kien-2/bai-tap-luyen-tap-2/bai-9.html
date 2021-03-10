@@ -7,9 +7,9 @@
 <body>
 <script>
     alert('kiểm tra a,b,c có phải là cạnh của tam giác:')
-    let a=parseInt(prompt('nhập a'))
-    let b=parseInt(prompt('nhập b'))
-    let c=parseInt(prompt('nhập c'))
+    let a=parseFloat(prompt('nhập a'))
+    let b=parseFloat(prompt('nhập b'))
+    let c=parseFloat(prompt('nhập c'))
     if(a>0 && b>0 && c>0){
         if(a+b>c && b+c>a && a+c>b){
             alert(a+','+b+','+c+'là 3 cạnh của tam giác')
@@ -17,7 +17,7 @@
             alert(a+','+b+','+c+'không phải 3 cạnh của tam giác')
 
     }else
-        alert('nhập vào 3 số dương')
+        alert('vui lòng nhập vào 3 số dương')
 </script>
 </body>
 </html>

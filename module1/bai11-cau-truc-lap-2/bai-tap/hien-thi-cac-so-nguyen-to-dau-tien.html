@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Các Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+<script>
+    let num = 2;
+    let count = 0;
+    let so="";
+
+    while (count < 20) {
+        let ktra = true;
+        for (i = 2; i < num / 2 + 1; i++) {
+            if (num % i == 0) {
+                ktra = false;
+                break;
+            }
+        }
+        if (ktra == true) {
+
+            so += num + "<br>";
+            count++;
+        }
+        num++;
+    }
+    document.write(so)
+</script>
+</body>
+</html>

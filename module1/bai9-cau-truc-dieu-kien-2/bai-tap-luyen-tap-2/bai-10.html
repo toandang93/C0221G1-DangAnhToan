@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giá Điện</title>
+</head>
+<body>
+<input type="number" placeholder="nhập vào số chữ điện (kWh)" name="name1" id="ipChu">
+<input type="button" value="Tính" onclick="tinhTien()"><br><br>
+<label id="ketQua">Kết Quả</label>
+<script>
+   function tinhTien() {
+       let dien=parseInt(document.getElementById('ipChu').value);
+       if(dien<50){
+           document.getElementById('ketQua').innerText=dien*1678+'đồng';
+       }else if(dien<100){
+           document.getElementById('ketQua').innerText=50*1678 + (dien-50)*1734 +'đồng';
+       }else if(dien<200){
+           document.getElementById('ketQua').innerText=50*1678 + 50*1734 + (dien-100)*2014 +'đồng';
+       }else {
+           document.getElementById('ketQua').innerText=50*1678 + 50*1734 + 100*2014 + (dien-200)*2356 +'đồng'
+       }
+
+   }
+</script>
+</body>
+</html>

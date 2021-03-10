@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt('nhập số'));
+    for (let i = 0; i < num; i++) {
+        document.write(fibonacci(i) + " ");
+    }
+
+    function fibonacci(so) {
+        if (so < 0) {
+            return -1;
+        } else if (so == 0 || so == 1) {
+            return so;
+        } else {
+            return fibonacci(so - 1) + fibonacci(so - 2);
+        }
+q
+    }
+
+</script>
+</body>
+</html>

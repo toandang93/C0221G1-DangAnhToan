@@ -6,8 +6,13 @@
 </head>
 <body>
 <script>
-    let a=parseInt(prompt('Nhập cạnh hình vuông"m"'));
-    alert('diện tích hình vuông là: ' + (a*a) + 'm')
+    let a=parseFloat(prompt('Nhập cạnh hình vuông"m"'));
+    if(typeof a=="number"){
+        alert('diện tích hình vuông là: ' + (a*a) + 'm')
+    }
+    if(isNaN(a)){
+        alert('Không hợp lệ')
+    }
 </script>
 </body>
 </html>

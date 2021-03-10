@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Cơ Bản</title>
+</head>
+<body>
+<input type="text" id="banTinh">
+<table>
+    <tr>
+        <td><input type="button" value="1" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="2" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="3" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="+" onclick="kichVao(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="5" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="6" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="-" onclick="kichVao(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="8" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="9" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="*" onclick="kichVao(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="AC" onclick="xoa()"></td>
+        <td><input type="button" value="0" onclick="kichVao(this.value)"></td>
+        <td><input type="button" value="=" onclick="tinhToan()"></td>
+        <td><input type="button" value="/" onclick="kichVao(this.value)"></td>
+    </tr>
+</table>
+<script>
+    function kichVao(kqua) {
+        document.getElementById('banTinh').value += kqua;
+
+    }
+
+    function tinhToan() {
+        let string = document.getElementById('banTinh').value;
+
+        document.getElementById('banTinh').value = eval(string);
+
+    }
+
+    function xoa() {
+        document.getElementById('banTinh').value = "";
+
+    }
+</script>
+</body>
+</html>

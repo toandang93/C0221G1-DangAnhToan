@@ -7,9 +7,14 @@
 <body>
 <script>
     let m=parseInt(prompt('nhập vào số m cần đổi'));
-
     f=m* 3.2808
-    alert(f +'f')
+    if(m!=NaN){
+        alert(f + 'f')
+    }
+    if(isNaN(m)) {
+        alert('bạn nhập không hợp lệ')
+    }
+
 </script>
 </body>
 </html>
