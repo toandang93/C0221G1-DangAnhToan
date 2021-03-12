@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vong Lap</title>
+</head>
+<body>
+<h2>Hãy Đoán Thử Xem?????</h2>
+<input type="button" value="Play" onclick="bamNut()">
+<script>
+    function bamNut() {
+        let nhapKhoang=prompt("nhập khoảng đoán số");
+        let random=Math.floor(Math.random()*nhapKhoang);
+
+        let count=0;
+        while (count<3){
+            let nhapSo=parseInt(prompt('nhập số đoán'));
+            if(nhapSo===random){
+                alert("Bạn đã đoán đúng");
+                break;
+            }else {
+                alert('bạn đã đoán sai');
+            }
+
+            count++;
+
+        }
+        alert('bạn đã hết lượt chơi')
+
+
+    }
+
+</script>
+</body>
+</html>

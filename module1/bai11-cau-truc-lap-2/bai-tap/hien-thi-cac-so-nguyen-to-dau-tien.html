@@ -12,7 +12,7 @@
 
     while (count < 20) {
         let ktra = true;
-        for (i = 2; i < num / 2 + 1; i++) {
+        for (let i = 2; i < Math.sqrt(num) ; i++) {
             if (num % i == 0) {
                 ktra = false;
                 break;
@@ -20,7 +20,7 @@
         }
         if (ktra == true) {
 
-            so += num + "<br>";
+            so =so + num + "<br>";
             count++;
         }
         num++;

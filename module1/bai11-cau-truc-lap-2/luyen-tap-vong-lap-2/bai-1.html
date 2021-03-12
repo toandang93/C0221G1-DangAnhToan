@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt('Nhập số cần in ra trong dãy Fibonacci'));
+    let a=0;
+    let b=1;
+    let count=0;
+    while(count<n){
+        document.writeln(b+'<br>');
+        c=a+b;
+        a=b;
+        b=c;
+        count++;
+    }
+</script>
+</body>
+</html>
