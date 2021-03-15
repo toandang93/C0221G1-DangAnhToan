@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let ketQua=0;
+    let mang=new Array(10);
+    for(let i=0;i<10;i++){
+        mang[i]=prompt('nhập dữ liệu');
+    }
+    for(let i=0;i<mang.length;i++){
+        if(mang[i]>=10){
+            ketQua++
+        }
+    }
+    alert(ketQua);
+
+</script>
+</body>
+</html>

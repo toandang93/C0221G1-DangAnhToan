@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let arr=prompt('nhập vào 1 chuỗi bất kỳ.');
+    let arr2=prompt('nhập vào chuỗi kiểm tra.');
+
+    let ketQua=true;
+    if(arr.length==arr2.length){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]==arr2[i]){
+                ketQua=true
+            }else {
+                ketQua=false;
+            }
+        }
+    }else {
+        ketQua=false;
+    }
+    if (ketQua){
+        alert('chuỗi kiểm tra GIỐNG chuỗi được nhập vào.');
+    }else {
+        alert('chuỗi kiểm tra KHÁC chuỗi được nhập vào');
+    }
+</script>
+</body>
+</html>

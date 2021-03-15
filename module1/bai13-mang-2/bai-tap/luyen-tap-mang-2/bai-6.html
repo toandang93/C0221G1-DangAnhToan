@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+   let arr=prompt('nhập vào một chuỗi bất kỳ');
+   let mang=arr.split("");
+   for (let i=0;i<mang.length;i++){
+       if(mang[i]=== '-'){
+           mang[i]= '_' ;
+       }
+   }
+   alert(mang.join(""));
+
+
+</script>
+</body>
+</html>

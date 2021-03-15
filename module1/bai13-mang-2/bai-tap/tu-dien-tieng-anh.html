@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển Đơn Giản</title>
+</head>
+<body>
+
+<script>
+    let chu=prompt('nhập từ cần kiểm tra')
+    let arr=['one','two','three','four'];
+    let arr2=['một','hai','ba','bốn'];
+    let ketQua='';
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]==chu){
+           ketQua=arr2[i]
+            break;
+        }else {
+            ketQua='không tìm thấy';
+        }
+    }
+    alert(ketQua);
+</script>
+</body>
+</html>

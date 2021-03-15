@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let arr = new Array();
+    let nhap;
+    for (let i = 0; i < 4; i++) {
+        while (true) {
+            nhap = parseInt(prompt('Nhap phan tu:' + i));
+            if (arr.indexOf(nhap) == -1) {
+                arr.push(nhap);
+                break;
+            }
+        }
+    }
+    alert(arr);
+    let viTri = 0;
+    let max = arr[0];
+    for (i = 1; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            viTri = i;
+        }
+    }
+    alert('gí trị lớn nhất là :'+max + '\n'+'và nó nằm tại vị trí'+viTri);
+
+</script>
+</body>
+</html>

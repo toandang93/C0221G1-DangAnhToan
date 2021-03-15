@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhập vào số lượng phần tử'));
+    let mang = new Array();
+    let tong = 0;
+    let trungBinh;
+    for (let i = 0; i < n; i++) {
+        mang[i] = parseInt(prompt('nhập dữ liệu bằng số nguyên'));
+    }
+    let max = mang[0];
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] > max) {
+            max = mang[i];
+        }
+        tong = tong + mang[i];
+
+
+    }
+    trungBinh = tong / mang.length;
+    document.writeln(mang);
+   document.writeln('max='+max+ ' tb='+trungBinh);
+</script>
+</body>
+</html>

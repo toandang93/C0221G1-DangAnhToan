@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let ketQua='';
+    let mang=new Array(4);
+    for(let i=0;i<4;i++){
+        mang[i]=new Array(4);
+    }
+    alert('nhập các phần tử vào mảng');
+    for (i=0;i<4;i++){
+        for (let j=0;j<4;j++){
+            mang[i][j]=prompt('nhập vào các phần tử ở dòng'+i);
+        }
+    }
+    console.log(mang)
+</script>
+</body>
+</html>

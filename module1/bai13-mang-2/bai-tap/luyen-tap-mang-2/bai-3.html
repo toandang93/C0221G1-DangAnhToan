@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+   let mang=prompt('nhập vào 1 chuỗi ký tự bất kỳ');
+   let chuoi='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   let ketQua=[];
+   for(let i=0;i<chuoi.length;i++){
+       if(mang.indexOf(chuoi[i])!== -1){
+           ketQua.push(chuoi[i]);
+       }
+   }
+   alert('chuỗi vừa nhập vào có:' + ketQua.length + 'ký tự là :' + ketQua);
+
+</script>
+</body>
+</html>

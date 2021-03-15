@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let mang = new Array(10);
+    for (let i = 0; i < 10; i++) {
+        mang[i] = prompt('nhập vào các phần tử trong mảng');
+    }
+    let V = parseInt(prompt('nhập vào số nguyên V cần kiểm tra'));
+    let viTri = -1;
+    for (let i = 0; i < 10; i++) {
+        if (V == mang[i]) {
+            mang.splice(i, 1);
+            mang.push(0);
+        }
+
+    }
+    alert(mang);
+
+
+</script>
+</body>
+</html>

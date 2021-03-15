@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt('Nhập vào số phần tử trong mảng!!!'));
+    let mang=new Array();
+    for(let i=0;i<n;i++){
+        mang[i]=prompt('nhập các phần tử trong mảng.')
+    }
+    document.writeln('mảng được khởi tạo là :'+mang+'<br>');
+    document.writeln('mảng sau khi đảo ngược'+mang.reverse().join(""));
+</script>
+</body>
+</html>
