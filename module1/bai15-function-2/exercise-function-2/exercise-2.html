@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    function areaCircle(a){
+        area=a*a*Math.PI;
+        return area;
+    }
+    function diameterCircle(a) {
+        diameter=2*a*Math.PI;
+        return diameter;
+    }
+    let a=parseFloat(prompt('enter radius of Circle'));
+    alert('area : '+areaCircle(a));
+    alert('diameter : '+ diameterCircle(a));
+</script>
+</body>
+</html>

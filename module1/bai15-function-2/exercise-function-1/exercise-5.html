@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', ' Altair', 'Dubhe ', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function findStar(arr1,arr2,input) {
+        let viTri=arr1.indexOf(input);
+        if(viTri!==-1){
+            alert(arr2[viTri]);
+        }else {
+            alert("don't find star.")
+        }
+       }
+
+    let check=prompt('enter your star:');
+    findStar(star,constellation,check);
+
+</script>
+</body>
+</html>

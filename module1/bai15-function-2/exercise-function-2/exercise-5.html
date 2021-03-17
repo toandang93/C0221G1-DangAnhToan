@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    function min(a,b,c) {
+        if(a<b&&a<c){
+            min=a;
+        }else if(b<c){
+            min=b;
+        }else {
+            min=c;
+        }
+        return min;
+    }
+    let a=parseFloat(prompt('enter your number a'))
+    let b=parseFloat(prompt('enter your number b'))
+    let c=parseFloat(prompt('enter your number c'))
+    alert('min is : '+min(a,b,c));
+</script>
+</body>
+</html>

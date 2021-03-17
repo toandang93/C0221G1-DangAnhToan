@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    function check(array,a) {
+        let count=0;
+        for (let i=0;i<array.length;i++){
+            if(a==array[i]){
+                count++;
+            }
+        }
+        if(count==0){
+            return -1;
+        }else {
+            return count;
+        }
+
+    }
+    function addArray(array){
+        let n=parseInt(prompt('enter length of array'));
+        for (let i=0;i<n;i++){
+            array[i]=prompt('enter your element');
+        }
+
+    }
+    let variable=prompt('enter your variable');
+    let arr=new Array();
+    addArray(arr);
+    alert('your array : '+ arr);
+
+    alert(check(arr,variable));
+
+
+</script>
+</body>
+</html>
