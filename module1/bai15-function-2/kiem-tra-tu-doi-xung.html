@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Từ Đối Xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(word){
+        let check=true;
+        if(word[0]==word[word.length-1]){
+        for (let i=1;i<word.length-1;i++){
+            if(word[i]!==word[word.length-1-i]){
+                check=false;
+            }
+        }
+
+        }else {
+            check=false;
+        }
+        return check;
+    }
+    let check=prompt('enter your word to check.');
+    alert(isPalindrome(check));
+</script>
+</body>
+</html>
