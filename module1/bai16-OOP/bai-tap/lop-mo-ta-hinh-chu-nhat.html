@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<canvas id="myCanvas" width= "800px" height="1000px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle{
+        constructor(x,y,length,width) {
+            this.x=x;
+            this.y=y;
+            this.length=length;
+            this.width=width;
+        };
+        getArea(){
+            return this.length*this.width;
+        };
+        getPerimeter(){
+            return (this.width+this.length)*2;
+        };
+
+    };
+    function createRectangle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let rectangle=new Rectangle(50,50,100,50);
+        ctx.fillStyle= "#d3538b";
+        ctx.fillRect(rectangle.x,rectangle.y,rectangle.length,rectangle.width);
+    };
+    createRectangle();
+
+
+</script>
+</body>
+</html>

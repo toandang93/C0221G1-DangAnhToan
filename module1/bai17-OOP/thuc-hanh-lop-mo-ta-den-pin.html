@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng Lớp Đối Tượng</title>
+</head>
+<body>
+<script>
+    class Battery{
+        constructor(energy) {
+            this.energy=energy;
+        }
+        getEnergy(){
+            return this.energy;
+        }
+        setEnergy(number){
+            this.energy=number;
+        }
+        decreaseEnergy(){
+            this.energy--;
+
+        }
+
+    }
+    class FlashLamp{
+        setBattery(battery){
+            this.battery=battery;
+        }
+        getBatteryInfo(){
+           return  this.battery.getEnergy()
+        }
+        light(){
+            if(this.battery.energy>0) {
+                this.battery.decreaseEnergy();
+                alert('white');
+            }
+        }
+        turnOn(){
+            this.status=true;
+        }
+        turnOff(){
+            this.status=false;
+        }
+
+    }
+
+    let lampack= new FlashLamp();
+    let rabbit= new Battery(5);
+    lampack.setBattery(rabbit);
+    alert(lampack.getBatteryInfo());
+    lampack.turnOff();
+    lampack.light();
+    lampack.light();
+    lampack.light();
+    lampack.light();
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamperature</title>
+</head>
+<body>
+<script>
+    class Tamperature{
+        constructor(celsius) {
+            this.celsius=celsius;
+        }
+        exchangeF(){
+           return  this.celsius*9/5+32;
+        }
+        exchangeK(){
+            return this.celsius+273.15;
+        }
+    }
+    let example= new Tamperature(25);
+    alert("F = "+ example.exchangeF()+' , K = '+example.exchangeK());
+</script>
+</body>
+</html>

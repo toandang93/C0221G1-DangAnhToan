@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote Và Tivi</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(code) {
+            this.code = code;
+        };
+
+        getCode() {
+            return this.code;
+        }
+
+        setCode(number) {
+            this.code = number;
+        }
+
+        changeChannel() {
+            switch (this.code) {
+                case 0:
+                    alert('hello');
+                    break;
+                case 1:
+                    alert('Football Channel');
+                    break;
+                case 2:
+                    alert('Fashion Channel');
+                    break;
+                case 3:
+                    alert('goodbye!!!');
+                    break;
+                default:
+                    alert("don't find channel");
+
+            }
+            ;
+        };
+
+        changeVolume(tivi) {
+            tivi.volume ++;
+        }
+    }
+
+    class TiVi {
+        constructor(volume) {
+            this.volume = volume;
+        }
+
+        getVolume() {
+            return this.volume;
+        }
+
+        channel(remote) {
+            return remote.changeChannel();
+        }
+
+        turnOn(remote) {
+            return remote.changeChannel(0);
+        }
+
+        turnOff(remote) {
+            return remote.changeChannel(3);
+        }
+    }
+
+    let tivi = new TiVi(10);
+    let remote = new Remote(0);
+    tivi.turnOn(remote);
+    alert('chuyển kênh nhaaaaa!');
+    remote.setCode(1);
+    tivi.channel(remote);
+    alert('rãnh quá chuyển kênh cái nữa!!!');
+    remote.setCode(2);
+    tivi.channel(remote);
+    alert('thôi tắt tivi đi ngủ!!!!!');
+    remote.setCode(3);
+    tivi.channel(remote);
+    alert('bật lại tivi!');
+    remote.setCode(0);
+    tivi.channel(remote);
+    alert('tăng cái âm lượng lên chớ hơi nhỏ');
+    remote.changeVolume(tivi);
+    alert(tivi.getVolume());
+
+
+
+</script>
+</body>
+</html>
