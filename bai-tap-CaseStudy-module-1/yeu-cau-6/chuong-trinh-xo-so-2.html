@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<h2 style="margin-left: 100px">Xổ Số CodeGym</h2>
+<div id="check"></div>
+
+
+<div id="hienThi"></div>
+<div id="hienThiKetQua"></div>
+<input type="button" value="Mua Vé" onclick="muaVe()">
+<input type="button" value="Kết Quả" onclick="kiemTra()">
+<script>
+
+
+    class XoSo{
+        constructor() {
+            this.arr = [];
+        }
+        inputLotery(){
+            let choose=prompt('Mời bạn chọn cách mua vé:\n' +
+                '1.Mua vé tự chọn\n' +
+                '2.Mua vé random\n' +
+                '3.Thoát')
+            if(choose==1){
+                let N;
+                do {
+                    N=prompt('nhập vào các sổ của bạn ( từ 0-99) ,mỗi số cách nhau bởi dấu cách');
+                    N=N.split(" ");
+                }while (N.length!==6);
+                if( this.arr.length<4){
+                    this.arr.push(N);
+                }else {
+                    alert('bạn đã hết lượt mua')
+                }
+            }else if(choose==2){
+                let N=[];
+                for (let i=0;i<6;i++){
+                    N[i]=Math.floor(Math.random()*100);
+                }
+                if(this.arr.length<4){
+                    this.arr.push(N);
+                }else {
+                    alert('bạn đã hết lượt mua')
+                }
+            }
+
+
+        }
+        display(){
+            let tableString='<table>';
+            for(let i=0;i<this.arr.length;i++){
+                tableString+='<tr>';
+                for(let j=0;j<6;j++){
+                    tableString+='<td><input type="number" value="'+ this.arr[i][j]+'" style="width: 40px" ></td>';
+                }
+                tableString+='</tr>';
+            }
+            tableString+='</table>';
+            document.getElementById('hienThi').innerHTML=tableString;
+        }
+    }
+    let play=new XoSo();
+    function muaVe() {
+        play.inputLotery();
+        play.display();
+
+    }
+    function kiemTra() {
+
+    }
+
+</script>
+</body>
+</html>

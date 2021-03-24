@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    // function Prime(x) {
+    //     let check = true;
+    //     for (let i = 0; i < Math.sqrt(x); i++) {
+    //         if (x % i == 0) {
+    //             check = false;
+    //         } else {
+    //             check = true;
+    //         }
+    //     }
+    //     return check;
+    // }
+    //
+    // let arr = new Array();
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = new Array();
+    // }
+    // let count = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         if (Prime(arr[i][j])) {
+    //             count++;
+    //         }
+    //     }
+    // }
+    // alert(count);
+
+    function Prime(array) {
+        let count=0;
+        let check=true;
+        for (let i=0;i<array.length;i++){
+            for (let j=0;j<array[i].length;j++){
+                for (let a=0;a<Math.sqrt(array[i][j]);a++){
+                    if (array[i][j]%a==0){
+                        check=false;
+                    }else {
+                        check=true;
+                    }
+                }
+                if (check){
+                    count++;
+                }
+            }
+        }
+        return count;
+
+    }
+</script>
+</body>
+</html>

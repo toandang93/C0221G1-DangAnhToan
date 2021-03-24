@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let luong=parseFloat(prompt('nhập số lương(đơn vị trđ)'));
+    let tong;
+    if(luong<=0){
+        alert('số tiền bạn nhập không hợp lệ');
+    }else if(luong<7){
+        tong=luong-(luong*0.05);
+        alert('thuế phải trả là 5% và lương thực nhận:'+ tong+"trđ");
+    }else if(luong<15){
+        tong= luong-(luong*0.1);
+        alert('thuế phải trả là 10% và lương thực nhận :'+ tong+"trđ");
+    }else {
+        tong=luong-(luong*0.15);
+        alert('thuế phải trả là 15% và lương thực nhận:'+ tong+"trđ");
+    }
+
+</script>
+</body>
+</html>

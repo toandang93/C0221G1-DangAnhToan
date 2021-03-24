@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ve hinh</title>
+</head>
+<body>
+<script>
+    let n=prompt('input hight');
+    let c="";
+    for (let i=1;i<=n;i++){
+        for (let a=1;a<=n-i;a++){
+            c+=' ';
+        }
+        for (let b=1;b<=2*i-1;b++){
+            c+="*";
+        }
+        c+='<br>';
+    }
+    document.writeln('<pre>'+c+"</pre>")
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<ol>MENU
+<li>Cafe: 7k</li>
+<li>Cam vắt :20k</li>
+<li>Nước ép cà rốt:15k</li>
+<li>Nước ép cà chua:17k</li>
+<li>Nước lọc:10k</li>
+<li>Nước dừa:12k</li>
+<li>Thoát</li>
+</ol>
+<input type="button" value="gọi món" onclick="tinhTien()">
+<script>
+    let arr1=['7000','20000','15000','17000','10000','12000']
+
+    function tinhTien() {
+        let tong=0;
+        do {
+            let nhap=parseInt(prompt('nhập món cần gọi'));
+            if(nhap<7){
+                let soLuong=parseInt(prompt('nhập số lượng'));
+                tong+=soLuong*arr1[nhap-1];
+            }else {
+               break;
+            }
+        }while (true);
+
+        alert('số tiền cần trả'+tong);
+
+    }
+</script>
+</body>
+</html>

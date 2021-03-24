@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let nhap=prompt('nhập vào ký tự cần kiểm tra.');
+    if(nhap.length===1){
+        switch (nhap) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+            case 'O':
+            case 'U':
+            case 'I':
+            case 'A':
+            case 'E':
+                alert('ký tự cần kiểm tra là nguyên âm.');
+                break;
+            default:
+                alert('ký tự bạn cần kiểm tra không phải nguyên âm.');
+
+        }
+    }else {
+        alert('ký tự bạn nhập không hợp lệ.');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let nhap=prompt('nhập vào một chuỗi bất kỳ');
+    nhap1=nhap.split(" ");
+    let chuoi=[];
+    for (let i=0;i<nhap1.length;i++){
+        if(nhap1[i]!==""){
+            chuoi.push(nhap1[i]);
+        }
+    }
+    let ketQua='';
+    for(let i=0;i<chuoi.length;i++){
+        ketQua+=chuoi[i][0].toUpperCase();
+        for (let j=1;j<chuoi[i].length;j++){
+            ketQua+=chuoi[i][j].toLowerCase();
+        }
+        ketQua+=' ';
+    }
+
+    let viTri=0;
+    let max=chuoi[0].length;
+    for (let i=1;i<chuoi.length;i++){
+        if(chuoi[i].length>max){
+            max=chuoi[i].length;
+            viTri=i;
+        }
+    }
+    alert('xâu ban đầu:'+nhap+'\n '+'xâu sau khi chuẩn hóa:'+ketQua+'\n'+'từ dài nhất trong xâu :'+ chuoi[viTri])
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let nhap = prompt('nhập số bất kỳ.');
+    let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let b = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín',];
+    let t = '';
+    for (let i = 0; i < nhap.length; i++) {
+        let viTri = a.indexOf(parseInt(nhap[i]));
+        if (viTri !== -1) {
+            t += b[viTri] + ' ';
+
+        }
+    }
+    alert(t);
+</script>
+</body>
+</html>

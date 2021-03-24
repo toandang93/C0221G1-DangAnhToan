@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ve hinh</title>
+</head>
+<body>
+<script>
+    let c="";
+    for (let i=0;i<5;i++){
+        for (let a=0;a<5-i-1;a++){
+            c+=' ';
+        }
+        for (let b=0;b<i*2+1;b++){
+            if(i==0 || b==0 || b==i*2 || i==4){
+                c+="*";
+            }else {
+                c+=" ";
+            }
+        }
+        c+= '<br>';
+    }
+    document.writeln('<pre>'+c+'</pre>');
+</script>
+</body>
+</html>

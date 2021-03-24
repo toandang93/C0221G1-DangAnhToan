@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let string1 = 'aabcc';
+    let string2 = 'adcaa';
+    let string3 = '';
+    for (let i = 0; i < 5; i++) {
+        if (string1.indexOf(string2[i]) !== -1 && string3.indexOf(string2[i]) === -1) {
+            string3 += string2[i];
+        }
+    }
+    let result='';let count=0;
+    for (let i=0;i<string3.length;i++){
+        if(num(string1,string3[i])>num(string2,string3[i])){
+          count=num(string2,string3[i]);
+        }
+        else {
+            count=num(string1,string3[i]);
+        }
+        result +=string3[i]+' have '+count+" ";
+    }
+    alert(result);
+    function num(string,char) {
+            let count=0;
+            for (let j=0;j<string.length;j++){
+                if( string[j]==char){
+                    count++;
+                }
+            }
+            return count;
+    }
+
+
+</script>
+</body>
+</html>

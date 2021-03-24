@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    function checkMax(array) {
+        let max=array[0][0];
+        for (let i=0;i<array.length;i++){
+            for (let j=0;j<array[i].length;j++){
+                if (array[i][j]>max){
+                    max=array[i][j];
+                }
+            }
+        }
+        return max;
+
+    }
+    function checkMin(array) {
+        let min=array[0][0];
+        for (let i=0;i<array.length;i++){
+            for (let j=0;j<array[i].length;j++){
+                if (array[i][j]<min){
+                    min=array[i][j];
+                }
+            }
+        }
+        return min;
+
+    }
+</script>
+</body>
+</html>

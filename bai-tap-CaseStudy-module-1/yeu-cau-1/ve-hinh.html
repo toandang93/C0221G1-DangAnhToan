@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseStudy</title>
+</head>
+<body>
+<script>
+    let n=prompt('input hight');
+    let m=prompt('input wight')
+    let C = '';
+
+    for (let i = 1; i <= n; i++) {
+        if (i == 1 || i == n) {
+            for (let a = 1; a <= m; a++) {
+                C += '*';
+            }
+            C += '<br>';
+        } else {
+            for (let b = 1; b <= m; b++) {
+                if (b == 1 || b == m) {
+                    C += '*';
+                } else {
+                    C += ' ';
+                }
+
+            }
+            C += '<br>';
+        }
+    }
+    document.writeln('<pre>' + C + '</pre>');
+
+</script>
+</body>
+</html>
