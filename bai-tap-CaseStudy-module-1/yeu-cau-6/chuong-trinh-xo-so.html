@@ -6,6 +6,7 @@
 </head>
 <body>
 <h2 style="margin-left: 100px">Xổ Số CodeGym</h2>
+
 <div>
     <input type="number" disabled id="kqXS1" style="width: 45px">-
     <input type="number" disabled id="kqXS2" style="width: 45px">-
@@ -34,25 +35,26 @@
         let n = prompt('Bạn có 2 lựa chọn' + '\n' + '1.Bạn muốn tự chọn số.' + '\n' + '2.Hệ thống tự random.')
         if (n == 1) {
             alert('mời bạn chọn số theo từng ô tương ứng.');
-            let n1=document.getElementById('ipXS1').value
-            let n2=document.getElementById('ipXS2').value
-            let n3=document.getElementById('ipXS3').value
-            let n4=document.getElementById('ipXS4').value
-            let n5=document.getElementById('ipXS5').value
-            let n6=document.getElementById('ipXS6').value
-            veso=[n1,n2,n3,n4,n5,n6];
-        }else if(n==2){
-            let m1=document.getElementById('ipXS1').value=Math.floor(Math.random()*100);
-            let m2=document.getElementById('ipXS2').value=Math.floor(Math.random()*100);
-            let m3=document.getElementById('ipXS3').value=Math.floor(Math.random()*100);
-            let m4=document.getElementById('ipXS4').value=Math.floor(Math.random()*100);
-            let m5=document.getElementById('ipXS5').value=Math.floor(Math.random()*100);
-            let m6=document.getElementById('ipXS6').value=Math.floor(Math.random()*100);
-            veso=[m1,m2,m3,m4,m5,m6];
-        }else {
+            let n1 = document.getElementById('ipXS1').value
+            let n2 = document.getElementById('ipXS2').value
+            let n3 = document.getElementById('ipXS3').value
+            let n4 = document.getElementById('ipXS4').value
+            let n5 = document.getElementById('ipXS5').value
+            let n6 = document.getElementById('ipXS6').value
+            veso = [n1, n2, n3, n4, n5, n6];
+        } else if (n == 2) {
+            let m1 = document.getElementById('ipXS1').value = Math.floor(Math.random() * 100);
+            let m2 = document.getElementById('ipXS2').value = Math.floor(Math.random() * 100);
+            let m3 = document.getElementById('ipXS3').value = Math.floor(Math.random() * 100);
+            let m4 = document.getElementById('ipXS4').value = Math.floor(Math.random() * 100);
+            let m5 = document.getElementById('ipXS5').value = Math.floor(Math.random() * 100);
+            let m6 = document.getElementById('ipXS6').value = Math.floor(Math.random() * 100);
+            veso = [m1, m2, m3, m4, m5, m6];
+        } else {
             alert('Hẹn gặp lại!!!')
         }
     }
+
     function xemKetQua() {
         let kq1=document.getElementById('kqXS1').value=Math.floor(Math.random()*100);
         let kq2=document.getElementById('kqXS2').value=Math.floor(Math.random()*100);
@@ -60,35 +62,26 @@
         let kq4=document.getElementById('kqXS4').value=Math.floor(Math.random()*100);
         let kq5=document.getElementById('kqXS5').value=Math.floor(Math.random()*100);
         let kq6=document.getElementById('kqXS6').value=Math.floor(Math.random()*100);
-        let ketQua=[kq1,kq2,kq3,kq4,kq5,kq6];
-        let kiemTra=true;
-        let kiemTra2=true;
-        let kiemTra3=true;
-        for (let i=0;i<6;i++){
-            if(ketQua[i]!==veso[i]){
-                kiemTra=false;
-            }
-            if(i>0){
-                if(ketQua[i]!==veso[i]){
-                    kiemTra2=false;
-                }
-            }
-            if(i>2){
-                if(ketQua[i]!==veso[i]){
-                    kiemTra3=false;
-                }
+        let ketQua = [kq1, kq2, kq3, kq4, kq5, kq6];
+        let count = 0;
+        for (let i = 5; i >= 0; i--) {
+            if (ketQua[i] == veso[i]) {
+                count++;
             }
         }
-        if (kiemTra){
-            alert('CHÚNG MỪNG BẠN ĐÃ TRÚNG GIẢI NHẤT CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 10 TỶ VND!!!');
-        }else
-        if (kiemTra2){
-            alert('CHÚC MỪNG BẠN ĐÃ TRÚNG GIẢI NHÌ CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 2 TỶ VNĐ!!!');
-        }else
-        if (kiemTra3){
-            alert('CHÚC MỪNG BẠN ĐÃ TRÚNG GIẢI KHUYẾN KHÍCH CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 500 TRIỆU VNĐ!!!');
-        }else {
-            alert('CHÚC BẠN MAY MẮN LẦN SAU!!!');
+        switch (count) {
+            case 6:
+                alert('CHÚNG MỪNG BẠN ĐÃ TRÚNG GIẢI NHẤT CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 10 TỶ VND!!!');
+                break;
+            case 5:
+                alert('CHÚC MỪNG BẠN ĐÃ TRÚNG GIẢI NHÌ CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 2 TỶ VNĐ!!!');
+                break;
+            case 3:
+                alert('CHÚC MỪNG BẠN ĐÃ TRÚNG GIẢI KHUYẾN KHÍCH CỦA CHƯƠNG TRÌNH VỚI GIÁ TRỊ GIẢI THƯỞNG LÀ 500 TRIỆU VNĐ!!!');
+                break;
+            default:
+                alert('CHÚC BẠN MAY MẮN LẦN SAU!!!');
+
         }
 
     }

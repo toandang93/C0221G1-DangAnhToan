@@ -6,73 +6,114 @@
 </head>
 <body>
 <h2 style="margin-left: 100px">Xổ Số CodeGym</h2>
-<div id="check"></div>
-
-
+<div id="ketqua"></div>
+<br><br>
 <div id="hienThi"></div>
-<div id="hienThiKetQua"></div>
 <input type="button" value="Mua Vé" onclick="muaVe()">
 <input type="button" value="Kết Quả" onclick="kiemTra()">
 <script>
-
-
-    class XoSo{
+    class Lottery {
         constructor() {
-            this.arr = [];
+            this.arrLottery = [];
         }
-        inputLotery(){
-            let choose=prompt('Mời bạn chọn cách mua vé:\n' +
+
+        inputLottery() {
+            let choose = prompt('Mời bạn chọn cách mua vé:\n' +
                 '1.Mua vé tự chọn\n' +
                 '2.Mua vé random\n' +
-                '3.Thoát')
-            if(choose==1){
+                '3.Thoát');
+            if (choose == 1) {
                 let N;
                 do {
-                    N=prompt('nhập vào các sổ của bạn ( từ 0-99) ,mỗi số cách nhau bởi dấu cách');
-                    N=N.split(" ");
-                }while (N.length!==6);
-                if( this.arr.length<4){
-                    this.arr.push(N);
-                }else {
+                    N = prompt('nhập vào các sổ của bạn ( từ 0-99) ,mỗi số cách nhau bởi dấu cách');
+                    N = N.split(" ");
+                } while (N.length !== 6);
+                if (this.arrLottery.length < 4) {
+                    this.arrLottery.push(N);
+                } else {
                     alert('bạn đã hết lượt mua')
                 }
-            }else if(choose==2){
-                let N=[];
-                for (let i=0;i<6;i++){
-                    N[i]=Math.floor(Math.random()*100);
+            } else if (choose == 2) {
+                let N = [];
+                for (let i = 0; i < 6; i++) {
+                    N[i] = Math.floor(Math.random() * 100);
                 }
-                if(this.arr.length<4){
-                    this.arr.push(N);
-                }else {
+                if (this.arrLottery.length < 4) {
+                    this.arrLottery.push(N);
+                } else {
                     alert('bạn đã hết lượt mua')
                 }
             }
-
 
         }
-        display(){
-            let tableString='<table>';
-            for(let i=0;i<this.arr.length;i++){
-                tableString+='<tr>';
-                for(let j=0;j<6;j++){
-                    tableString+='<td><input type="number" value="'+ this.arr[i][j]+'" style="width: 40px" ></td>';
+
+        display() {
+            let tableString = '<table>';
+            for (let i = 0; i < this.arrLottery.length; i++) {
+                tableString += '<tr>';
+                for (let j = 0; j < 6; j++) {
+                    tableString += '<td><input type="number" value="' + this.arrLottery[i][j] + '" style="width: 40px" ></td>';
                 }
-                tableString+='</tr>';
+                tableString += '</tr>';
             }
-            tableString+='</table>';
-            document.getElementById('hienThi').innerHTML=tableString;
+            tableString += '</table>';
+            document.getElementById('hienThi').innerHTML = tableString;
         }
     }
-    let play=new XoSo();
+
+    let player = new Lottery();
+
     function muaVe() {
-        play.inputLotery();
-        play.display();
+        player.inputLottery();
+        player.display();
 
     }
+
+    let arrkq = [];
+
+    function displayKq() {
+        let table = "";
+        for (let i = 0; i < 6; i++) {
+            table += "<input type=\"number\" disabled value='" + arrkq[i] + "' style=\"width: 45px\">  ";
+        }
+        document.getElementById('ketqua').innerHTML = table;
+    }
+
+    displayKq();
+
     function kiemTra() {
+        let arr = (player.arrLottery);
+        for (let i = 0; i < 6; i++) {
+            arrkq[i] = Math.floor(Math.random() * 100);
+        }
+        let result="";
+        for (let i = 0; i < arr.length; i++) {
+            let count = 0;
+            for (let j = 5; j >= 0; j--) {
+                if (arr[j] == arrkq[j]) {
+                    count++;
+                }
+            }
+            switch (count) {
+                case 6:
+                    result+="Giải nhất 1000$";
+                    break;
+                case 5:
+                    result+='Giải nhì 600$';
+                    break;
+                case 3:
+                    result+='Giải ba 300$';
+                    break;
 
+            }
+        }
+        if(result){
+            alert(result);
+        }else {
+            alert("Chúc bạn may mắn lần sau");
+        }
+        displayKq();
     }
-
 </script>
 </body>
 </html>
