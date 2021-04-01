@@ -7,11 +7,11 @@
 <body>
 <script>
     let nhap = prompt('nhập vào 1 chuỗi bất kỳ.');
-    let mang = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    // let mang = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     let ketQua = [];
-    for (let i = 0; i < mang.length; i++) {
-        if (nhap.indexOf(mang[i]) !== -1) {
-            ketQua.push(mang[i]);
+    for (let i = 0; i < nhap.length; i++) {
+        if (ketQua.indexOf(nhap[i]) == -1) {
+            ketQua.push(nhap[i]);
         }
     }
     alert(ketQua)

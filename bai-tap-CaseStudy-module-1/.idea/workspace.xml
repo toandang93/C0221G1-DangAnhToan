@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85d24511-1ebd-40e7-94ec-4015f62294c8" name="Default Changelist" comment="" />
+    <list default="true" id="85d24511-1ebd-40e7-94ec-4015f62294c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeu-cau-4/bai-1-cach2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeu-cau-4/bai-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeu-cau-4/bai-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeu-cau-5/bai-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeu-cau-5/bai-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeu-cau-5/bai-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeu-cau-5/bai-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeu-cau-6/chuong-trinh-xo-so-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeu-cau-6/chuong-trinh-xo-so-2.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +23,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1pareS2wUbiKI89OnXu0VPcUhQa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,24 +36,30 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Codegym/C0221G1-DangAnhToan/module1/bai11-cau-truc-lap-2/luyen-tap-vong-lap-2/bai-6.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.bai-3.html">
+  <component name="RunManager" selected="JavaScript Debug.test.html">
     <configuration name="bai-1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bai-tap-CaseStudy-module-1/bai-1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="bai-3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bai-tap-CaseStudy-module-1/yeu-cau-4/bai-3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bai-tap-CaseStudy-module-1/test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="JavaScript Debug.bai-3.html" />
         <item itemvalue="JavaScript Debug.bai-1.html" />
       </list>
@@ -70,6 +89,10 @@
       <workItem from="1616375851983" duration="13740000" />
       <workItem from="1616459959399" duration="3053000" />
       <workItem from="1616547977892" duration="8347000" />
+      <workItem from="1616727231626" duration="6584000" />
+      <workItem from="1616807612468" duration="9074000" />
+      <workItem from="1616824970199" duration="25000" />
+      <workItem from="1616985668239" duration="2565000" />
     </task>
     <servers />
   </component>
@@ -77,10 +100,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="450" y="119" key="FileChooserDialogImpl" timestamp="1616296214746">
+    <state x="450" y="119" key="FileChooserDialogImpl" timestamp="1616824992790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="450" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616296214746" />
+    <state x="450" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616824992790" />
     <state width="1282" height="196" key="GridCell.Tab.0.bottom" timestamp="1616408274677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -145,6 +168,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1282" height="196" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1616408274678" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1616732761723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616732761723" />
     <state x="232" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1616377950608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
