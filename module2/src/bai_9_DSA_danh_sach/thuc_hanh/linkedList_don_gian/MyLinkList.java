@@ -30,14 +30,13 @@ public class MyLinkList {
 
     public void add(int index, Object data) {
         Node current = head;
-        for (int i = 1; i < index; i++) {
+        for (int i = 0; i < index-1; i++) {
             current = current.next;
         }
         Node temp = current.next;
         current.next = new Node(data);
         current.next.next = temp;
         numNodes++;
-
     }
 
     public void addFist(Object data) {
