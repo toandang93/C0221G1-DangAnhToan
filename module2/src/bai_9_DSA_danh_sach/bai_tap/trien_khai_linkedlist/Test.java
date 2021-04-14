@@ -19,5 +19,6 @@ public class Test {
         myLinkList.print();
 
 
+
     }
 }
