@@ -1,4 +1,4 @@
-package bai_11_collectionFarmword.bai_tap;
+package bai_11_collectionFarmword.bai_tap.quanLySanPham_1;
 
 public class SanPham {
     private int id;
