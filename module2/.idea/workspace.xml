@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bai_12_search_algorithms/bai_tap/Search.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_12_search_algorithms/thuc_hanh/tim_kiem_nhi_phan_khong_su_dung_de_quy/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_13_sorting_algorithms/bai_tap/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_13_sorting_algorithms/bai_tap/SelectionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_13_sorting_algorithms/thuc_hanh/BubbleSortByStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_13_sorting_algorithms/thuc_hanh/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/module2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_14_bug_exception/bai_tap_IllegalTriangleException/IllegalTriangleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_14_bug_exception/bai_tap_IllegalTriangleException/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_14_bug_exception/thuc_hanh/ArrayExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,18 +33,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="D:/luyen_tap" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.InsertionSort">
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_12_search_algorithms.thuc_hanh.tim_kiem_nhi_phan_khong_su_dung_de_quy.BinarySearch" />
+  <component name="RunManager" selected="Application.TestException">
+    <configuration name="ArrayExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_14_bug_exception.thuc_hanh.ArrayExample" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_12_search_algorithms.thuc_hanh.tim_kiem_nhi_phan_khong_su_dung_de_quy.*" />
+          <option name="PATTERN" value="bai_14_bug_exception.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -58,12 +53,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BubbleSortByStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_13_sorting_algorithms.thuc_hanh.BubbleSortByStep" />
+    <configuration name="IllegalTriangleException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.IllegalTriangleException" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_13_sorting_algorithms.thuc_hanh.*" />
+          <option name="PATTERN" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,19 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_12_search_algorithms.bai_tap.Search" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bai_12_search_algorithms.bai_tap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bai_13_sorting_algorithms.thuc_hanh.SelectionSort" />
       <module name="module2" />
@@ -110,13 +92,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.TestException" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestException" />
+        <item itemvalue="Application.ArrayExample" />
+        <item itemvalue="Application.IllegalTriangleException" />
         <item itemvalue="Application.InsertionSort" />
         <item itemvalue="Application.SelectionSort" />
-        <item itemvalue="Application.BubbleSortByStep" />
-        <item itemvalue="Application.Search" />
-        <item itemvalue="Application.BinarySearch" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +133,8 @@
       <workItem from="1618543973053" duration="62000" />
       <workItem from="1618795885597" duration="2252000" />
       <workItem from="1618844791310" duration="16000" />
-      <workItem from="1618881823740" duration="7582000" />
+      <workItem from="1618881823740" duration="9093000" />
+      <workItem from="1619054728643" duration="9063000" />
     </task>
     <servers />
   </component>
@@ -150,54 +146,66 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="233" y="20" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1618538616404" />
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1619075064714">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1619075064714" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617785115027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1617785115027" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1618803311643">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1619077523513">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1618803311643" />
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1618907083477">
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1619077523513" />
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1619086528628">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1618907083477" />
-    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1618907083477">
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619086528628" />
+    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1619086528628">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1618907083477" />
-    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1618907083476">
+    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1619086528628" />
+    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1619086528628">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1618907083476" />
-    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1618907083477">
+    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1619086528628" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1619086528628">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1618907083477" />
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1618904808469">
+    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1619086528628" />
+    <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1618904808469" />
-    <state width="1237" height="220" key="GridCell.Tab.1.center" timestamp="1618904808469">
+    <state width="1237" height="220" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
+    <state width="1237" height="220" key="GridCell.Tab.1.center" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1618904808469" />
-    <state width="1237" height="220" key="GridCell.Tab.1.left" timestamp="1618904808469">
+    <state width="1237" height="220" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
+    <state width="1237" height="220" key="GridCell.Tab.1.left" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1618904808469" />
-    <state width="1237" height="220" key="GridCell.Tab.1.right" timestamp="1618904808469">
+    <state width="1237" height="220" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
+    <state width="1237" height="220" key="GridCell.Tab.1.right" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1618904808469" />
+    <state width="1237" height="220" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1618538692297">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1618881824010">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1619054751692">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1618881824010" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1619054751692" />
+    <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="371" y="117" key="extract.method.dialog/0.0.1280.720@0.0.1280.720" timestamp="1619075644295" />
+    <state x="297" y="161" key="run.anything.popup" timestamp="1619075139083">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1619075139083" />
   </component>
 </project>
