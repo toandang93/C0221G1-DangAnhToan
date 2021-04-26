@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_copy_file_text/CreatFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_copy_file_text/source.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_copy_file_text/target.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_docFile_csv/CreatFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_docFile_csv/country.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_test/CreatFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_test/WriterFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/bai_tap_test/text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/thuc_hanh/ReadFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_15_IO_TextFile/thuc_hanh/source.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/bai_tap/copyFileNhiPhan/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/bai_tap/luuFileNhiPhan_QuanLySanPham/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/bai_tap/luuFileNhiPhan_QuanLySanPham/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/thuc_hanh/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/thuc_hanh/student_jame21/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bai_16_IO_BinaryFile_Serialization/thuc_hanh/student_jame21/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,20 +46,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.CreatFile (2)">
-    <configuration name="CreatFile (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_15_IO_TextFile.bai_tap_copy_file_text.CreatFile" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bai_15_IO_TextFile.bai_tap_copy_file_text.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="CreatFile (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bai_15_IO_TextFile.bai_tap_docFile_csv.CreatFile" />
       <module name="module2" />
@@ -73,12 +60,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_15_IO_TextFile.bai_tap_test.CreatFile" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_16_IO_BinaryFile_Serialization.thuc_hanh.student_jame21.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_15_IO_TextFile.bai_tap_test.*" />
+          <option name="PATTERN" value="bai_16_IO_BinaryFile_Serialization.thuc_hanh.student_jame21.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +73,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.TestException" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_16_IO_BinaryFile_Serialization.bai_tap.copyFileNhiPhan.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_14_bug_exception.bai_tap_IllegalTriangleException.*" />
+          <option name="PATTERN" value="bai_16_IO_BinaryFile_Serialization.bai_tap.copyFileNhiPhan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +86,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WriterFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_15_IO_TextFile.bai_tap_test.WriterFile" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_16_IO_BinaryFile_Serialization.thuc_hanh.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bai_15_IO_TextFile.bai_tap_test.*" />
+          <option name="PATTERN" value="bai_16_IO_BinaryFile_Serialization.thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_16_IO_BinaryFile_Serialization.bai_tap.luuFileNhiPhan_QuanLySanPham.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bai_16_IO_BinaryFile_Serialization.bai_tap.luuFileNhiPhan_QuanLySanPham.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_15_IO_TextFile.thuc_hanh.ReadFileExample" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bai_15_IO_TextFile.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CreatFile (2)" />
-        <item itemvalue="Application.CreatFile (1)" />
-        <item itemvalue="Application.WriterFile" />
-        <item itemvalue="Application.CreatFile" />
-        <item itemvalue="Application.TestException" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ReadFileExample" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +155,9 @@
       <workItem from="1618844791310" duration="16000" />
       <workItem from="1618881823740" duration="9093000" />
       <workItem from="1619054728643" duration="9063000" />
-      <workItem from="1619146380254" duration="4687000" />
+      <workItem from="1619146380254" duration="6213000" />
+      <workItem from="1619403718236" duration="3782000" />
+      <workItem from="1619418523992" duration="6789000" />
     </task>
     <servers />
   </component>
@@ -158,10 +173,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1619147138349" />
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1619075064714">
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1619419719088">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1619075064714" />
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1619419719088" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617785115027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -170,27 +185,27 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="438" y="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.720@0.0.1280.720" timestamp="1619148608653" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1619149505352">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1619428329083">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1619149505352" />
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1619151390785">
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1619428329083" />
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1619428297408">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619151390785" />
-    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1619151390785">
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619428297408" />
+    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1619428297407">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1619151390785" />
-    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1619151390785">
+    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1619428297407" />
+    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1619428297407">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1619151390785" />
-    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1619151390785">
+    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1619428297407" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1619428297408">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1619151390785" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1619428297408" />
     <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -211,10 +226,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1619146381286">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1619418526766">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1619146381286" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1619418526766" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -223,5 +238,9 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1619147221042" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1619423930519">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1619423930519" />
   </component>
 </project>
