@@ -17,7 +17,7 @@ public class CrawlNews {
             String content = scanner.next();
             scanner.close();
             content = content.replaceAll("\\n+", "");
-            Pattern p = Pattern.compile("title=\"(.*?)\" ");
+            Pattern p = Pattern.compile("title  =\"(.*?)\" ");
             Matcher m = p.matcher(content);
             while (m.find()) {
                 System.out.println(m.group(1));
