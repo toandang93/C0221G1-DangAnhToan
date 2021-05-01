@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85d24511-1ebd-40e7-94ec-4015f62294c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../module2/src/bai_15_IO_TextFile/thuc_hanh/ReadFileExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/bai_15_IO_TextFile/thuc_hanh/source.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/bai_16_IO_BinaryFile_Serialization/thuc_hanh/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +90,8 @@
       <workItem from="1618715468282" duration="255000" />
       <workItem from="1618802618627" duration="4000" />
       <workItem from="1619404999459" duration="817000" />
+      <workItem from="1619765057509" duration="15000" />
+      <workItem from="1619784544958" duration="5000" />
     </task>
     <servers />
   </component>
