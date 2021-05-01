@@ -1,5 +1,6 @@
 package VehicleManager.controllers;
 
+import VehicleManager.commons.ReaderFileHangSanXuat;
 import VehicleManager.commons.VehicleException;
 import VehicleManager.commons.WriterReader;
 import VehicleManager.manager.Car;
@@ -7,6 +8,7 @@ import VehicleManager.manager.Motorcycle;
 import VehicleManager.manager.Truck;
 import VehicleManager.manager.Vehicle;
 
+import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -46,16 +48,30 @@ public class AddVehicle {
         }
 
         String name = null;
-        while (true){
-            try{
-                System.out.println("Input name of manufacturer");
-                name = scanner.nextLine();
-                VehicleException.checkName(name);
-                break;
-            }catch (VehicleException e){
-                System.err.println(e.getMessage());
+        int choose ;
+        int index =0;
+        boolean check = false;
+        List<String> stringList = new ArrayList<>();
+        stringList = ReaderFileHangSanXuat.readFile();
+
+        do {
+            for (int i =0; i<stringList.size();i++){
+                System.out.println((i+1)+" :"+stringList.get(i));
             }
-        }
+            System.out.println("choose menu");
+            choose = Integer.parseInt(scanner.nextLine());
+            for (int i =0 ;i<stringList.size();i++){
+                if (i==choose-1){
+                    index = i;
+                    check = true;
+                }
+            }
+            if (check){
+                name = stringList.get(index).split(",")[1];
+                break;
+            }
+        }while (choose>=stringList.size());
+
 
         int year =0;
         while (true){
@@ -145,16 +161,29 @@ public class AddVehicle {
         }
 
         String name = null;
-        while (true){
-            try{
-                System.out.println("Input name of manufacturer");
-                name = scanner.nextLine();
-                VehicleException.checkName(name);
-                break;
-            }catch (VehicleException e){
-                System.err.println(e.getMessage());
+        int choose ;
+        int index =0;
+        boolean check = false;
+        List<String> stringList = new ArrayList<>();
+        stringList = ReaderFileHangSanXuat.readFile();
+
+        do {
+            for (int i =0; i<stringList.size();i++){
+                System.out.println((i+1)+" :"+stringList.get(i));
             }
-        }
+            System.out.println("choose menu");
+            choose = Integer.parseInt(scanner.nextLine());
+            for (int i =0 ;i<stringList.size();i++){
+                if (i==choose-1){
+                    index = i;
+                    check = true;
+                }
+            }
+            if (check){
+                name = stringList.get(index).split(",")[1];
+                break;
+            }
+        }while (choose>=stringList.size());
 
         int year = 0;
         String yearString = null;
@@ -234,16 +263,29 @@ public class AddVehicle {
         }
 
         String name = null;
-        while (true){
-            try{
-                System.out.println("Input name of manufacturer");
-                name = scanner.nextLine();
-                VehicleException.checkName(name);
-                break;
-            }catch (VehicleException e){
-                System.err.println(e.getMessage());
+        int choose ;
+        int index =0;
+        boolean check = false;
+        List<String> stringList = new ArrayList<>();
+        stringList = ReaderFileHangSanXuat.readFile();
+
+        do {
+            for (int i =0; i<stringList.size();i++){
+                System.out.println((i+1)+" :"+stringList.get(i));
             }
-        }
+            System.out.println("choose menu");
+            choose = Integer.parseInt(scanner.nextLine());
+            for (int i =0 ;i<stringList.size();i++){
+                if (i==choose-1){
+                    index = i;
+                    check = true;
+                }
+            }
+            if (check){
+                name = stringList.get(index).split(",")[1];
+                break;
+            }
+        }while (choose>=stringList.size());
 
         int year = 0;
         String yearString = null;
