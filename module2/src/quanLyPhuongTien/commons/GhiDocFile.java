@@ -1,13 +1,13 @@
 package quanLyPhuongTien.commons;
 
-import quanLyPhuongTien.models.Oto;
-import quanLyPhuongTien.models.PhuongTien;
-import quanLyPhuongTien.models.XeMay;
-import quanLyPhuongTien.models.XeTai;
+        import quanLyPhuongTien.models.Oto;
+        import quanLyPhuongTien.models.PhuongTien;
+        import quanLyPhuongTien.models.XeMay;
+        import quanLyPhuongTien.models.XeTai;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+        import java.io.*;
+        import java.util.ArrayList;
+        import java.util.List;
 
 public class GhiDocFile {
     public static final String PATH ="src/quanLyPhuongTien/data/";

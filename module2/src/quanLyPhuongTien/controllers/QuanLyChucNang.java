@@ -193,6 +193,7 @@ public class QuanLyChucNang {
                    switch (chon){
                        case 1:
                            phuongTienList.remove(phuongTienList.get(i));
+                           GhiDocFile.ghiFile("phuongtien.csv",phuongTienList,false);
                            System.out.println("Đã xóa thành công");
                            co = true;
                            break;
