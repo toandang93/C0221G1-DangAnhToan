@@ -18,7 +18,7 @@ public class QuanLyNhapDuLieu {
 
     public static String nhapMaKhachHangVN() {
         String maKH = null;
-        int chon;
+//        int chon;
 //            System.out.println("Chọn mã khách hàng\n" +
 //                    "1.Khách hàng Việt Nam - KHVN\n" +
 //                    "2.Khách hàng nước ngoài - KHNC");
