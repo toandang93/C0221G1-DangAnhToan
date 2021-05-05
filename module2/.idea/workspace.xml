@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyHienThi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy/models/KhachHang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +144,7 @@
       <workItem from="1620127070612" duration="603000" />
       <workItem from="1620136294856" duration="1923000" />
       <workItem from="1620177535572" duration="5703000" />
+      <workItem from="1620200220984" duration="63000" />
     </task>
     <servers />
   </component>
@@ -186,11 +180,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620136432344">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620200259568">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620136432344" />
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620200259568" />
     <state width="1237" height="246" key="GridCell.Tab.0.bottom" timestamp="1620097191509">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -227,18 +221,18 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620177534637">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620200221410">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620177534637" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620200221410" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="371" y="117" key="extract.method.dialog/0.0.1280.720@0.0.1280.720" timestamp="1619075644295" />
-    <state x="91" y="0" key="new project wizard" timestamp="1620127676542">
+    <state x="91" y="0" key="new project wizard" timestamp="1620200281897">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620127676542" />
+    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620200281897" />
     <state x="297" y="161" key="run.anything.popup" timestamp="1619495627282">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
