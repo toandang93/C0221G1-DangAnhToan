@@ -1,8 +1,7 @@
 package caseStudy.controllers;
 
 import caseStudy.commons.GhiDocFile;
-import caseStudy.models.DichVu;
-import caseStudy.models.Villa;
+import caseStudy.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +39,27 @@ public class QuanLyThemMoi {
         String soTang = QuanLyNhapDuLieu.nhapSoTang();
 
         List<DichVu> dichVuList = new ArrayList<>();
-        DichVu villa = new Villa(tenDV,dienTich,chiPhi,soLuongNguoi,kieuThue,tieuChuanPhong,moTaTienNghi,dienTichHoBoi,soTang);
-        dichVuList.add(villa);
-        GhiDocFile.ghiFile("villa.csv",dichVuList,true);
+        DichVu nha = new Nha(tenDV,dienTich,chiPhi,soLuongNguoi,kieuThue,tieuChuanPhong,moTaTienNghi,Integer.parseInt(soTang));
+        dichVuList.add(nha);
+        GhiDocFile.ghiFile("nha.csv",dichVuList,true);
     }
+    public static void themMoiPhong(){
+        //tenDichVu, String donVi, double giaTien
+        String tenDV = QuanLyNhapDuLieu.nhapTenDichVu("Nha");
+        String dienTich = QuanLyNhapDuLieu.nhapDienTichSuDung();
+        String chiPhi = QuanLyNhapDuLieu.nhapChiPhiThue();
+        String soLuongNguoi = QuanLyNhapDuLieu.nhapSoLuongNguoi();
+        String kieuThue = QuanLyNhapDuLieu.nhapKieuThue();
+        String tenDichVu = QuanLyNhapDuLieu.nhapTenDichVuDiKem();
+        String donVi = QuanLyNhapDuLieu.nhapDonViDichVuDiKem();
+        double giaTien = QuanLyNhapDuLieu.nhapGiaTien();
+
+        List<DichVu> dichVuList = new ArrayList<>();
+        DichVuDiKem dichVuDiKem = new DichVuDiKem(tenDichVu,donVi,giaTien);
+        DichVu phong = new Phong(tenDV,dienTich,chiPhi,soLuongNguoi,kieuThue,dichVuDiKem);
+        dichVuList.add(phong);
+        GhiDocFile.ghiFile("phong.csv",dichVuList,true);
+    }
+
 
 }

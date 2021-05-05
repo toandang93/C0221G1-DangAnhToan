@@ -92,4 +92,13 @@ public class QuanLyNhapDuLieu {
             }
         }
     }
+    //:  Họ tên Customer, Ngày sinh, Giới tính, Số CMND, Số ĐT, Email, Loại khách,
+    // Địa chỉ và thuộc tính sử dụng dịch vụ có kiểu đối tượng là Services, và phương thức showInfor().
+    public static String hoTenKhachHang(){
+        String hoTen = null;
+        while (true){
+           
+        }
+    }
+
 }

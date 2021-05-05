@@ -16,10 +16,13 @@ public class QuanLyChucNang {
             chon = scanner.nextLine();
             switch (chon){
                 case "1":
+                    QuanLyThemMoi.themMoiVilla();
                     break;
                 case "2":
+                    QuanLyThemMoi.themMoiNha();
                     break;
                 case "3":
+                    QuanLyThemMoi.themMoiPhong();
                     break;
                 case "4":
                     return;
@@ -29,5 +32,46 @@ public class QuanLyChucNang {
                     System.out.println("vui long chon 1-5");
             }
         }
+    }
+
+    public static void hienThiDichVu(){
+        String chon = null;
+        while (true){
+            System.out.println("---SHOW---\n" +
+                    "1.\tShow all Villa\n" +
+                    "2.\tShow all House\n" +
+                    "3.\tShow all Room\n" +
+                    "4.\tShow All Name Villa Not Duplicate\n" +
+                    "5.\tShow All Name House Not Duplicate\n" +
+                    "6.\tShow All Name Name Not Duplicate\n" +
+                    "7.\tBack to menu\n" +
+                    "8.\tExit\n");
+            chon = scanner.nextLine();
+            switch (chon){
+                case "1":
+                    QuanLyHienThi.hienThiVilla();
+                    break;
+                case "2":
+                    QuanLyHienThi.hienThiNha();
+                    break;
+                case "3":
+                    QuanLyHienThi.hienThiPhong();
+                    break;
+                case "4":
+                    break;
+                case "5":
+                    break;
+                case "6":
+                    break;
+                case "7":
+                    return;
+                case "8":
+                    System.exit(0);
+            }
+        }
+    }
+
+    public static void themMoiKhachHang(){
+
     }
 }

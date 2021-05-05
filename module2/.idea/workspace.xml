@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyHienThi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy/models/KhachHang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/models/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quanLyHoaDonTienDien/controllers/QuanLyNhapDuLieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyHoaDonTienDien/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="C2341G" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/bai_tap_lam_them" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -146,7 +147,10 @@
       <workItem from="1620027878278" duration="5377000" />
       <workItem from="1620049844145" duration="1331000" />
       <workItem from="1620096501556" duration="1483000" />
-      <workItem from="1620100229747" duration="5926000" />
+      <workItem from="1620100229747" duration="12456000" />
+      <workItem from="1620127070612" duration="603000" />
+      <workItem from="1620136294856" duration="1923000" />
+      <workItem from="1620177535572" duration="5703000" />
     </task>
     <servers />
   </component>
@@ -166,10 +170,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1619147138349" />
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1620031050618">
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1620139520992">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1620031050618" />
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1620139520992" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617785115027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -182,11 +186,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620035137056">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620136432344">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620035137056" />
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620136432344" />
     <state width="1237" height="246" key="GridCell.Tab.0.bottom" timestamp="1620097191509">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -223,21 +227,25 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620100247250">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620177534637">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620100247250" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620177534637" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="371" y="117" key="extract.method.dialog/0.0.1280.720@0.0.1280.720" timestamp="1619075644295" />
+    <state x="91" y="0" key="new project wizard" timestamp="1620127676542">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620127676542" />
     <state x="297" y="161" key="run.anything.popup" timestamp="1619495627282">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1619495627282" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1619423930519">
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620118164696">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1619423930519" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620118164696" />
   </component>
 </project>
