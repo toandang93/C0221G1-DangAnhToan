@@ -1,9 +1,9 @@
 package caseStudy.controllers;
 
+import bai_11_collectionFarmword.bai_tap.quanLySanPham_1.QuanLy;
 import caseStudy.commons.GhiDocFiles;
-import caseStudy.models.DichVu;
-import caseStudy.models.KhachHang;
-import org.omg.CORBA.INTERNAL;
+import caseStudy.models.*;
+import quanLyHoaDonTienDien.commons.GhiDocFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,13 +80,13 @@ public class QuanLyChucNang {
     }
 
     public static void themMoiKhachHang() {
-        String hoTen = QuanLyNhapDuLieu.nhapHoTenKhachHang();
-        String ngaySinh = QuanLyNhapDuLieu.nhapNgaySinhKhachHang();
-        String gioiTinh = QuanLyNhapDuLieu.nhapGioiTinhKhachHang();
+        String hoTen = QuanLyNhapDuLieu.nhapHoTen();
+        String ngaySinh = QuanLyNhapDuLieu.nhapNgaySinh();
+        String gioiTinh = QuanLyNhapDuLieu.nhapGioiTinh();
         String soCMND = QuanLyNhapDuLieu.nhapSoCMND();
         String soDT = QuanLyNhapDuLieu.nhapSoDT();
         String email = QuanLyNhapDuLieu.nhapEmail();
-        String diaChi = QuanLyNhapDuLieu.nhapDiaChiKhachhang();
+        String diaChi = QuanLyNhapDuLieu.nhapDiaChi();
         String loaiKhach = QuanLyNhapDuLieu.nhapLoaiKhach();
         DichVu dichVu = null;
 
@@ -100,10 +100,10 @@ public class QuanLyChucNang {
         KhachHang khachHang = null;
         boolean kiemTra = false;
         int chon = 0;
-        List<String[]> list = GhiDocFiles.docFile("khachhang.csv");
+        List<KhachHang> khachHangList = GhiDocFiles.docFileKhachHang("khachhang.csv");
         while (true) {
-            for (int i = 0; i < list.size(); i++) {
-                System.out.println((i + 1) + " : " + list.get(i));
+            for (int i = 0; i < khachHangList.size(); i++) {
+                System.out.println((i + 1) + " : " + khachHangList.get(i));
             }
             System.out.println("chon khach hang theo danh sach");
             while (true) {
@@ -115,9 +115,9 @@ public class QuanLyChucNang {
                     e.printStackTrace();
                 }
             }
-            for (int i = 0; i < list.size(); i++) {
+            for (int i = 0; i < khachHangList.size(); i++) {
                 if (i == chon - 1) {
-                    khachHang = new KhachHang(list.get(i));
+                    khachHang = khachHangList.get(i);
                     kiemTra = true;
                     break;
                 }
@@ -147,28 +147,125 @@ public class QuanLyChucNang {
                 case 1:
                     int chon1 = 0;
                     List<String[]> strings = GhiDocFiles.docFile("villa.csv");
-                    for (int i = 0; i < strings.size(); i++) {
-                        System.out.println((i + 1) + " : " + strings.get(i));
-                    }
-                    while (true) {
-                        try {
-                            System.out.println("chon theo danh sach");
-                            chon1 = Integer.parseInt(scanner.nextLine());
-                            break;
-                        } catch (NumberFormatException e) {
-                            System.out.println("vui long nhap so");
-                            e.printStackTrace();
+                    while (true){
+                        boolean kiemtra1 = false;
+                        List<Villa> villaList = new ArrayList<>();
+                        for (String[] strings1 : strings){
+                            Villa villa = new Villa(strings1);
+                            villaList.add(villa);
                         }
-                    }
-                    for (int i = 0; i < strings.size(); i++) {
-                        if (i == chon1 - 1){
-                            
+                        for (int i =0;i<villaList.size();i++){
+                            System.out.println((i+1)+" : "+villaList.get(i));
+                        }
+                        while (true) {
+                            try {
+                                System.out.println("chon theo danh sach");
+                                chon1 = Integer.parseInt(scanner.nextLine());
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("vui long nhap so");
+                                e.printStackTrace();
+                            }
+                        }
+                        for (int i = 0; i < strings.size(); i++) {
+                            if (i == chon1 - 1){
+                                DichVu dichVu = new Villa(strings.get(i));
+                                khachHang.setDichVu(dichVu);
+                                List<KhachHang> khachHangList1 = new ArrayList<>();
+                                khachHangList1.add(khachHang);
+                                GhiDocFiles.ghiFile("booking.csv",khachHangList1,true);
+                                kiemtra1 = true;
+                                break;
+                            }
+                        }
+                        if (kiemtra1){
+                            break;
+                        }else {
+                            System.out.println("vui long chon trong danh sach");
                         }
                     }
                     break;
                 case 2:
+                    int chon2 = 0;
+                    List<String[]> strings2 = GhiDocFiles.docFile("nha.csv");
+                    while (true){
+                        boolean kiemtra1 = false;
+                        List<Nha> nhaList = new ArrayList<>();
+                        for (String[] strings1 : strings2){
+                            Nha nha = new Nha(strings1);
+                            nhaList.add(nha);
+                        }
+                        for (int i =0;i<nhaList.size();i++){
+                            System.out.println((i+1)+" : "+nhaList.get(i));
+                        }
+                        while (true) {
+                            try {
+                                System.out.println("chon theo danh sach");
+                                chon2 = Integer.parseInt(scanner.nextLine());
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("vui long nhap so");
+                                e.printStackTrace();
+                            }
+                        }
+                        for (int i = 0; i < strings2.size(); i++) {
+                            if (i == chon2 - 1){
+                                DichVu dichVu = new Villa(strings2.get(i));
+                                khachHang.setDichVu(dichVu);
+                                List<KhachHang> khachHangList1 = new ArrayList<>();
+                                khachHangList1.add(khachHang);
+                                GhiDocFiles.ghiFile("booking.csv",khachHangList1,true);
+                                kiemtra1 = true;
+                                break;
+                            }
+                        }
+                        if (kiemtra1){
+                            break;
+                        }else {
+                            System.out.println("vui long chon trong danh sach");
+                        }
+                    }
                     break;
                 case 3:
+                    int chon3 = 0;
+                    List<String[]> strings3 = GhiDocFiles.docFile("phong.csv");
+                    while (true){
+                        boolean kiemtra1 = false;
+                        List<Phong> phongList = new ArrayList<>();
+                        for (String[] strings1 : strings3){
+                            Phong phong = new Phong(strings1);
+                            phongList.add(phong);
+                        }
+                        for (int i =0;i<phongList.size();i++){
+                            System.out.println((i+1)+" : "+phongList.get(i));
+                        }
+                        while (true) {
+                            try {
+                                System.out.println("chon theo danh sach");
+                                chon3 = Integer.parseInt(scanner.nextLine());
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("vui long nhap so");
+                                e.printStackTrace();
+                            }
+                        }
+                        for (int i = 0; i < strings3.size(); i++) {
+                            if (i == chon3 - 1){
+                                DichVu dichVu = new Villa(strings3.get(i));
+                                khachHang.setDichVu(dichVu);
+                                List<KhachHang> khachHangList1 = new ArrayList<>();
+                                khachHangList1.add(khachHang);
+                                GhiDocFiles.ghiFile("booking.csv",khachHangList1,true);
+                                kiemtra1 = true;
+                                break;
+                            }
+                        }
+                        if (kiemtra1){
+                            break;
+                        }else {
+                            System.out.println("vui long chon trong danh sach");
+                        }
+                    }
                     break;
                 case 4:
                     return;
@@ -178,28 +275,43 @@ public class QuanLyChucNang {
         }
     }
 
-    public static void muaVeVilla() {
+    public static void hienThiVeDichVu(){
+        List<String> list = GhiDocFiles.docFileString("booking.csv");
+        for (String string : list){
+            System.out.println(string);
+        }
+    }
 
-        int chon = 0;
-        List<String[]> strings = GhiDocFiles.docFile("villa.csv");
-        for (int i = 0; i < strings.size(); i++) {
-            System.out.println((i + 1) + " : " + strings.get(i));
-        }
-        while (true) {
-            try {
-                System.out.println("chon theo danh sach");
-                chon = Integer.parseInt(scanner.nextLine());
-                break;
-            } catch (NumberFormatException e) {
-                System.out.println("vui long nhap so");
-                e.printStackTrace();
-            }
-        }
-        for (int i = 0; i < strings.size(); i++) {
-            if (i == chon - 1){
+    public static void themMoiNhanVien(){
+//: Họ tên Employee , Ngày sinh, Số CMND, Số ĐT, Email, Trình độ, Vị trí, lương
+        String ten = QuanLyNhapDuLieu.nhapHoTen();
+        String ngaySinh = QuanLyNhapDuLieu.nhapNgaySinh();
+        String soCMND = QuanLyNhapDuLieu.nhapSoCMND();
+        String soDt = QuanLyNhapDuLieu.nhapSoDT();
+        String email = QuanLyNhapDuLieu.nhapEmail();
+        String trinhDo = QuanLyNhapDuLieu.nhapTrinhDo();
+        String viTri = QuanLyNhapDuLieu.nhapViTri();
+        String luong = QuanLyNhapDuLieu.nhapLuong();
 
-            }
-        }
+        NhanVien nhanVien = new NhanVien(ten,ngaySinh,soCMND,soDt,email,trinhDo,viTri,luong);
+        List<NhanVien> nhanViens = new ArrayList<NhanVien>();
+        nhanViens.add(nhanVien);
+        GhiDocFiles.ghiFile("nhanvien.csv",nhanViens,true);
 
     }
+
+    public static void hienThiNhanVien(){
+        List<String[]> strings = GhiDocFiles.docFile("nhanvien.csv");
+        List<NhanVien> nhanVienList = new ArrayList<>();
+        for (String[] string : strings){
+            NhanVien nhanVien = new NhanVien(string);
+            nhanVienList.add(nhanVien);
+        }
+        for (NhanVien nhanVien : nhanVienList){
+            nhanVien.showInfo();
+        }
+    }
+
+    
+
 }

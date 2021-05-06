@@ -1,8 +1,9 @@
 package controllers;
 
 import commons.CanBoException;
-import commons.GhiDocFile;
+
 import models.CanBo;
+import on_tap_OOP.src.commons.GhiDocFile;
 
 import java.util.Calendar;
 import java.util.List;

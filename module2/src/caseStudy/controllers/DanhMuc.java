@@ -13,8 +13,10 @@ public class DanhMuc {
                    "3.\tAdd New Customer\n" +
                    "4.\tShow Information of Customer\n" +
                    "5.\tAdd New Booking\n" +
-                   "6.\tShow Information of Employee\n" +
-                   "7.\tExit\n");
+                   "6.\tShow Information Booking\n" +
+                   "7.\tAdd new Employee\n" +
+                   "8.\tShow Information of Employee\n" +
+                   "9.\tExit\n");
            chon = scanner.nextLine();
            switch (chon){
                case "1":
@@ -30,10 +32,18 @@ public class DanhMuc {
                    QuanLyHienThi.hienThiKhachHang();
                    break;
                case "5":
+                   QuanLyChucNang.muaVeDichVu();
                    break;
                case "6":
+                   QuanLyChucNang.hienThiVeDichVu();
                    break;
                case "7":
+                   QuanLyChucNang.themMoiNhanVien();
+                   break;
+               case "8":
+                   QuanLyChucNang.hienThiNhanVien();
+                   break;
+               case "9":
                    System.exit(0);
                default:
                    System.out.println("Vui long chon tu 1-7");

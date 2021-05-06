@@ -11,7 +11,7 @@ public class DichVuException extends Exception {
         }
     }
 
-    public static void kiemTraKieuThue(String input) throws DichVuException {
+    public static void kiemTraSo(String input) throws DichVuException {
         String regex = "^[0-9]*$";
         if (!input.matches(regex)){
             throw new DichVuException("vui long chi nhap so");
@@ -72,7 +72,7 @@ public class DichVuException extends Exception {
         }
     }
     public static void kiemTraEmail(String input) throws DichVuException{
-        String regex =  "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,6}$";
+        String regex =  "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         if (!input.matches(regex)){
             throw new DichVuException("vui long nhap dung dinh dang : XXX@XXX.XXX");
         }

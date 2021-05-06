@@ -1,10 +1,12 @@
-package controllers;
+package on_tap_OOP.src.controllers;
 
-import commons.GhiDocFile;
+
 import models.CanBo;
 import models.CongNhan;
 import models.KySu;
-import models.NhanVien;
+import on_tap_OOP.src.commons.GhiDocFile;
+import on_tap_OOP.src.models.NhanVien;
+
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -44,12 +46,12 @@ public class QuanLyChucNang {
     }
     public static void themCongNhan(){
         //ing id, String hoTen, String namSinh, String gioiTinh, String diaChi, String bac) {
-        String id = QuanLyNhapDuLieu.nhapID();
-        String hoTen = QuanLyNhapDuLieu.nhapHoTen();
-        String namSinh = QuanLyNhapDuLieu.nhapNamSinh();
-        String gioiTinh = QuanLyNhapDuLieu.nhapGioiTinh();
-        String diaChi = QuanLyNhapDuLieu.nhapDiaChi();
-        String bac = QuanLyNhapDuLieu.nhapCapBac();
+        String id = controllers.QuanLyNhapDuLieu.nhapID();
+        String hoTen = controllers.QuanLyNhapDuLieu.nhapHoTen();
+        String namSinh = controllers.QuanLyNhapDuLieu.nhapNamSinh();
+        String gioiTinh = controllers.QuanLyNhapDuLieu.nhapGioiTinh();
+        String diaChi = controllers.QuanLyNhapDuLieu.nhapDiaChi();
+        String bac = controllers.QuanLyNhapDuLieu.nhapCapBac();
 
         List<CanBo> canBoList = new ArrayList<>();
         CanBo congNhan = new CongNhan(id,hoTen,namSinh,gioiTinh,diaChi,bac);
@@ -57,12 +59,12 @@ public class QuanLyChucNang {
         GhiDocFile.ghiFile("canbo.csv",canBoList,true);
     }
     public static void themKySu(){
-        String id = QuanLyNhapDuLieu.nhapID();
-        String hoTen = QuanLyNhapDuLieu.nhapHoTen();
-        String namSinh = QuanLyNhapDuLieu.nhapNamSinh();
-        String gioiTinh = QuanLyNhapDuLieu.nhapGioiTinh();
-        String diaChi = QuanLyNhapDuLieu.nhapDiaChi();
-        String nganh = QuanLyNhapDuLieu.nhapNganhDaoTao();
+        String id = controllers.QuanLyNhapDuLieu.nhapID();
+        String hoTen = controllers.QuanLyNhapDuLieu.nhapHoTen();
+        String namSinh = controllers.QuanLyNhapDuLieu.nhapNamSinh();
+        String gioiTinh = controllers.QuanLyNhapDuLieu.nhapGioiTinh();
+        String diaChi = controllers.QuanLyNhapDuLieu.nhapDiaChi();
+        String nganh = controllers.QuanLyNhapDuLieu.nhapNganhDaoTao();
 
         List<CanBo> canBoList = new ArrayList<>();
         CanBo kySu = new KySu(id,hoTen,namSinh,gioiTinh,diaChi,nganh);
@@ -70,12 +72,12 @@ public class QuanLyChucNang {
         GhiDocFile.ghiFile("canbo.csv",canBoList,true);
     }
     public static void themNhanVien(){
-        String id = QuanLyNhapDuLieu.nhapID();
-        String hoTen = QuanLyNhapDuLieu.nhapHoTen();
-        String namSinh = QuanLyNhapDuLieu.nhapNamSinh();
-        String gioiTinh = QuanLyNhapDuLieu.nhapGioiTinh();
-        String diaChi = QuanLyNhapDuLieu.nhapDiaChi();
-        String congViec = QuanLyNhapDuLieu.nhapCongViec();
+        String id = controllers.QuanLyNhapDuLieu.nhapID();
+        String hoTen = controllers.QuanLyNhapDuLieu.nhapHoTen();
+        String namSinh = controllers.QuanLyNhapDuLieu.nhapNamSinh();
+        String gioiTinh = controllers.QuanLyNhapDuLieu.nhapGioiTinh();
+        String diaChi = controllers.QuanLyNhapDuLieu.nhapDiaChi();
+        String congViec = controllers.QuanLyNhapDuLieu.nhapCongViec();
 
         List<CanBo> canBoList = new ArrayList<>();
         CanBo nhanVien = new NhanVien(id,hoTen,namSinh,gioiTinh,diaChi,congViec);

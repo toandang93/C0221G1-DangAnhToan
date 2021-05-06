@@ -1,5 +1,7 @@
 package controllers;
 
+import on_tap_OOP.src.controllers.QuanLyChucNang;
+
 import java.util.Scanner;
 
 public class DanhMuc {

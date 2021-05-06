@@ -1,9 +1,10 @@
-package commons;
+package on_tap_OOP.src.commons;
 
 import models.CanBo;
 import models.CongNhan;
 import models.KySu;
-import models.NhanVien;
+
+import on_tap_OOP.src.models.NhanVien;
 import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 import java.io.*;

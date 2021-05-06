@@ -1,7 +1,6 @@
 package caseStudy.controllers;
 
 import caseStudy.commons.DichVuException;
-import caseStudy.models.DichVu;
 
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ public class QuanLyNhapDuLieu {
         String id = null;
         while (true){
             try{
-                System.out.println("nhap so luong nguoi toi da");
+                System.out.println("nhap ma dich vu villa");
                 id = scanner.nextLine();
                 DichVuException.kiemTraMaDichVuVilla(id);
                 return id;
@@ -27,7 +26,7 @@ public class QuanLyNhapDuLieu {
         String id = null;
         while (true){
             try{
-                System.out.println("nhap so luong nguoi toi da");
+                System.out.println("nhap ma dich vu nha");
                 id = scanner.nextLine();
                 DichVuException.kiemTraMaDichVuNha(id);
                 return id;
@@ -40,7 +39,7 @@ public class QuanLyNhapDuLieu {
         String id = null;
         while (true){
             try{
-                System.out.println("nhap so luong nguoi toi da");
+                System.out.println("nhap ma dich vu phong");
                 id = scanner.nextLine();
                 DichVuException.kiemTraMaDichVuPhong(id);
                 return id;
@@ -82,7 +81,7 @@ public class QuanLyNhapDuLieu {
             try{
                 System.out.println("nhap kieu thue");
                 kieuThue= scanner.nextLine();
-                DichVuException.kiemTraKieuThue(kieuThue);
+                DichVuException.kiemTraSo(kieuThue);
                 return kieuThue;
             }catch (DichVuException e){
                 System.err.println(e.getMessage());
@@ -134,11 +133,11 @@ public class QuanLyNhapDuLieu {
     }
     //:  Họ tên Customer, Ngày sinh, Giới tính, Số CMND, Số ĐT, Email, Loại khách,
     // Địa chỉ và thuộc tính sử dụng dịch vụ có kiểu đối tượng là Services, và phương thức showInfor().
-    public static String nhapHoTenKhachHang(){
+    public static String nhapHoTen(){
         String hoTen = null;
         while (true){
            try{
-               System.out.println("nhap ho va ten khach hang");
+               System.out.println("nhap ho va ten ");
                hoTen = scanner.nextLine();
                DichVuException.kiemTraTen(hoTen);
                return hoTen;
@@ -147,11 +146,11 @@ public class QuanLyNhapDuLieu {
            }
         }
     }
-    public static String nhapNgaySinhKhachHang(){
+    public static String nhapNgaySinh(){
         String ngaySinh = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap ngay sinh");
                 ngaySinh = scanner.nextLine();
                 DichVuException.kiemTraMaNgaySinh(ngaySinh);
                 return ngaySinh;
@@ -160,11 +159,11 @@ public class QuanLyNhapDuLieu {
             }
         }
     }
-    public static String nhapGioiTinhKhachHang(){
+    public static String nhapGioiTinh(){
         String gioiTinh = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap gioi tinh");
                 gioiTinh = scanner.nextLine();
                 DichVuException.kiemTraGioiTinh(gioiTinh);
                 return gioiTinh;
@@ -177,7 +176,7 @@ public class QuanLyNhapDuLieu {
         String soCMND = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap so CMND");
                 soCMND = scanner.nextLine();
                 DichVuException.kiemTraSoCMND(soCMND);
                 return soCMND;
@@ -190,7 +189,7 @@ public class QuanLyNhapDuLieu {
         String soDT = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap so dt");
                 soDT = scanner.nextLine();
                 DichVuException.kiemTraSoDT(soDT);
                 return soDT;
@@ -203,7 +202,7 @@ public class QuanLyNhapDuLieu {
         String email = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap email");
                 email = scanner.nextLine();
                 DichVuException.kiemTraEmail(email);
                 return email;
@@ -240,11 +239,11 @@ public class QuanLyNhapDuLieu {
         return loaiKhach;
 
     }
-    public static String nhapDiaChiKhachhang(){
+    public static String nhapDiaChi(){
         String diaChi = null;
         while (true){
             try{
-                System.out.println("nhap ho va ten khach hang");
+                System.out.println("nhap dia chi");
                 diaChi = scanner.nextLine();
                 DichVuException.kiemTraTen(diaChi);
                 return diaChi;
@@ -252,6 +251,108 @@ public class QuanLyNhapDuLieu {
                 System.err.println(e.getMessage());
             }
         }
+    }
+
+    public static String nhapTrinhDo(){
+        boolean kiemTra = false;
+        String chon = null;
+        String trinhDo = null;
+        while (true){
+            System.out.println("Chon trinh do cua nhan vien : \n" +
+                    "1.Trung cấp\n" +
+                    "2.Cao Đăng\n" +
+                    "3.Đại học \n" +
+                    "4.Sau đại học");
+            chon = scanner.nextLine();
+            switch (chon){
+                case "1":
+                    trinhDo = "Trung cấp";
+                    kiemTra = true;
+                    break;
+                case "2":
+                    trinhDo = "Cao đẳng";
+                    kiemTra = true;
+                    break;
+                case "3":
+                    trinhDo = "Đại học";
+                    kiemTra = true;
+                    break;
+                case "4":
+                    trinhDo = "Sau đại học";
+                    kiemTra = true;
+                    break;
+
+            }
+            if (kiemTra){
+                break;
+            }else {
+                System.out.println("vui long chon theo danh sach 1-4");
+            }
+        }
+        return trinhDo;
+    }
+    public static String nhapViTri(){
+        boolean kiemTra = false;
+        String chon = null;
+        String viTri = null;
+        while (true){
+            //Lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giá đốc.
+            System.out.println("Chon vi tri cua nhan vien : \n" +
+                    "1.Lễ tân\n" +
+                    "2.Phục vụ\n" +
+                    "3.Chuyên viên \n" +
+                    "4.Giám sát\n" +
+                    "5.Quản lý\n" +
+                    "6.Giám đốc");
+            chon = scanner.nextLine();
+            switch (chon){
+                case "1":
+                    viTri = "Lễ tân";
+                    kiemTra = true;
+                    break;
+                case "2":
+                    viTri = "Phục vụ";
+                    kiemTra = true;
+                    break;
+                case "3":
+                    viTri = "Chuyên viên";
+                    kiemTra = true;
+                    break;
+                case "4":
+                    viTri = "Giám sát";
+                    kiemTra = true;
+                    break;
+                case "5":
+                    viTri = "Quản lý";
+                    kiemTra = true;
+                    break;
+                case "6":
+                    viTri = "Giám đốc";
+                    kiemTra = true;
+                    break;
+
+            }
+            if (kiemTra){
+                break;
+            }else {
+                System.out.println("vui long chon theo danh sach 1-4");
+            }
+        }
+        return viTri;
+    }
+    public static String nhapLuong(){
+        String luong = null;
+        while (true){
+            try{
+                System.out.println("nhap luong nhan vien");
+                luong = scanner.nextLine();
+                DichVuException.kiemTraSo(luong);
+                break;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+        return luong;
     }
 
 
