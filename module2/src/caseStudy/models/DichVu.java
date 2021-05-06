@@ -10,13 +10,31 @@ public abstract class DichVu {
 
     public DichVu() {
     }
+    public DichVu(String[] strings) {
+        this.id = strings[0];
+        this.ten = strings[1];
+        this.dienTichSuDung = strings[2];
+        this.chiPhiThue = strings[3];
+        this.soLuongNguoi = strings[4];
+        this.kieuThue = strings[5];
+    }
 
-    public DichVu(String ten, String dienTich, String chiPhiThue, String soLuongNguoi, String kieuThue) {
+
+    public DichVu(String id, String ten, String dienTichSuDung, String chiPhiThue, String soLuongNguoi, String kieuThue) {
+        this.id = id;
         this.ten = ten;
-        this.dienTichSuDung = dienTich;
+        this.dienTichSuDung = dienTichSuDung;
         this.chiPhiThue = chiPhiThue;
         this.soLuongNguoi = soLuongNguoi;
         this.kieuThue = kieuThue;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTen() {
@@ -62,10 +80,11 @@ public abstract class DichVu {
 
     @Override
     public String toString() {
-        return ten +
+        return  id +
+                "," + ten  +
                 "," + dienTichSuDung +
                 "," + chiPhiThue +
-                "," + soLuongNguoi  +
+                "," + soLuongNguoi +
                 "," + kieuThue ;
     }
 }

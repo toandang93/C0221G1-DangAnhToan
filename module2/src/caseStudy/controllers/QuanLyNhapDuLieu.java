@@ -1,6 +1,7 @@
 package caseStudy.controllers;
 
 import caseStudy.commons.DichVuException;
+import caseStudy.models.DichVu;
 
 import java.util.Scanner;
 
@@ -9,6 +10,45 @@ public class QuanLyNhapDuLieu {
     //Tên dịch vụ, Diện tích sử dụng, Chi phí thuê, Số lượng người tối đa, Kiểu thuê (bao gồm thuê theo năm, tháng, ngày, giờ).
     //-	Riêng Villa sẽ có thêm thông tin: Tiêu chuẩn phòng, Mô tả tiện nghi khác, Diện tích hồ bơi, Số tầng.
     //
+    public static String nhapidDichVuVilla(){
+        String id = null;
+        while (true){
+            try{
+                System.out.println("nhap so luong nguoi toi da");
+                id = scanner.nextLine();
+                DichVuException.kiemTraMaDichVuVilla(id);
+                return id;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapidDichVuNha(){
+        String id = null;
+        while (true){
+            try{
+                System.out.println("nhap so luong nguoi toi da");
+                id = scanner.nextLine();
+                DichVuException.kiemTraMaDichVuNha(id);
+                return id;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapidDichVuPhong(){
+        String id = null;
+        while (true){
+            try{
+                System.out.println("nhap so luong nguoi toi da");
+                id = scanner.nextLine();
+                DichVuException.kiemTraMaDichVuPhong(id);
+                return id;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
     public static String nhapTenDichVu(String ten){
         String tenDV = ten;
         return tenDV;
@@ -94,11 +134,126 @@ public class QuanLyNhapDuLieu {
     }
     //:  Họ tên Customer, Ngày sinh, Giới tính, Số CMND, Số ĐT, Email, Loại khách,
     // Địa chỉ và thuộc tính sử dụng dịch vụ có kiểu đối tượng là Services, và phương thức showInfor().
-    public static String hoTenKhachHang(){
+    public static String nhapHoTenKhachHang(){
         String hoTen = null;
         while (true){
-           
+           try{
+               System.out.println("nhap ho va ten khach hang");
+               hoTen = scanner.nextLine();
+               DichVuException.kiemTraTen(hoTen);
+               return hoTen;
+           }catch (DichVuException e){
+               System.err.println(e.getMessage());
+           }
         }
     }
+    public static String nhapNgaySinhKhachHang(){
+        String ngaySinh = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                ngaySinh = scanner.nextLine();
+                DichVuException.kiemTraMaNgaySinh(ngaySinh);
+                return ngaySinh;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapGioiTinhKhachHang(){
+        String gioiTinh = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                gioiTinh = scanner.nextLine();
+                DichVuException.kiemTraGioiTinh(gioiTinh);
+                return gioiTinh;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapSoCMND(){
+        String soCMND = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                soCMND = scanner.nextLine();
+                DichVuException.kiemTraSoCMND(soCMND);
+                return soCMND;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapSoDT(){
+        String soDT = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                soDT = scanner.nextLine();
+                DichVuException.kiemTraSoDT(soDT);
+                return soDT;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapEmail(){
+        String email = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                email = scanner.nextLine();
+                DichVuException.kiemTraEmail(email);
+                return email;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    public static String nhapLoaiKhach(){
+        boolean kiemTra = false;
+        String loaiKhach = null;
+        String chon = null;
+        //Diamond, Platinium, Gold, Silver, Member
+        String[] strings ={"Diamond","Platinium","Gold","Silver","Menber"};
+        while (true){
+            for (int i =0 ;i<strings.length;i++){
+                System.out.println((i+1)+" : "+strings[i]);
+            }
+            System.out.println("chon loai khach");
+            chon = scanner.nextLine();
+            for (int i =0 ;i<strings.length;i++){
+                if (i == Integer.parseInt(chon)-1){
+                    loaiKhach = strings[i];
+                    kiemTra = true;
+                    break;
+                }
+            }
+            if (kiemTra){
+                break;
+            }else {
+                System.out.println("vui long chon theo danh sach");
+            }
+        }
+        return loaiKhach;
+
+    }
+    public static String nhapDiaChiKhachhang(){
+        String diaChi = null;
+        while (true){
+            try{
+                System.out.println("nhap ho va ten khach hang");
+                diaChi = scanner.nextLine();
+                DichVuException.kiemTraTen(diaChi);
+                return diaChi;
+            }catch (DichVuException e){
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+
+
 
 }

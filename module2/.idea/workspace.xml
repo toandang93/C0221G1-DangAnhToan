@@ -2,7 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/caseStudy/commons/GD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/caseStudy/views/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/commons/DichVuException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/commons/DichVuException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/commons/GhiDocFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/DanhMuc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/DanhMuc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyNhapDuLieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyNhapDuLieu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/models/DichVu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/models/DichVu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Nha.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Nha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Phong.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Phong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/quanLyHoaDonTienDien/controllers/QuanLyNhapDuLieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/quanLyHoaDonTienDien/controllers/QuanLyNhapDuLieu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/commons/DichVuException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/DanhMuc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/DanhMuc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyHienThi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyHienThi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyThemMoiCacDichVu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/DichVu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/KhachHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/Nha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/Nha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/Phong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/Phong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caseStudy/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/CongNhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/on_tap_OOP/src/models/CongNhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/KySu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/on_tap_OOP/src/models/KySu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/on_tap_OOP/src/models/NhanVien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,25 +62,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="C2341G" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/bai_tap_lam_them" />
+    <property name="last_opened_file_path" value="D:/on_tap_OOP" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
-    <configuration name="CrawlNews" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bai_17_String_Regex.bai_tap.crawl_tin_tuc.CrawlNews" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bai_17_String_Regex.bai_tap.crawl_tin_tuc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="VehicleManager.views.Main" />
       <module name="module2" />
@@ -91,6 +107,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="views.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="module2" />
@@ -100,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.CrawlNews" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +174,9 @@
       <workItem from="1620136294856" duration="1923000" />
       <workItem from="1620177535572" duration="5703000" />
       <workItem from="1620200220984" duration="63000" />
+      <workItem from="1620208301939" duration="344000" />
+      <workItem from="1620214095134" duration="9821000" />
+      <workItem from="1620264247826" duration="5093000" />
     </task>
     <servers />
   </component>
@@ -164,10 +196,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1619147138349" />
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1620139520992">
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1620221798778">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1620139520992" />
+    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1620221798778" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617785115027">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -180,11 +212,11 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620200259568">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620266115434">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620200259568" />
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620266115434" />
     <state width="1237" height="246" key="GridCell.Tab.0.bottom" timestamp="1620097191509">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -221,10 +253,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620200221410">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620264457578">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620200221410" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620264457578" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -233,13 +265,13 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620200281897" />
-    <state x="297" y="161" key="run.anything.popup" timestamp="1619495627282">
+    <state x="297" y="161" key="run.anything.popup" timestamp="1620270124589">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1619495627282" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620118164696">
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1620270124589" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620218675188">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620118164696" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620218675188" />
   </component>
 </project>

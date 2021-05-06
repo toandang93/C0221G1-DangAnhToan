@@ -1,6 +1,6 @@
-package models;
+package on_tap_OOP.src.models;
 
-public class NhanVien extends CanBo {
+public class NhanVien extends models.CanBo {
     //: công việc*
     //*công việc gồm “PV-trong nhà” hoặc “PV-ngoài trời”.
     private String congViec;

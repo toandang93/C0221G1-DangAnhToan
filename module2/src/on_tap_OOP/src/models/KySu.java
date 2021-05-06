@@ -1,6 +1,6 @@
 package models;
 
-public class KySu extends CanBo {
+public class KySu extends models.CanBo {
     //Các kỹ sư cần quản lý: Ngành đào tạo.(Lưu ý mục 2).
     //    Cho phép người dùng chọn thông tin.
     private String nganhDT;

@@ -6,12 +6,24 @@ public class Phong extends DichVu {
     public Phong() {
     }
 
+    public Phong(String[] strings) {
+        super(strings);
+        this.dichVuDiKem = new DichVuDiKem(strings[6],strings[7],Double.parseDouble(strings[8]));
+    }
+
+
+
     public Phong(DichVuDiKem dichVuDiKem) {
         this.dichVuDiKem = dichVuDiKem;
     }
 
-    public Phong(String ten, String dienTich, String chiPhiThue, String soLuongNguoi, String kieuThue, DichVuDiKem dichVuDiKem) {
-        super(ten, dienTich, chiPhiThue, soLuongNguoi, kieuThue);
+    public Phong(String[] strings, DichVuDiKem dichVuDiKem) {
+        super(strings);
+        this.dichVuDiKem = dichVuDiKem;
+    }
+
+    public Phong(String id, String ten, String dienTichSuDung, String chiPhiThue, String soLuongNguoi, String kieuThue, DichVuDiKem dichVuDiKem) {
+        super(id, ten, dienTichSuDung, chiPhiThue, soLuongNguoi, kieuThue);
         this.dichVuDiKem = dichVuDiKem;
     }
 
@@ -24,19 +36,20 @@ public class Phong extends DichVu {
     }
 
     @Override
+    public String toString() {
+        return super.toString()+","+ dichVuDiKem ;
+    }
+
+    @Override
     public void showInfo() {
         System.out.println("Phong{" +
                 "dichVuDiKem=" + dichVuDiKem +
+                ", id='" + id + '\'' +
                 ", ten='" + ten + '\'' +
                 ", dienTichSuDung='" + dienTichSuDung + '\'' +
                 ", chiPhiThue='" + chiPhiThue + '\'' +
                 ", soLuongNguoi='" + soLuongNguoi + '\'' +
                 ", kieuThue='" + kieuThue + '\'' +
                 '}');
-    }
-
-    @Override
-    public String toString() {
-        return super.toString()+ "," + dichVuDiKem.toString() ;
     }
 }

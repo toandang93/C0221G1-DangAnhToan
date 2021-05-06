@@ -18,12 +18,16 @@ public class DanhMuc {
            chon = scanner.nextLine();
            switch (chon){
                case "1":
+                   QuanLyChucNang.themMoiDichVu();
                    break;
                case "2":
+                   QuanLyChucNang.hienThiDichVu();
                    break;
                case "3":
+                   QuanLyChucNang.themMoiKhachHang();
                    break;
                case "4":
+                   QuanLyHienThi.hienThiKhachHang();
                    break;
                case "5":
                    break;

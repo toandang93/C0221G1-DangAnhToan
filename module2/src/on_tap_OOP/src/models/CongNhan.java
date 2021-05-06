@@ -1,6 +1,6 @@
 package models;
 
-public class CongNhan extends CanBo {
+public class CongNhan extends models.CanBo {
     //Bậc (công nhân bậc 3/7, bậc 4/7 ...)
     private String bac;
 

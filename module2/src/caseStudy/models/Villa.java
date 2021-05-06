@@ -8,6 +8,13 @@ public class Villa extends DichVu {
 
     public Villa() {
     }
+    public Villa(String[] strings) {
+        super(strings);
+        this.tieuChuanPhong = strings[6];
+        this.moTaTienNghi = strings[7];
+        this.dienTichHoBoi = strings[8];
+        this.soTang = strings[9];
+    }
 
     public Villa(String tieuChuanPhong, String moTaTienNghi, String dienTichHoBoi, String soTang) {
         this.tieuChuanPhong = tieuChuanPhong;
@@ -16,8 +23,9 @@ public class Villa extends DichVu {
         this.soTang = soTang;
     }
 
-    public Villa(String ten, String dienTich, String chiPhiThue, String soLuongNguoi, String kieuThue, String tieuChuanPhong, String moTaTienNghi, String dienTichHoBoi, String soTang) {
-        super(ten, dienTich, chiPhiThue, soLuongNguoi, kieuThue);
+
+    public Villa(String id, String ten, String dienTichSuDung, String chiPhiThue, String soLuongNguoi, String kieuThue, String tieuChuanPhong, String moTaTienNghi, String dienTichHoBoi, String soTang) {
+        super(id, ten, dienTichSuDung, chiPhiThue, soLuongNguoi, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.moTaTienNghi = moTaTienNghi;
         this.dienTichHoBoi = dienTichHoBoi;
@@ -57,26 +65,26 @@ public class Villa extends DichVu {
     }
 
     @Override
-    public void showInfo() {
-        System.out.println("\"Villa{\" +\n" +
-                "                \"tieuChuanPhong='\" + tieuChuanPhong + '\\'' +\n" +
-                "                \", moTaTienNghi='\" + moTaTienNghi + '\\'' +\n" +
-                "                \", dienTichHoBoi='\" + dienTichHoBoi + '\\'' +\n" +
-                "                \", soTang='\" + soTang + '\\'' +\n" +
-                "                \", ten='\" + ten + '\\'' +\n" +
-                "                \", dienTichSuDung='\" + dienTichSuDung + '\\'' +\n" +
-                "                \", chiPhiThue='\" + chiPhiThue + '\\'' +\n" +
-                "                \", soLuongNguoi='\" + soLuongNguoi + '\\'' +\n" +
-                "                \", kieuThue='\" + kieuThue + '\\'' +\n" +
-                "                '}'");
+    public String toString() {
+        return super.toString()+","+ tieuChuanPhong +
+                "," + moTaTienNghi +
+                ",'" + dienTichHoBoi +
+                "," + soTang  ;
     }
 
     @Override
-    public String toString() {
-        return super.toString()+ "," + tieuChuanPhong  +
-                "," + moTaTienNghi  +
-                "," + dienTichHoBoi +
-                "," + soTang
-                ;
+    public void showInfo() {
+        System.out.println("Villa{" +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", moTaTienNghi='" + moTaTienNghi + '\'' +
+                ", dienTichHoBoi='" + dienTichHoBoi + '\'' +
+                ", soTang='" + soTang + '\'' +
+                ", id='" + id + '\'' +
+                ", ten='" + ten + '\'' +
+                ", dienTichSuDung='" + dienTichSuDung + '\'' +
+                ", chiPhiThue='" + chiPhiThue + '\'' +
+                ", soLuongNguoi='" + soLuongNguoi + '\'' +
+                ", kieuThue='" + kieuThue + '\'' +
+                '}');
     }
 }
