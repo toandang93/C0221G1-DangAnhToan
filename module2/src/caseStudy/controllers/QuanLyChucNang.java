@@ -294,9 +294,9 @@ public class QuanLyChucNang {
         String luong = QuanLyNhapDuLieu.nhapLuong();
 
         NhanVien nhanVien = new NhanVien(ten,ngaySinh,soCMND,soDt,email,trinhDo,viTri,luong);
-        List<NhanVien> nhanViens = new ArrayList<NhanVien>();
-        nhanViens.add(nhanVien);
-        GhiDocFiles.ghiFile("nhanvien.csv",nhanViens,true);
+        List<NhanVien> list = new ArrayList<NhanVien>();
+        list.add(nhanVien);
+        GhiDocFiles.ghiFile("nhanvien.csv",list,true);
 
     }
 

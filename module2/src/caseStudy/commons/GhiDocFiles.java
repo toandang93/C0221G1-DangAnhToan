@@ -2,6 +2,7 @@ package caseStudy.commons;
 
 import caseStudy.models.DichVu;
 import caseStudy.models.KhachHang;
+import caseStudy.models.NhanVien;
 import caseStudy.models.Villa;
 
 import java.io.*;
@@ -17,7 +18,7 @@ public interface GhiDocFiles<T> {
         BufferedWriter bufferedWriter = null;
         try {
             file = new File(PATH + duongDan);
-            fileWriter = new FileWriter(file);
+            fileWriter = new FileWriter(file,trangThai);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (T t : list) {
                 bufferedWriter.write(t.toString());
@@ -123,5 +124,35 @@ public interface GhiDocFiles<T> {
             }
         }
         return khachHangList;
+    }
+    public static List<NhanVien> docFileNhanVien(String duongDan){
+        File file = null;
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        List<NhanVien> nhanVienList = new ArrayList<>();
+        String[] strings = null;
+        String line = null;
+        try {
+            file = new File(PATH + duongDan);
+            if (!file.exists()){
+                file.createNewFile();
+            }
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            while ((line = bufferedReader.readLine()) != null) {
+                strings = line.split(",");
+                nhanVienList.add(new NhanVien(strings));
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                bufferedReader.close();
+                fileReader.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return nhanVienList;
     }
 }
