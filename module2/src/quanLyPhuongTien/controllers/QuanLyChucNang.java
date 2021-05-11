@@ -136,9 +136,13 @@ public class QuanLyChucNang {
     public static void hienThiXeTai(){
         List<PhuongTien> phuongTienList = new ArrayList<>();
         phuongTienList = GhiDocFile.docFile("phuongtien.csv");
+        //String bienKiemSoat, String tenHSX, int namSX, String chuSoHuu, int taiTrong)
+        System.out.printf("%-15s | %-15s | %-15s | %-15s | %-15s","biển kiểm soát","Tên HSX","Năm Sản Xuất","Chủ sở hửu","Tải trọng");
+        System.out.println();
         for (PhuongTien phuongTien : phuongTienList){
             if (phuongTien instanceof XeTai){
-                System.out.println(phuongTien);
+                System.out.printf("%-15s | %-15s | %-15s | %-15s | %-15s",phuongTien.getBienKiemSoat(),phuongTien.getTenHSX(),phuongTien.getNamSX(),phuongTien.getChuSoHuu(),((XeTai) phuongTien).getTaiTrong());
+                System.out.println();
             }
         }
     }

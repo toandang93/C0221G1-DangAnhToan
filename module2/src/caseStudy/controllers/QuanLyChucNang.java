@@ -5,9 +5,7 @@ import caseStudy.commons.GhiDocFiles;
 import caseStudy.models.*;
 import quanLyHoaDonTienDien.commons.GhiDocFile;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class QuanLyChucNang {
     static Scanner scanner = new Scanner(System.in);
@@ -307,8 +305,13 @@ public class QuanLyChucNang {
             NhanVien nhanVien = new NhanVien(string);
             nhanVienList.add(nhanVien);
         }
+        Map<String , NhanVien> map = new HashMap<String, NhanVien>();
         for (NhanVien nhanVien : nhanVienList){
-            nhanVien.showInfo();
+            map.put(nhanVien.getSoCMND(),nhanVien);
+        }
+        Set set = map.keySet();
+        for (Map.Entry<String, NhanVien> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
 

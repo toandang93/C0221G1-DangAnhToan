@@ -1,36 +1,12 @@
 package compar;
 
 public class HocSinh  {
-    private String ten;
-    private int tuoi;
-
-    public HocSinh(String ten, int tuoi) {
-        this.ten = ten;
-        this.tuoi = tuoi;
+    int value;
+    public HocSinh() {
     }
 
-    public String getTen() {
-        return ten;
-    }
-
-    public void setTen(String ten) {
-        this.ten = ten;
-    }
-
-    public int getTuoi() {
-        return tuoi;
-    }
-
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
-    }
-
-    @Override
-    public String toString() {
-        return "HocSinh{" +
-                "ten='" + ten + '\'' +
-                ", tuoi=" + tuoi +
-                '}';
+    public static void show(){
+        System.out.println("hello");
     }
 
 //    @Override

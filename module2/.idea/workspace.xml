@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compar/HocSinh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compar/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compar/SoSanhTen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compar/SoSanhTuoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/commons/GhiDocFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/commons/GhiDocFiles.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/data/nhanvien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/data/nhanvien.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/commons/GhiDocFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/data/booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/HocSinh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/compar/HocSinh.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/compar/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/SoSanhTen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/SoSanhTuoi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/controllers/QuanLyChucNang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/controllers/QuanLyChucNang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/data/booking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/data/nhanvien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/data/nhanvien.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compar/HocSinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compar/HocSinh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compar/SoSanhTen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compar/SoSanhTuoi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/Views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/Views/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/controllers/QuanLyChucNang.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="VehicleManager.views.Main" />
       <module name="module2" />
@@ -131,10 +135,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
@@ -181,7 +185,13 @@
       <workItem from="1620264247826" duration="6457000" />
       <workItem from="1620284166979" duration="3087000" />
       <workItem from="1620290219984" duration="11940000" />
-      <workItem from="1620308894836" duration="413000" />
+      <workItem from="1620308894836" duration="3480000" />
+      <workItem from="1620348461647" duration="4913000" />
+      <workItem from="1620475104425" duration="2144000" />
+      <workItem from="1620554914447" duration="237000" />
+      <workItem from="1620557226334" duration="79000" />
+      <workItem from="1620561012083" duration="2895000" />
+      <workItem from="1620612359507" duration="1018000" />
     </task>
     <servers />
   </component>
@@ -217,27 +227,27 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620308268528">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620369252819">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620308268528" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1620308270947">
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620369252819" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1620614569141">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620308270947" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1620308270947">
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1620614569141">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620308270947" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1620308270947">
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1620614569141">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620308270947" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1620308270947">
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1620614569141">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620308270947" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
     <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1619021455416">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -258,25 +268,25 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620290220872">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620612358602">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620290220872" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620612358602" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="371" y="117" key="extract.method.dialog/0.0.1280.720@0.0.1280.720" timestamp="1619075644295" />
-    <state x="91" y="0" key="new project wizard" timestamp="1620200281897">
+    <state x="91" y="0" key="new project wizard" timestamp="1620614565586">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620200281897" />
+    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1620614565586" />
     <state x="297" y="161" key="run.anything.popup" timestamp="1620270124589">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1620270124589" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620218675188">
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620475242887">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620218675188" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620475242887" />
   </component>
 </project>
