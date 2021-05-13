@@ -88,10 +88,14 @@ create table loai_dich_vu(
 IDloaiDichVu int auto_increment primary key,
 TenLoaiDichVu varchar(45)
 );
+
 insert into khach_hang(HoTen,NgaySinh,SoCMTND,SDT,DiaChi)
 values ("Dang Toan","1993/09/18",222999887,0908333222,"Da Nang"),
 ("Duong Thinh","1998/07/18",234876345,0222123854,"Quang Tri"),
 ("Huynh Tan","1995/06/18",123098324,0333867534,"Hue");
+SET SQL_SAFE_UPDATES = 0;
+
+select * from khach_hang;
 insert into trinh_do(Trinhdo)
 values ("Trung Cap"),
 ("Cao Dang"),
@@ -115,15 +119,49 @@ values ("Diamond"),
 ("Gold"),
 ("Silver"),
 ("Member");
+select * from loai_khach;
 insert into kieu_thue(TenKieuThue,Gia)
 values ("Nam",1200),
 ("Thang",150),
 ("Ngay",10),
 ("Gio",2);
+select * from kieu_thue;
 insert into nhan_vien(hoTen,NgaySinh,SoCMTND,Luong,SDT,Email,DiaChi)
 values ("Huynh Tan Khoa","1999/12/05",345212345,800,0909111123,"dathuynh@gmail.com","Quang Tri"),
 ("Truong Cong Tuan","1995/12/09",256765888,800,0909111123,"tuantruong@gmail.com","Da Nang"),
 ("Nguyen Quoc Huy","1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Tri");
+update nhan_vien
+set IDviTri = 4 , IDtrinhDo = 3,IDboPhan = 4
+where IDnhanVien = 3;
+select * from nhan_vien;
+-- massage, karaoke, thức ăn, nước uống
+insert into dich_vu_di_kem(TenDichVuDiKem,Gia)
+values ("massage",50),
+("karaoke",50),
+("thuc an",10),
+("thuc uong",5);
+insert into loai_dich_vu(TenLoaiDichVu)
+values ("Binh dan"),
+("Trung cap"),
+("Cao cap");
+update dich_vu
+set IDloaiDichVu = 3
+where IDdichVu = 3;
+
+insert into dich_vu(TenDichVu,DienTich,SoTang,SoNguoiToiDa,ChiPhiThue,IDkieuThue,IDloaiDichVu)
+values 
+("House",40,2,6,200,3,2),
+("Room",40,0,4,100,1,2);
+select * from dich_vu;
+insert into hop_dong(IDnhanVien,IDkhachHang,IDdichVu,NgayLamHopDong,NgayKetThuc,TienDatCoc,TongTien)
+values (1,1,4,"2020/10/12","2020/10/15",100,250),
+(2,2,5,"2020/11/10","2020/11/15",120,300);
+select * from hop_dong_chi_tiet;
+insert into hop_dong_chi_tiet(IDhopDong,IDdichVuDiKem,Soluong)
+values (3,1,2),
+(4,2,2);
+
+
 
 
 
