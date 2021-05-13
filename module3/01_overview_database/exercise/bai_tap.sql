@@ -1,5 +1,5 @@
-create database if not exists student_managerment;
-use student_managerment;
+create database if not exists student_management;
+use student_management;
 create table Teacher(
 id int(10) auto_increment not null primary key ,
 `name` varchar(50),

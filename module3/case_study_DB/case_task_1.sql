@@ -46,9 +46,11 @@ tong_tien int
 );
 create table hop_dong_chi_tiet(
 id_hop_dong_chi_tiet int auto_increment primary key,
-id_hop_dong int, foreign key(id_hop_dong) references hop_dong(id_hop_dong),
-id_dich_vu_di_kem int, foreign key(id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem),
-so_luong int
+id_hop_dong int, 
+id_dich_vu_di_kem int,
+so_luong int,
+foreign key(id_hop_dong) references hop_dong(id_hop_dong),
+foreign key(id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
 );
 
 create table khach_hang(
