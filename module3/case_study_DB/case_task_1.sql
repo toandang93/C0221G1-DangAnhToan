@@ -2,145 +2,141 @@ create database if not exists case_study_DB;
 use case_study_DB;
 
 create table vi_tri(
-IDviTri int auto_increment primary key,
-TenViTri varchar(45)
+id_vi_tri int auto_increment primary key,
+ten_vi_tri varchar(45)
 );
 create table trinh_do(
-IDtrinhDo int auto_increment primary key,
-TrinhDo varchar(45)
+id_trinh_do int auto_increment primary key,
+trinh_do varchar(45)
 );
 create table bo_phan(
-IDboPhan int auto_increment primary key,
-TenBoPhan varchar(45)
+id_bo_phan int auto_increment primary key,
+ten_bo_phan varchar(45)
 );
 create table nhan_vien(
-IDnhanVien int auto_increment primary key,
-hoTen varchar(45),
-IDviTri int, foreign key (IDviTri) references vi_tri(IDviTri),
-IDtrinhDo int,foreign key (IDtrinhDo) references trinh_do(IDtrinhDo),
-IDboPhan int ,foreign key (IDboPhan) references bo_phan(IDboPhan),
-NgaySinh date,
-SoCMTND varchar(45),
-Luong varchar(45),
+id_nhan_vien int auto_increment primary key,
+ho_ten varchar(45),
+id_vi_tri int, foreign key (id_vi_tri) references vi_tri(id_vi_tri),
+id_bo_phan int,foreign key (id_bo_phan) references bo_phan(id_bo_phan),
+id_trinh_do int ,foreign key (id_trinh_do) references trinh_do(id_trinh_do),
+ngay_sinh date,
+so_CMTND varchar(45),
+luong varchar(45),
 SDT varchar(45),
-Email varchar(45),
-DiaChi varchar(45)
+email varchar(45),
+dia_chi varchar(45)
 );
-alter table nhan_vien
-modify column SoCMTND varchar(45) unique;
 
 create table dich_vu_di_kem(
-IDdichVuDiKem int auto_increment primary key,
-TenDichVuDiKem varchar(45),
-Gia int,
-DonVi int,
-TrangThaiKhaDung varchar(45)
+id_dich_vu_di_kem int auto_increment primary key,
+ten_dich_vu_di_kem varchar(45),
+gia int,
+donVi int,
+trang_thai_kha_dung varchar(45)
 );
 create table hop_dong(
-IDhopDong int auto_increment primary key,
-IDnhanVien int,foreign key (IDnhanVien) references nhan_vien(IDnhanVien),
-IDkhachHang int,foreign key (IDkhachHang) references khach_hang(IDkhachHang),
-IDdichVu int, foreign key (IDdichVu) references dich_vu(IDdichVu),
-NgayLamHopDong date,
-NgayKetThuc date,
-TienDatCoc int,
-TongTien int
+id_hop_dong int auto_increment primary key,
+id_nhan_vien int,foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
+id_khach_hang int,foreign key (id_khach_hang) references khach_hang(id_khach_hang),
+id_dich_vu int, foreign key (id_dich_vu) references dich_vu(id_dich_vu),
+ngay_lam_hop_dong date,
+ngay_ket_thuc date,
+tien_dat_coc int,
+tong_tien int
 );
 create table hop_dong_chi_tiet(
-IDhopDongChiTiet int auto_increment primary key,
-IDhopDong int, foreign key(IDhopDong) references hop_dong(IDhopDong),
-IDdichVuDiKem int, foreign key(IDdichVuDiKem) references dich_vu_di_kem(IDdichVuDiKem),
-Soluong int
+id_hop_dong_chi_tiet int auto_increment primary key,
+id_hop_dong int, foreign key(id_hop_dong) references hop_dong(id_hop_dong),
+id_dich_vu_di_kem int, foreign key(id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem),
+so_luong int
 );
 
 create table khach_hang(
-IDkhachHang int auto_increment primary key,
-IDloaiKhach int, foreign key (IDloaiKhach) references loai_khach(IDloaiKhach),
-HoTen varchar(45),
-NgaySinh date,
-SoCMTND varchar(45),
+id_khach_hang int auto_increment primary key,
+id_loai_khach int, foreign key (id_loai_khach) references loai_khach(id_loai_khach),
+ho_ten varchar(45),
+ngay_sinh date,
+so_CMTND varchar(45),
 SDT varchar(45),
-DiaChi varchar(45)
-);
-alter table khach_hang
-modify column SoCMTND varchar(45) unique;
-create table loai_khach(
-IDloaiKhach int auto_increment primary key,
-TenLoaiKhachHang varchar(45)
-);
-create table dich_vu(
-IDdichVu int auto_increment primary key,
-TenDichVu varchar(45),
-DienTich int,
-SoTang int,
-SoNguoiToiDa varchar(45),
-ChiPhiThue varchar(45),
-IDkieuThue int, foreign key (IDkieuThue) references kieu_thue(IDkieuThue),
-IDloaiDichVu int, foreign key (IDloaiDichVu) references loai_dich_vu(IDloaiDichVu),
-TrangThai varchar(45)
-);
-create table kieu_thue(
-IDkieuThue int auto_increment primary key,
-TenKieuThue varchar(45),
-Gia int
-);
-create table loai_dich_vu(
-IDloaiDichVu int auto_increment primary key,
-TenLoaiDichVu varchar(45)
+dia_chi varchar(45)
 );
 
-insert into khach_hang(HoTen,NgaySinh,SoCMTND,SDT,DiaChi)
-values ("Dang Toan","1993/09/18",222999887,0908333222,"Da Nang"),
-("Duong Thinh","1998/07/18",234876345,0222123854,"Quang Tri"),
-("Huynh Tan","1995/06/18",123098324,0333867534,"Hue");
+create table loai_khach(
+id_loai_khach int auto_increment primary key,
+ten_loai_khach_hang varchar(45)
+);
+create table dich_vu(
+id_dich_vu int auto_increment primary key,
+ten_dich_vu varchar(45),
+dien_tich int,
+so_tang int,
+so_nguoi_toi_da varchar(45),
+chi_phi_thue varchar(45),
+id_kieu_thue int, foreign key (id_kieu_thue) references kieu_thue(id_kieu_thue),
+id_loai_dich_vu int, foreign key (id_loai_dich_vu) references loai_dich_vu(id_loai_dich_vu),
+trang_thai varchar(45)
+);
+create table kieu_thue(
+id_kieu_thue int auto_increment primary key,
+ten_kieu_thue varchar(45),
+gia int
+);
+create table loai_dich_vu(
+id_loai_dich_vu int auto_increment primary key,
+ten_loai_dich_vu varchar(45)
+);
+
+insert into khach_hang(id_loai_khach,ho_ten,ngay_sinh,so_CMTND,SDT,dia_chi)
+values (1,"Dang Toan","1993/09/18",222999887,0908333222,"Da Nang"),
+(2,"Duong Thinh","1998/07/18",234876345,0222123854,"Quang Tri"),
+(3,"Huynh Tan","1995/06/18",123098324,0333867534,"Hue");
+
 SET SQL_SAFE_UPDATES = 0;
 
 select * from khach_hang;
-insert into trinh_do(Trinhdo)
+insert into trinh_do(trinh_do)
 values ("Trung Cap"),
 ("Cao Dang"),
 ("Dai Hoc"),
 ("Sau Dai Hoc");
-insert into vi_tri(TenViTri)
+insert into vi_tri(ten_vi_tri)
 values ("Le Tan"),
 ("Phuc Vu"),
 ("Chuyen Vien"),
 ("Giam Sat"),
 ("Quan Ly"),
 ("Giam Doc");
-insert into bo_phan(TenBoPhan)
+insert into bo_phan(ten_bo_phan)
 values ("Sale-Marketing"),
 ("Hanh Chinh"),
 ("Phuc Vu"),
 ("Quan Ly");
-insert into loai_khach(TenLoaiKhachHang)
+insert into loai_khach(ten_loai_khach_hang)
 values ("Diamond"),
 ("Platinium"),
 ("Gold"),
 ("Silver"),
 ("Member");
 select * from loai_khach;
-insert into kieu_thue(TenKieuThue,Gia)
+insert into kieu_thue(ten_kieu_thue,gia)
 values ("Nam",1200),
 ("Thang",150),
 ("Ngay",10),
 ("Gio",2);
 select * from kieu_thue;
-insert into nhan_vien(hoTen,NgaySinh,SoCMTND,Luong,SDT,Email,DiaChi)
-values ("Huynh Tan Khoa","1999/12/05",345212345,800,0909111123,"dathuynh@gmail.com","Quang Tri"),
-("Truong Cong Tuan","1995/12/09",256765888,800,0909111123,"tuantruong@gmail.com","Da Nang"),
-("Nguyen Quoc Huy","1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Tri");
-update nhan_vien
-set IDviTri = 4 , IDtrinhDo = 3,IDboPhan = 4
-where IDnhanVien = 3;
+insert into nhan_vien(ho_ten,id_vi_tri,id_bo_phan,id_trinh_do,ngay_sinh,so_CMTND,luong,SDT,email,dia_chi)
+values ("Huynh Tan Khoa",1,1,1,"1999/12/05",345212345,800,0909111123,"dathuynh@gmail.com","Quang Tri"),
+("Truong Cong Tuan",2,2,2,"1995/12/09",256765888,800,0909111123,"tuantruong@gmail.com","Da Nang"),
+("Nguyen Quoc Huy",3,3,3,"1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Tri");
+
 select * from nhan_vien;
 -- massage, karaoke, thức ăn, nước uống
-insert into dich_vu_di_kem(TenDichVuDiKem,Gia)
+insert into dich_vu_di_kem(ten_dich_vu_di_kem,gia)
 values ("massage",50),
 ("karaoke",50),
 ("thuc an",10),
 ("thuc uong",5);
-insert into loai_dich_vu(TenLoaiDichVu)
+insert into loai_dich_vu(ten_loai_dich_vu)
 values ("Binh dan"),
 ("Trung cap"),
 ("Cao cap");
@@ -148,18 +144,18 @@ update dich_vu
 set IDloaiDichVu = 3
 where IDdichVu = 3;
 
-insert into dich_vu(TenDichVu,DienTich,SoTang,SoNguoiToiDa,ChiPhiThue,IDkieuThue,IDloaiDichVu)
-values 
-("House",40,2,6,200,3,2),
-("Room",40,0,4,100,1,2);
-select * from dich_vu;
-insert into hop_dong(IDnhanVien,IDkhachHang,IDdichVu,NgayLamHopDong,NgayKetThuc,TienDatCoc,TongTien)
-values (1,1,4,"2020/10/12","2020/10/15",100,250),
-(2,2,5,"2020/11/10","2020/11/15",120,300);
+insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,trang_thai)
+values ("Villa",40,3,10,200,3,2,"day"),
+("House",30,2,6,200,3,2,"day"),
+("Room",20,0,4,100,1,2,"day");
+select * from hop_dong;
+insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,tong_tien)
+values (1,1,1,"2020/10/12","2020/10/15",100,0),
+(2,2,2,"2020/11/10","2020/11/15",120,0);
 select * from hop_dong_chi_tiet;
-insert into hop_dong_chi_tiet(IDhopDong,IDdichVuDiKem,Soluong)
-values (3,1,2),
-(4,2,2);
+insert into hop_dong_chi_tiet(id_hop_dong,id_dich_vu_di_kem,so_luong)
+values (1,1,2),
+(2,2,3);
 
 
 
