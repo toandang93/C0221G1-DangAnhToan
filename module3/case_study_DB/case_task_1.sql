@@ -91,7 +91,13 @@ ten_loai_dich_vu varchar(45)
 insert into khach_hang(id_loai_khach,ho_ten,ngay_sinh,so_CMTND,SDT,dia_chi)
 values (1,"Dang Toan","1993/09/18",222999887,0908333222,"Da Nang"),
 (2,"Duong Thinh","1998/07/18",234876345,0222123854,"Quang Tri"),
-(3,"Huynh Tan","1995/06/18",123098324,0333867534,"Hue");
+(3,"Huynh Tan","1995/06/18",123098324,0333867534,"Hue"),
+(4,"Tran Yen","1999/09/18",325654345,0575424234,"Hoi An"),
+(5,"Trinh Cong Son","1997/07/18",754253564,0122354642,"Vinh"),
+(4,"Nguyen Thang","1989/06/18",856345236,0333456234,"Quang Binh"),
+(1,"Nguyen Hung","2000/09/18",347543763,0866789987,"Da Nang"),
+(2,"Ronaldo","1992/07/18",346754231,0983456654,"Quang Tri"),
+(3,"Ziddans","1991/06/18",235764322,0675234432,"Hue");
 
 SET SQL_SAFE_UPDATES = 0;
 
@@ -138,10 +144,12 @@ values ("massage",50),
 ("karaoke",50),
 ("thuc an",10),
 ("thuc uong",5);
+
 insert into loai_dich_vu(ten_loai_dich_vu)
 values ("Binh dan"),
 ("Trung cap"),
 ("Cao cap");
+
 update dich_vu
 set IDloaiDichVu = 3
 where IDdichVu = 3;
@@ -149,15 +157,27 @@ where IDdichVu = 3;
 insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,trang_thai)
 values ("Villa",40,3,10,200,3,2,"day"),
 ("House",30,2,6,200,3,2,"day"),
-("Room",20,0,4,100,1,2,"day");
-select * from hop_dong;
+("Room",20,0,4,100,1,2,"day"),
+("Villa",40,4,14,250,3,1,"trong"),
+("House",30,2,6,200,3,2,"trong"),
+("Room",20,0,4,100,1,1,"trong");
+
 insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,tong_tien)
 values (1,1,1,"2020/10/12","2020/10/15",100,0),
-(2,2,2,"2020/11/10","2020/11/15",120,0);
-select * from hop_dong_chi_tiet;
+(2,2,2,"2020/11/10","2020/11/15",120,0),
+(3,1,1,"2018/10/12","2019/10/15",150,0),
+(2,3,2,"2009/11/10","2009/11/15",150,0),
+(1,4,1,"2012/10/12","2013/10/15",100,0),
+(3,5,2,"2017/11/10","2018/11/15",120,0);
+
 insert into hop_dong_chi_tiet(id_hop_dong,id_dich_vu_di_kem,so_luong)
 values (1,1,2),
-(2,2,3);
+(2,2,3),
+(3,3,2),
+(4,4,3),
+(5,2,2);
+
+
 
 
 
