@@ -10,11 +10,12 @@ from khach_hang
 where (year(curdate()) - year(ngay_sinh) between 18 and 50) and (dia_chi in ("Da Nang","Quang Tri"));
 
 -- task_4
-select kh.id_khach_hang,count(hd.id_hop_dong)
+select kh.id_khach_hang,kh.ho_ten,count(hd.id_hop_dong)
 from khach_hang kh 
 join hop_dong hd
 on kh.id_khach_hang=hd.id_khach_hang
 where kh.id_loai_khach = 1
+group by kh.ho_ten
 order by count(hd.id_hop_dong) ASC;
 
 -- IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien 
