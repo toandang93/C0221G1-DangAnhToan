@@ -1,29 +1,29 @@
 create database quan_ly_sinh_vien;
 use quan_ly_sinh_vien;
 create table class(
-ClassId int auto_increment primary key,
-ClassName varchar(60) not null,
-StarDate datetime not null,
+class_id int auto_increment primary key,
+class_name varchar(60) not null,
+start_date datetime not null,
 `Status` Bit 
 );
 create table student(
-StudentID int auto_increment primary key,
-StudentName varchar(20) not null,
-Address varchar(50),
-Phone varchar(20),
+student_id int auto_increment primary key,
+`name` varchar(20) not null,
+address varchar(50),
+phone varchar(20),
 `Status` Bit,
-ClassID int not null ,foreign key(ClassID) references class(Classid)
+class_id int not null ,foreign key(class_id) references class(class_id)
 );
 create table `subject`(
-SubID int auto_increment primary key,
-SubName varchar(30) not null,
-Credit tinyint not null default 1 check(Credit >=1),
+subject_id int auto_increment primary key,
+`name` varchar(30) not null,
+credit tinyint not null default 1 check(credit >=1),
 `Status` Bit default 1
 );
 create table mark(
-MarkID int auto_increment primary key,
-SubID int not null,foreign key(SubID) references `subject`(SubID),
-StudentID int not null, foreign key(StudentID) references student(StudentID),
+mark_id int auto_increment primary key,
+subject_id int not null,foreign key(subject_id) references `subject`(subject_id),
+student_id int not null, foreign key(student_id) references student(student_id),
 Mark float default 0 check (Mark between 0 and 100),
-unique (SubID,StudentID)
+unique (subject_id,student_id)
 );
