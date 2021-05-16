@@ -2,7 +2,7 @@ use case_study_db;
 -- task_2
 select *
 from nhan_vien
-where (ho_ten like 'H%' or 'K%' or 'T%') and length(ho_ten)<=15;
+where ((ho_ten like 'H%') or (ho_ten like 'K%') or (ho_ten like 'T%')) and length(ho_ten)<=15;
 
 -- task_3
 select *
