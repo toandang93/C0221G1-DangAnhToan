@@ -45,8 +45,8 @@ where ( (month(hd.ngay_lam_hop_dong) in (10,11,12)) and  year(hd.ngay_lam_hop_do
 		and not exists (select hd.id_hop_dong
 						from hop_dong hd
                         where (month(ngay_lam_hop_dong) between 1 and 6)  
-                        and year(hd.ngay_lam_hop_dong) = 2019
-                        and hd.id_dich_vu = dv.id_dich_vu)
+                        and year(ngay_lam_hop_dong) = 2019
+                        )
 group by hd.id_hop_dong;
 
 
