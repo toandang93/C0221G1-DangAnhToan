@@ -47,13 +47,16 @@ delimiter //
 create trigger tr_2
 before update on hop_dong for each row
 begin
-	if datediff(ngay_ket_thuc,old.ngay_lam_hop_dong) >= 2 then
+	if datediff(new.ngay_ket_thuc,old.ngay_lam_hop_dong) >= 2 then
 		select "cập nhật thành công" as log into outfile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/toan_tr2.txt';
     else
 		SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = 'Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày';
 	end if;
 end; //
-delimiter ;    
+delimiter ;
+
+drop trigger tr_2;
+    
     
 
 
