@@ -29,7 +29,7 @@ and id_khach_hang in (select a.id from (select hd.id_khach_hang as id,
         join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
         where year(hd.ngay_lam_hop_dong)=2019
         group by id
-        having tong_tien > 300 ) as a	  	);           
+        having tong_tien > 10000000 ) as a	);           
 
 
 -- task 18

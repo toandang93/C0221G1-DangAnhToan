@@ -60,10 +60,16 @@ delimiter ;
 
 
 delimiter //
-create procedure update_product_name(p_id int,p_name varchar(45))
+create procedure update_product_name(p_id int,p_name varchar(45), p_code int,
+		   p_price double,p_amount int,p_description varchar(100),p_status varchar(100))
 BEGIN
 update products
-set product_name = p_name
+set product_name = p_name,
+ product_code=p_code,
+ product_price=p_price,
+ product_amount = p_amount,
+ product_description=p_description,
+ product_status=p_status
 where id_product = p_id;
 END; //
 delimiter ;
