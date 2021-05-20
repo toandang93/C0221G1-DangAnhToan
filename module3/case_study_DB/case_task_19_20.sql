@@ -18,9 +18,16 @@ where id_dich_vu_di_kem in (select a.id from
 --  thông tin hiển thị bao gồm
 --  ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
 
-select nv.id_nhan_vien,nv.ho_ten,nv.ngay_sinh,nv.email,nv.SDT,nv.dia_chi,
-kh.id_khach_hang,kh.ho_ten,kh.ngay_sinh,kh.SDT,kh.dia_chi
+-- select nv.id_nhan_vien,nv.ho_ten,nv.ngay_sinh,nv.email,nv.SDT,nv.dia_chi,
+-- kh.id_khach_hang,kh.ho_ten,kh.ngay_sinh,kh.SDT,kh.dia_chi
+-- from nhan_vien nv
+-- left join hop_dong hd on nv.id_nhan_vien = hd.id_nhan_vien
+-- right join khach_hang kh on hd.id_khach_hang = kh.id_khach_hang;
+
+select nv.id_nhan_vien as id_nv,nv.ho_ten,nv.email,nv.sdt,nv.ngay_sinh,nv.dia_chi, 1 as `type`
 from nhan_vien nv
-left join hop_dong hd on nv.id_nhan_vien = hd.id_nhan_vien
-right join khach_hang kh on hd.id_khach_hang = kh.id_khach_hang;
+union all
+select kh.id_khach_hang as id_kh,kh.ho_ten,kh.so_CMTND,kh.sdt,kh.ngay_sinh,kh.dia_chi, 0 as `type`
+from khach_hang kh;
+
 
