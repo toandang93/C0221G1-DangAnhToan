@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        .header {
+            background: brown;
+            height: 50px;
+            justify-content: space-between;
+            display: flex;
+        }
+        .sub-header {
+            line-height: 50px;
+            display: flex;
+        }
+        .sub-header div {
+            text-align: center;
+        }
+
+        .sub-header-2{
+            line-height: 50px;
+            margin: 0px 5px;
+        }
+        #ip {
+            background: brown;
+        }
+        #home{
+            background: black;
+        }
+        .main {
+            display: flex;
+        }
+        .main .left div {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .right ul {
+            margin: 0;
+            padding: 0;
+        }
+        .right ul li {
+            list-style: none;
+            border: 1px solid pink;
+            text-align: center;
+            height: 80px;
+            margin: 30px;
+            line-height: 80px;
+        }
+
+        .footer {
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            position: fixed;
+            bottom: 0;
+            background: brown;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header col-12">
+   <div class="sub-header col-5">
+       <div class="col-2">Logo</div>
+       <div id="home" class="col-2">Home</div>
+       <div class="col-2">About</div>
+       <div class="col-2">Projects</div>
+       <div class="col-2">Contact</div>
+   </div>
+
+    <div class="sub-header-2"><input id="ip" type="button" value="Login"></div>
+</div>
+
+<div class="main col-12">
+    <div class="left col-2">
+        <div class="sub-left"><a href="#">Link</a></div>
+        <div class="sub-left"><a href="#">Link</a></div>
+        <div class="sub-left"><a href="#">Link</a></div>
+
+    </div>
+    <div class="content col-8">
+        <h1>Welcome</h1>
+        <p>Chọn lựa từ những từ điển sẵn có tập thông tin dành cho những người học tiếng Anh ở mọi trình độ.
+            Lý tưởng cho những người học đang chuẩn bị cho các kì thi tiếng Anh Cambridge và IELTS.
+            Từ điển tiếng Anh này bao gồm Từ điển Người học Nâng cao Cambridge, Từ điển Nội dung Học thuật Cambridge,
+            và Từ điển tiếng Anh Thương mại.
+            Từ điển Người học Cambridge là hoàn hảo cho người học cấp độ trung cấp.</p>
+        <hr>
+        <h1>Test</h1>
+        <p>abc</p>
+    </div>
+    <div class="right col-2">
+        <ul>
+            <li>ADS</li>
+            <li>ADS</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer col-12">Footer Text</div>
+</body>
+</html>
