@@ -2,22 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai-tap-CaseStudy-module-1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ADMIN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/07_website_layout_design/exercise/01_creating_layouts/create_layouts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/controllers/QuanLyChucNang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/caseStudy/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/caseStudy/data/booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/commons/CanBoException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module2/compar/HocSinh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/compar/HocSinh.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module2/compar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/compar/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/SoSanhTen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/compar/SoSanhTuoi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/controllers/QuanLyChucNang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/controllers/QuanLyChucNang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caseStudy/controllers/QuanLyChucNang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compar/HocSinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compar/HocSinh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compar/SoSanhTen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compar/SoSanhTuoi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/controllers/DanhMuc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/controllers/DanhMuc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/controllers/QuanLyNhapDuLieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/controllers/QuanLyNhapDuLieu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/models/CanBo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/models/CongNhan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/models/KySu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/on_tap_OOP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/out/production/on_tap_OOP/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/out/production/on_tap_OOP/data/nganhDaoTao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/src/commons/GhiDocFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/src/controllers/QuanLyChucNang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/src/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/src/data/nganhDaoTao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/on_tap_OOP/src/models/NhanVien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/Views/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/Views/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/data/phuongtien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module2/quanLyPhuongTien/data/phuongtien.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai_thi_cuoi_module_2/src/controllers/DanhMuc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DanhMuc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai_thi_cuoi_module_2/src/data/contacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai_thi_cuoi_module_2/src/data/contacts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai_thi_cuoi_module_2/src/models/DanhBa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/DanhBa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/on_tap_OOP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/commons/CanBoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/commons/GhiDocFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/controllers/DanhMuc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/controllers/QuanLyChucNang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/controllers/QuanLyNhapDuLieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/data/nganhDaoTao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/models/CanBo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/models/CongNhan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/models/KySu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/models/NhanVien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/out/production/on_tap_OOP/views/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/commons/CanBoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/commons/GhiDocFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/controllers/DanhMuc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/controllers/QuanLyChucNang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/controllers/QuanLyNhapDuLieu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/data/nganhDaoTao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/CanBo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/CongNhan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/KySu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/models/NhanVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/on_tap_OOP/src/views/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/Views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/Views/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/controllers/QuanLyChucNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/controllers/QuanLyChucNang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/data/phuongtien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/data/phuongtien.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,31 +90,18 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="C2341G" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/học tập/module2/Ôn tập OOP.docx" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="VehicleManager.views.Main" />
+      <option name="MAIN_CLASS_NAME" value="test.main.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="VehicleManager.views.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="quanLyHoaDonTienDien.views.Main" />
-      <module name="module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="quanLyHoaDonTienDien.views.*" />
+          <option name="PATTERN" value="test.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,6 +128,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="compar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="views.Main" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +233,9 @@
       <workItem from="1620557226334" duration="79000" />
       <workItem from="1620561012083" duration="2895000" />
       <workItem from="1620612359507" duration="1018000" />
+      <workItem from="1621779746524" duration="1732000" />
+      <workItem from="1621820458726" duration="82000" />
+      <workItem from="1621827225384" duration="1805000" />
     </task>
     <servers />
   </component>
@@ -227,51 +271,51 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1620369252819">
+    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1621828242988">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620369252819" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1620614569141">
+    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1621828242988" />
+    <state width="1237" height="220" key="GridCell.Tab.0.bottom" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1620614569141">
+    <state width="1237" height="220" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
+    <state width="1237" height="220" key="GridCell.Tab.0.center" timestamp="1621837337327">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1620614569141">
+    <state width="1237" height="220" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1621837337327" />
+    <state width="1237" height="220" key="GridCell.Tab.0.left" timestamp="1621837337327">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1620614569141">
+    <state width="1237" height="220" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1621837337327" />
+    <state width="1237" height="220" key="GridCell.Tab.0.right" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620614569141" />
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1619021455416">
+    <state width="1237" height="220" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
+    <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
-    <state width="1237" height="220" key="GridCell.Tab.1.center" timestamp="1619021455416">
+    <state width="1237" height="220" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
+    <state width="1237" height="220" key="GridCell.Tab.1.center" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
-    <state width="1237" height="220" key="GridCell.Tab.1.left" timestamp="1619021455416">
+    <state width="1237" height="220" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
+    <state width="1237" height="220" key="GridCell.Tab.1.left" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
-    <state width="1237" height="220" key="GridCell.Tab.1.right" timestamp="1619021455416">
+    <state width="1237" height="220" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
+    <state width="1237" height="220" key="GridCell.Tab.1.right" timestamp="1621837337328">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1619021455416" />
+    <state width="1237" height="220" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1618538692297">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620612358602">
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1621827226347">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1620612358602" />
+    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1621827226347" />
     <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

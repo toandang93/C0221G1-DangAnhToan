@@ -21,25 +21,25 @@ public class DanhMuc {
             chon = scanner.nextLine();
             switch (chon){
                 case "1":
-                    QuanLyChucNang.hienThiDanhBa();
+                    controllers.QuanLyChucNang.hienThiDanhBa();
                     break;
                 case "2":
-                    QuanLyChucNang.themMoiDanhBa();
+                    controllers.QuanLyChucNang.themMoiDanhBa();
                     break;
                 case "3":
-                    QuanLyChucNang.capNhatDanhBa();
+                    controllers.QuanLyChucNang.capNhatDanhBa();
                     break;
                 case "4":
-                    QuanLyChucNang.xoaDanhBa();
+                    controllers.QuanLyChucNang.xoaDanhBa();
                     break;
                 case "5":
-                    QuanLyChucNang.timKiemDanhBa();
+                    controllers.QuanLyChucNang.timKiemDanhBa();
                     break;
                 case "6":
-                    QuanLyChucNang.docVaoFile();
+                    controllers.QuanLyChucNang.docVaoFile();
                     break;
                 case "7":
-                    QuanLyChucNang.ghiVaoFile();
+                    controllers.QuanLyChucNang.ghiVaoFile();
                     break;
                 case "8":
                     System.exit(0);
