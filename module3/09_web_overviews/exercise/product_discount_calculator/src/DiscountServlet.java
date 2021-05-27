@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,10 +13,15 @@ public class DiscountServlet extends HttpServlet {
         Double discount_amount = Double.parseDouble(request.getParameter("product-price"));
         Double discount_price = Double.parseDouble(request.getParameter("product-discount"));
         Double result = discount_amount*discount_price* 0.01;
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<html>" +
-                "<h2>Chiếc khấu là : "+result+"</h2>" +
-                "</html>");
+        request.setAttribute("total",result);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("calculator.jsp");
+        requestDispatcher.forward(request,response);
+
+
+//        PrintWriter printWriter = response.getWriter();
+//        printWriter.println("<html>" +
+//                "<h2>Chiếc khấu là : "+result+"</h2>" +
+//                "</html>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
