@@ -103,7 +103,9 @@ public class CustomerServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
@@ -120,19 +122,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //doGet
     private void listCustomers(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customers = this.customerService.findAll();
         request.setAttribute("customers", customers);
