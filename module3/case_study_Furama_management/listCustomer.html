@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="../bootraps_min/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("img/background1.jpg");
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid align-items-center justify-content-between d-flex  ">
+    <div class=""><img src="img/FURAMA.png" height="60" width="60"/></div>
+</div>
+<h1 class="d-flex justify-content-center">Customer List</h1>
+<!--modal create customer-->
+<div class="container">
+    <div class="row">
+<!--        ...-->
+        <div class="col-4">
+            <!-- Button create new customer -->
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                Create New Customer
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Create new customer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--                        Create customer table-->
+                        <div class="modal-body" style="background-image: url('img/background1.jpg')">
+                            <div class="container-fluid d-flex justify-content-center">
+                                <form class="border border-dark" action=""
+                                      style="width: 100%;box-shadow: 5px 5px darkgray;border-radius: 5px">
+                                    <div class=" d-flex justify-content-center">Create Customer</div>
+                                    <div>
+                                        <table>
+                                            <tr>
+                                                <td>Customer Name</td>
+                                                <td><input type="text" name="name" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Date</td>
+                                                <td><input type="text" name="date" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gender</td>
+                                                <td><input type="text" name="gender" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Id card</td>
+                                                <td><input type="text" name="idCard" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td><input type="text" name="phone" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><input type="email" name="email" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type of customer</td>
+                                                <td><input type="text" name="type" class="form-group"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td><input type="text" name="address" class="form-group"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4 d-flex">
+            <form class="form-inline my-2 my-lg-0 d-flex">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+<!--            <input type="text" name="name" placeholder="Search" style="border-radius: 10px">-->
+<!--            <input type="submit" value="Search" style="border-radius: 5px">-->
+        </div>
+    </div>
+</div>
+
+<!--content body-->
+<div class="container-fluid">
+    <div class="row">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Id card</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Type Customer</th>
+                <th scope="col">Address</th>
+                <th scope="col">Show</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+<!--                show-->
+                <td>
+                    <!-- Button show customer -->
+<!--                    phải đổi data-taget trùng với id ở Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show">
+                        Show
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="show" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">Show info</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="background-image: url('img/background1.jpg')">
+                                    <form class="border border-dark" action=""
+                                          style="width: 100%;box-shadow: 5px 5px darkgray;border-radius: 5px" >
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Customer Name</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Date</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gender</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Id card</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phone</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Type of customer</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--                                    <button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+<!--                Modal edit customer-->
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit">
+                        Edit
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel2">Edit customer</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+<!--                                bảng edit-->
+                                <div class="modal-body" style="background-image: url('img/background1.jpg')">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <form class="border border-dark" action=""
+                                              style="width: 100%;box-shadow: 5px 5px darkgray;border-radius: 5px">
+                                            <div class=" d-flex justify-content-center">Edit Customer</div>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td>Customer Name</td>
+                                                        <td><input type="text" name="name" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date</td>
+                                                        <td><input type="text" name="date" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gender</td>
+                                                        <td><input type="text" name="gender" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Id card</td>
+                                                        <td><input type="text" name="idCard" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Phone</td>
+                                                        <td><input type="text" name="phone" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email</td>
+                                                        <td><input type="email" name="email" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Type of customer</td>
+                                                        <td><input type="text" name="type" ></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Address</td>
+                                                        <td><input type="text" name="address" ></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+                        Delete
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel3">Do you want to delete customer</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="background-image: url('img/background1.jpg')">
+                                    <form class="border border-dark" action=""
+                                          style="width: 100%;box-shadow: 5px 5px darkgray;border-radius: 5px" >
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Customer Name</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Date</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gender</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Id card</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phone</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Type of customer</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-primary">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="../bootraps/jquery-3.6.0.min.js"></script>
+<script src="../bootraps_min/popper.min.js"></script>
+<script src="../bootraps_min/bootstrap.min.js"></script>
+</body>
+</html>
