@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class HocSinh {
+        constructor(stt, ten, ngaySinh, diemTrungBinh) {
+            this.stt = stt;
+            this.ten = ten;
+            this.ngaySinh = ngaySinh;
+            this.diemtrungbinh = diemTrungBinh;
+        }
+
+        getstt() {
+            return this.stt;
+        }
+
+        getten() {
+            return this.ten;
+        }
+
+        getngaySinh() {
+            return this.ngaySinh;
+        }
+
+        getdiemTrungBinh() {
+            return this.diemtrungbinh;
+        }
+
+        setstt(sttMoi) {
+            this.stt = ttMoi;
+        }
+
+        setten(tenMoi) {
+            this.ten = tenmoi;
+        }
+
+        setngaysinh(ngaysinhMoi) {
+            this.ngaySinh = ngaysinhMoi;
+        }
+
+        setdiemTrungBinh(diemTrungBinhMoi) {
+            this.diemTrungBinh = diemTrungBinhMoi;
+        }
+
+        diemTb() {
+            if (this.diemtrungbinh > 8) {
+                alert("Lả học sinh Giỏi");
+            } else if (this.diemtrungbinh >= 6.5) {
+                alert("là học sinh Khá");
+            } else if (this.diemtrungbinh >= 5) {
+                alert("là học sinh Trung Bình");
+            } else if (this.diemtrungbinh >= 3.5) {
+                alert("là học sinh Yếu");
+            } else {
+                alert("là học sinh Kém");
+            }
+
+        }
+
+    }
+
+    let hocsinh1 = new HocSinh(1, "Nguyễn Văn A", 9 + '/' + 9 + '/' + 2001, "9");
+    let hocsinhA = new HocSinh(1, "Nguyễn Văn A", "9/9/1999",9);
+
+    let hocsinh2 = new HocSinh(2, "Nguyễn Văn B", 15 + '/' + 3 + '/' + 2001, 7);
+    let hocsinh3 = new HocSinh(3, "Nguyễn Văn C", 21 + '/' + 7 + '/' + 2001, 6);
+    let hocsinh4 = new HocSinh(4, "Nguyễn Văn D", 3 + '/' + 2 + '/' + 2001, 4);
+    // alert(hocsinh1.getstt());
+    // alert(hocsinh1.getten());
+    // alert(hocsinh1.getngaySinh());
+    // alert(hocsinh1.getdiemTrungBinh());
+   hocsinhA.diemTb();
+</script>
+</body>
+</html>

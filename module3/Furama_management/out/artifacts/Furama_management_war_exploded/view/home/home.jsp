@@ -12,6 +12,7 @@
 <head>
     <title>Title</title>
 </head>
+<body style="background-image: url('../img/FURAMA.png')">
 <div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56">
     <div class=""><img src="img/FURAMA.png" height="100" width="100"/></div>
     <p id="name" class="mr-4">Đặng Anh Toàn</p>
