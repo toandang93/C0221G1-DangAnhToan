@@ -10,28 +10,45 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../bootraps_min/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
 </head>
+<body>
 <div class="container-fluid -3 mb-3 d-flex align-items-center justify-content-between"
      style="background: #085F56;height: 60px">
-    <div><img src="../img/FURAMA.png" height="60" width="60"/></div>
+    <div><img src="../../img/FURAMA.png" height="60" width="60"/></div>
     <div class="d-flex justify-content-around " style="width: 100%">
         <a href="#" style="color: white">Home</a>
         <a href="#" style="color: white">Employee</a>
         <a href="#" style="color: white">Customer</a>
         <a href="#" style="color: white">Service</a>
         <a href="#" style="color: white">Contract</a>
+        <a href="#" style="color: white">Contract Detail</a>
     </div>
 </div>
 <div class="container-fluid d-flex justify-content-center">
     <h1>Create New Customer</h1>
 </div>
+<div>
+    <c:if test="${message!=null}">
+        <p class="text-success">${message}</p>
+    </c:if>
+</div>
 <div class="container d-flex ">
-    <form style="width: 70%;margin-left: 155px">
+    <form action="/customers?action=create" style="width: 70%;margin-left: 155px" method="post">
         <div class="form-group row">
             <label for="inputName" class="col-sm-3 col-form-label">Customer Name</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inputName" name="name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputType" class="col-sm-3 col-form-label">Type of customer</label>
+            <div class="col-sm-6">
+                <select name="type" id="inputType">
+                   <c:forEach items="${list}" var="customerName" >
+                       <option value="${customerName[0]}">${customerName[1]}</option>
+                   </c:forEach>
+                </select>
             </div>
         </div>
         <div class="form-group row">
@@ -43,7 +60,17 @@
         <div class="form-group row">
             <label for="inputGender" class="col-sm-3 col-form-label">Gender</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputGender" name="gender">
+                <select name="gender" id="inputGender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-6">
+                <input type="email" class="form-control" id="inputEmail" name="email">
             </div>
         </div>
         <div class="form-group row">
@@ -59,33 +86,21 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
-            <div class="col-sm-6">
-                <input type="email" class="form-control" id="inputEmail" name="email">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputType" class="col-sm-3 col-form-label">Type of customer</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputType" name="type">
-            </div>
-        </div>
-        <div class="form-group row">
             <label for="inpurAddress" class="col-sm-3 col-form-label">Address</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inpurAddress" name="address">
             </div>
         </div>
         <div class="d-flex ">
-            <a href="#" class="btn btn-secondary" style="margin-left: 200px">Back to list</a>
-            <input class="btn btn-success" style="margin-left: 174px;width: 100px" value="Create">
+            <a href="/customers" class="btn btn-secondary" style="margin-left: 200px">Back to list</a>
+            <input type="submit" class="btn btn-success" style="margin-left: 174px;width: 100px" value="Create">
         </div>
 
     </form>
 </div>
 
-<script src="../bootraps_min/jquery-3.6.0.min.js"></script>
-<script src="../bootraps_min/popper.min.js"></script>
-<script src="../bootraps_min/bootstrap.min.js"></script>
+<script src="../../bootraps_min/jquery-3.6.0.min.js"></script>
+<script src="../../bootraps_min/popper.min.js"></script>
+<script src="../../bootraps_min/bootstrap.min.js"></script>
 </body>
 </html>

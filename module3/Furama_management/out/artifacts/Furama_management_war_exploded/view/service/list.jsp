@@ -1,23 +1,23 @@
 <%--
   Created by IntelliJ IDEA.
   User: ADMIN
-  Date: 5/30/2021
-  Time: 6:50 PM
+  Date: 6/2/2021
+  Time: 8:07 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Customer List</title>
-        <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
     <link rel="stylesheet" href="../../bootraps_min/dataTables.bootstrap.min.css">
 </head>
 <body>
 <div class="container-fluid align-items-center justify-content-between d-flex mb-3"
      style="background: #085F56;height: 60px">
     <div class=""><img src="../../img/FURAMA.png" height="60" width="60"/></div>
-    <h1 class="d-flex justify-content-center text-white">Customer List</h1>
+    <h1 class="d-flex justify-content-center text-white">Service List</h1>
     <p class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
 </div>
 
@@ -43,20 +43,18 @@
 </div>
 
 <!--content body-->
-<div class="container-fluid">
+<div class="container-fluid ">
     <div class="row">
-        <table  id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
+        <table  id="tableCustomer" class="table table-striped table-bordered " >
             <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Type Customer</th>
-                <th scope="col">Date</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Id card</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
+                <th scope="col">Area</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Max People</th>
+                <th scope="col">Rent type</th>
+                <th scope="col">Service type</th>
                 <th scope="col">Show</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
@@ -72,8 +70,6 @@
                     <td>${customer.gender}</td>
                     <td>${customer.idCard}</td>
                     <td>${customer.phone}</td>
-                    <td>${customer.email}</td>
-                    <td>${customer.address}</td>
                     <td><a class="btn btn-info" href="/customers?action=show&id=${customer.id}">Show</a></td>
                     <td><a class="btn btn-warning" href="/customers?action=edit&id=${customer.id}">Edit</a></td>
                     <td>
@@ -135,6 +131,5 @@
         })
     })
 </script>
-
 </body>
 </html>

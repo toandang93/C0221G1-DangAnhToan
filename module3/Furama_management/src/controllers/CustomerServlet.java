@@ -1,6 +1,6 @@
 package controllers;
 
-import model.bean.Customer;
+import model.bean.customer.Customer;
 import model.service.ICRUD;
 import model.service.impl.CustomerServiceImpl;
 
@@ -21,11 +21,25 @@ public class CustomerServlet extends HttpServlet {
             action="";
         }
         switch (action){
-
+            case "create":
+                createCustomer(request,response);
+                break;
+            case "delete":
+                deleteCustomer(request,response);
+                break;
+            case "edit":
+                editCustomer(request,response);
+                break;
+            case "search":
+                showSearch(request,response);
+                break;
             default:
                 break;
         }
     }
+
+
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -33,6 +47,15 @@ public class CustomerServlet extends HttpServlet {
             action="";
         }
         switch (action){
+            case "create":
+                showFormCreate(request,response);
+                break;
+            case "edit":
+                showFormEdit(request,response);
+                break;
+            case "show":
+                showInfo(request,response);
+                break;
 
             default:
                 showListCustomer(request,response);
@@ -42,9 +65,119 @@ public class CustomerServlet extends HttpServlet {
 
 
 
+
+    //doPost
+    private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
+        boolean check = false;
+        String name = request.getParameter("name");
+        int typeCustomer = Integer.parseInt(request.getParameter("type"));
+        String date = request.getParameter("date");
+        String gender = request.getParameter("gender");
+        String email = request.getParameter("email");
+        String idCard = request.getParameter("idCard");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+        Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
+        check = customerService.insertIntoCustomer(customer);
+        if (check){
+            request.setAttribute("message","Create success");
+        }
+        try {
+            request.getRequestDispatcher("/view/customer/create.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("customerId"));
+        customerService.deleteCustomer(id);
+        try {
+            response.sendRedirect("/customers");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
+        boolean check = false;
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        int typeCustomer = Integer.parseInt(request.getParameter("type"));
+        String date = request.getParameter("date");
+        String gender = request.getParameter("gender");
+        String email = request.getParameter("email");
+        String idCard = request.getParameter("idCard");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+        Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
+        check = customerService.updateCustomerById(id,customer);
+        if (check){
+            request.setAttribute("message","Edit success");
+        }
+        try {
+            request.getRequestDispatcher("/view/customer/edit.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     //doGet
     private void showListCustomer(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = customerService.findAll();
+        request.setAttribute("customers",customerList);
+        try {
+            request.getRequestDispatcher("/view/customer/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showFormCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<String[]> stringList = customerService.findTypeOfCustomer();
+        request.setAttribute("list",stringList);
+        try {
+            request.getRequestDispatcher("/view/customer/create.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = customerService.findById(id);
+        request.setAttribute("customer",customer);
+        List<String[]> stringList = customerService.findTypeOfCustomer();
+        request.setAttribute("list",stringList);
+        try {
+            request.getRequestDispatcher("/view/customer/edit.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showInfo(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = customerService.findById(id);
+        request.setAttribute("customer",customer);
+        try {
+            request.getRequestDispatcher("/view/customer/show.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showSearch(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("searchName");
+        List<Customer> customerList = customerService.searchByName(name);
         request.setAttribute("customers",customerList);
         try {
             request.getRequestDispatcher("/view/customer/list.jsp").forward(request,response);

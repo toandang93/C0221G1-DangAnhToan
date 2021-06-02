@@ -7,33 +7,29 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="stylesheet" href="../bootraps_min/bootstrap.min.css">
+<link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
 <html>
 <head>
     <title>Title</title>
 </head>
 <body >
 <div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56;height: 60px">
-    <div class=""><img src="../img/FURAMA.png" height="60" width="60"/></div>
-    <p id="name" class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
+    <div class=""><img src="../../img/FURAMA.png" height="60" width="60"/></div>
+    <p  class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
 </div>
 
 <!--navbar-->
 <div class="container-fluid -3 my-3 d-flex align-items-center justify-content-between" style="background: #085F56;height: 50px">
 
-    <div class="d-flex justify-content-around " style="width: 70%">
+    <div class="d-flex justify-content-around " style="width: 100%">
         <a href="#" style="color: white">Home</a>
         <a href="#" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="#" style="color: white">Service</a>
         <a href="#" style="color: white">Contract</a>
+        <a href="#" style="color: white">Contract Detail</a>
     </div>
-    <form action="">
-        <div class="mx-3">
-            <input type="text" name="name" placeholder="Search" style="border-radius: 10px">
-            <input type="submit" value="Search" style="border-radius: 5px">
-        </div>
-    </form>
+
 
 </div>
 <!--content-->
@@ -88,8 +84,8 @@
 
 
 
-<script src="../bootraps_min/jquery-3.6.0.min.js"></script>
-<script src="../bootraps_min/popper.min.js"></script>
-<script src="../bootraps_min/bootstrap.min.js"></script>
+<script src="../../bootraps_min/jquery-3.6.0.min.js"></script>
+<script src="../../bootraps_min/popper.min.js"></script>
+<script src="../../bootraps_min/bootstrap.min.js"></script>
 </body>
 </html>
