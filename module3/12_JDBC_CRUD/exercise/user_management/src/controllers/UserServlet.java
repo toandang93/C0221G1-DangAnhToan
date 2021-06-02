@@ -39,6 +39,8 @@ public class UserServlet extends HttpServlet {
     }
 
 
+
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action==null){
@@ -113,6 +115,20 @@ public class UserServlet extends HttpServlet {
     }
 
 
+    private void listSearch(HttpServletRequest request, HttpServletResponse response) {
+        String country = request.getParameter("country");
+        List<User> list = userService.searchByCountry(country);
+        request.setAttribute("listUser",list);
+        try {
+            request.getRequestDispatcher("view/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 
@@ -177,23 +193,25 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void listSearch(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("nameSearch");
-        List<User> userList = new ArrayList<>();
-        List<User> users = userService.findByAll();
-        for (User user : users){
-            if (user.getName().contains(name)){
-                userList.add(user);
-            }
-        }
-        request.setAttribute("listUser",userList);
-        try {
-            request.getRequestDispatcher("view/list.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+//    private void listSearch(HttpServletRequest request, HttpServletResponse response) {
+//        String name = request.getParameter("nameSearch");
+//        List<User> userList = new ArrayList<>();
+//        List<User> users = userService.findByAll();
+//        for (User user : users){
+//            if (user.getName().contains(name)){
+//                userList.add(user);
+//            }
+//        }
+//        request.setAttribute("listUser",userList);
+//        try {
+//            request.getRequestDispatcher("view/list.jsp").forward(request,response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }

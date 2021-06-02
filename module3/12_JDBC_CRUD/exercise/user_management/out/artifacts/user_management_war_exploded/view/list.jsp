@@ -30,7 +30,7 @@
     </div>
     <div>
         <form action="/users?action=search" method="post" >
-            <input type="text" name="nameSearch" style="float: left">
+            <input type="text" name="country" style="float: left">
             <input type="submit" value="search" style="float: left">
         </form>
     </div>

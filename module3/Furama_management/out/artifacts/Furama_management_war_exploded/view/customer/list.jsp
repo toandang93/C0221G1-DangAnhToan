@@ -12,13 +12,33 @@
     <title>Customer List</title>
     <link rel="stylesheet" href="../bootraps_min/bootstrap.min.css">
 </head>
-<body style="background-image: url('../img/background1.jpg')">
-<div class="container-fluid align-items-center justify-content-between d-flex  ">
+<body >
+<div class="container-fluid align-items-center justify-content-between d-flex mb-3" style="background: #085F56;height: 60px">
     <div class=""><img src="../img/FURAMA.png" height="60" width="60"/></div>
+    <h1 class="d-flex justify-content-center text-white" >Customer List</h1>
+    <p id="name" class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
 </div>
-<h1 class="d-flex justify-content-center">Customer List</h1>
 
-<button class="bg-success ml-3" href="/customers?action=create">Create new customer</button>
+<div class="container-fluid -3 mb-3 d-flex align-items-center justify-content-between" style="background: #085F56;height: 60px">
+    <div class="d-flex justify-content-around " style="width: 100%">
+        <a href="#" style="color: white">Home</a>
+        <a href="#" style="color: white">Employee</a>
+        <a href="#" style="color: white">Customer</a>
+        <a href="#" style="color: white">Service</a>
+        <a href="#" style="color: white">Contract</a>
+    </div>
+</div>
+
+
+<!--modal create customer-->
+<div class="d-flex justify-content-between my-3">
+    <a href="#" class="btn btn-info" style="border-radius: 5px">Create new customer</a>
+    <form class="form-inline my-2 my-lg-0 d-flex">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+
 <!--content body-->
 <div class="container-fluid">
     <div class="row">
@@ -41,7 +61,7 @@
             </thead>
             <tbody>
             <tr>
-                <th scope="row"></th>
+                <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
@@ -50,10 +70,14 @@
                 <td>@mdo</td>
                 <td>@mdo</td>
                 <td>@mdo</td>
-                <td><a class="btn btn-info" href="/customers?action=view$id=">Show</a></td>
-                <td><a class="btn btn-warning" href="/customers?action=edit&id">Edit</a></td>
-                <td><a class="btn btn-danger" href="/customers?action=delete&id">Delete</a></td>
+                <td><a class="btn btn-info" href="#">Show</a></td>
+                <td><a class="btn btn-warning" href="#">Edit</a></td>
+                <td><a class="btn btn-danger" href="#">Delete</a></td>
             </tr>
+
+
+
+
             </tbody>
         </table>
     </div>

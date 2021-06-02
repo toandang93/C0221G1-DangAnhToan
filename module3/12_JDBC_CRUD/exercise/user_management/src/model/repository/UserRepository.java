@@ -2,7 +2,9 @@ package model.repository;
 
 import model.bean.User;
 
+import java.math.BigDecimal;
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +19,32 @@ public class UserRepository {
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String SORT_BY_NAME_SQL = "select * from users\n" +
             "order by name;";
+    private static final String SEARCH_BY_COUNTRY = "select * from users\n" +
+            "where country like ?;";
 
     public UserRepository() {
+    }
+
+    public List<User> searchByCountry(String countrySearch){
+        List<User> users = new ArrayList<>();
+        Connection connection = baseRepository.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);
+            preparedStatement.setString(1, "%"+countrySearch+"%");
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
     }
 
     public List<User> sortByName(){
@@ -50,13 +76,16 @@ public class UserRepository {
         // try-with-resource statement will auto close the connection.
         try{
             Connection connection = baseRepository.getConnection();
+            //Statement
+            //PreparedStatement
+            //Call....
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
             System.out.println(preparedStatement);
+            rowInsert = preparedStatement.executeUpdate() >0;
 
-            rowInsert = preparedStatement.executeUpdate() > 0;
             BaseRepository.close();
         } catch (SQLException e) {
             printSQLException(e);
@@ -161,6 +190,7 @@ public class UserRepository {
             }
         }
     }
+
 
 
 }

@@ -12,29 +12,29 @@
 <head>
     <title>Title</title>
 </head>
-<body style="background-image: url('../img/FURAMA.png')">
-<div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56">
-    <div class=""><img src="img/FURAMA.png" height="100" width="100"/></div>
-    <p id="name" class="mr-4">Đặng Anh Toàn</p>
+<body >
+<div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56;height: 60px">
+    <div class=""><img src="../img/FURAMA.png" height="60" width="60"/></div>
+    <p id="name" class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
 </div>
 
 <!--navbar-->
-<div class="container-fluid -3 my-3" style="background: #085F56">
-    <div class="row d-flex justify-content-between">
-        <div class="d-flex justify-content-around " style="width: 70%">
-            <a href="">Home</a>
-            <a href="">Employee</a>
-            <a href="/view/customer/list.jsp">Customer</a>
-            <a href="">Service</a>
-            <a href="">Contract</a>
-        </div>
-        <form action="">
-            <div class="mx-3">
-                <input type="text" name="name" placeholder="Search" style="border-radius: 10px">
-                <input type="submit" value="Search" style="border-radius: 5px">
-            </div>
-        </form>
+<div class="container-fluid -3 my-3 d-flex align-items-center justify-content-between" style="background: #085F56;height: 50px">
+
+    <div class="d-flex justify-content-around " style="width: 70%">
+        <a href="#" style="color: white">Home</a>
+        <a href="#" style="color: white">Employee</a>
+        <a href="#" style="color: white">Customer</a>
+        <a href="#" style="color: white">Service</a>
+        <a href="#" style="color: white">Contract</a>
     </div>
+    <form action="">
+        <div class="mx-3">
+            <input type="text" name="name" placeholder="Search" style="border-radius: 10px">
+            <input type="submit" value="Search" style="border-radius: 5px">
+        </div>
+    </form>
+
 </div>
 <!--content-->
 <div class="container-fluid">
@@ -79,7 +79,7 @@
 </div>
 
 <div class="d-flex justify-content-center">
-    <img src="img/Capture.PNG" height="509" width="1200"/>
+    <img src="../img/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-1.jpg" height="509" width="1200"/>
 </div>
 <!--footer-->
 <div class="container-fluid  d-flex justify-content-center align-items-center bg-danger" style="clear: bottom">
