@@ -45,14 +45,14 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">STT</th>
+                <th scope="col">ID</th>
                 <th scope="col">Name</th>
+                <th scope="col">Type Customer</th>
                 <th scope="col">Date</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Id card</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
-                <th scope="col">Type Customer</th>
                 <th scope="col">Address</th>
                 <th scope="col">Show</th>
                 <th scope="col">Edit</th>
@@ -60,23 +60,22 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td><a class="btn btn-info" href="#">Show</a></td>
-                <td><a class="btn btn-warning" href="#">Edit</a></td>
-                <td><a class="btn btn-danger" href="#">Delete</a></td>
-            </tr>
-
-
-
+            <c:forEach items="${customers}" var="customer">
+                <tr>
+                    <th scope="row">${customer.id}</th>
+                    <td>${customer.name}</td>
+                    <td>${customer.customerTypeName}</td>
+                    <td>${customer.birthday}</td>
+                    <td>${customer.gender}</td>
+                    <td>${customer.idCard}</td>
+                    <td>${customer.phone}</td>
+                    <td>${customer.email}</td>
+                    <td>${customer.address}</td>
+                    <td><a class="btn btn-info" href="#">Show</a></td>
+                    <td><a class="btn btn-warning" href="#">Edit</a></td>
+                    <td><a class="btn btn-danger" href="#">Delete</a></td>
+                </tr>
+            </c:forEach>
 
             </tbody>
         </table>

@@ -62,6 +62,9 @@ so_CMTND varchar(45),
 SDT varchar(45),
 dia_chi varchar(45)
 );
+alter table khach_hang
+add gioi_tinh varchar(45),
+add email varchar(45);
 
 create table loai_khach(
 id_loai_khach int auto_increment primary key,

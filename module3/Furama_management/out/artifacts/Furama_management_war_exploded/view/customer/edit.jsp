@@ -15,7 +15,7 @@
 <body >
 <div class="container-fluid -3 mb-3 d-flex align-items-center justify-content-between"
      style="background: #085F56;height: 60px">
-    <div><img src="img/FURAMA.png" height="60" width="60"/></div>
+    <div><img src="../img/FURAMA.png" height="60" width="60"/></div>
     <div class="d-flex justify-content-around " style="width: 100%">
         <a href="#" style="color: white">Home</a>
         <a href="#" style="color: white">Employee</a>
