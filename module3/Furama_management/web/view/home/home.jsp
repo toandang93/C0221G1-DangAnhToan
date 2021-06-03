@@ -25,7 +25,7 @@
         <a href="#" style="color: white">Home</a>
         <a href="#" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
-        <a href="#" style="color: white">Service</a>
+        <a href="/services" style="color: white">Service</a>
         <a href="#" style="color: white">Contract</a>
         <a href="#" style="color: white">Contract Detail</a>
     </div>

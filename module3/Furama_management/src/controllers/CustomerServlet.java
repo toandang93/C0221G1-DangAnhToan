@@ -14,7 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "CustomerServlet",urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
-    ICRUD customerService = new CustomerServiceImpl();
+    ICRUD<Customer> customerService = new CustomerServiceImpl();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action==null){
@@ -42,7 +42,7 @@ public class CustomerServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
+            String action = request.getParameter("action");
         if (action==null){
             action="";
         }
@@ -78,7 +78,7 @@ public class CustomerServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
         Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
-        check = customerService.insertIntoCustomer(customer);
+        check = customerService.insertInto(customer);
         if (check){
             request.setAttribute("message","Create success");
         }
@@ -93,7 +93,7 @@ public class CustomerServlet extends HttpServlet {
     }
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("customerId"));
-        customerService.deleteCustomer(id);
+        customerService.delete(id);
         try {
             response.sendRedirect("/customers");
         } catch (IOException e) {
@@ -112,7 +112,7 @@ public class CustomerServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
         Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
-        check = customerService.updateCustomerById(id,customer);
+        check = customerService.updateById(id,customer);
         if (check){
             request.setAttribute("message","Edit success");
         }
@@ -151,7 +151,7 @@ public class CustomerServlet extends HttpServlet {
     }
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Customer customer = customerService.findById(id);
+        Customer customer =  customerService.findById(id);
         request.setAttribute("customer",customer);
         List<String[]> stringList = customerService.findTypeOfCustomer();
         request.setAttribute("list",stringList);

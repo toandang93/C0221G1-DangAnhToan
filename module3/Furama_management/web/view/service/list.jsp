@@ -35,7 +35,17 @@
 
 
 <div class="d-flex justify-content-between my-3">
-    <a href="/customers?action=create" class="btn btn-info" style="border-radius: 5px">Create new customer</a>
+    <!--    <a href="/customers?action=create" class="btn btn-info" style="border-radius: 5px">Create new customer</a>-->
+    <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Create new service
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Create Villa</a>
+            <a class="dropdown-item" href="#">Create House</a>
+            <a class="dropdown-item" href="#">Create Room</a>
+        </div>
+    </div>
     <form action="/customers?action=search" class="form-inline my-2 my-lg-0 d-flex" method="post">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchName">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
@@ -45,7 +55,7 @@
 <!--content body-->
 <div class="container-fluid ">
     <div class="row">
-        <table  id="tableCustomer" class="table table-striped table-bordered " >
+        <table  id="tableCustomer" class="table table-striped table-bordered " style="width: 100%">
             <thead>
             <tr>
                 <th scope="col">ID</th>
