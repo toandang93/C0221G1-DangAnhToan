@@ -10,12 +10,13 @@ public class Service {
     private int serviceTypeID;
     private String standardRoom;
     private String description;
-    private int numberFloor;
+    private String numberFloor;
+    private String poolArea;
 
     public Service() {
     }
 
-    public Service(int id, String name, int area, double cost, int peopleMax, int rentTypeID, int serviceTypeID, String standardRoom, String description, int numberFloor) {
+    public Service(int id, String name, int area, double cost, int peopleMax, int rentTypeID, int serviceTypeID, String standardRoom, String description, String numberFloor, String poolArea) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -26,9 +27,10 @@ public class Service {
         this.standardRoom = standardRoom;
         this.description = description;
         this.numberFloor = numberFloor;
+        this.poolArea = poolArea;
     }
 
-    public Service(String name, int area, double cost, int peopleMax, int rentTypeID, int serviceTypeID, String standardRoom, String description, int numberFloor) {
+    public Service(String name, int area, double cost, int peopleMax, int rentTypeID, int serviceTypeID, String standardRoom, String description, String numberFloor, String poolArea) {
         this.name = name;
         this.area = area;
         this.cost = cost;
@@ -38,6 +40,7 @@ public class Service {
         this.standardRoom = standardRoom;
         this.description = description;
         this.numberFloor = numberFloor;
+        this.poolArea = poolArea;
     }
 
     public int getId() {
@@ -112,11 +115,19 @@ public class Service {
         this.description = description;
     }
 
-    public int getNumberFloor() {
+    public String getNumberFloor() {
         return numberFloor;
     }
 
-    public void setNumberFloor(int numberFloor) {
+    public void setNumberFloor(String numberFloor) {
         this.numberFloor = numberFloor;
+    }
+
+    public String getPoolArea() {
+        return poolArea;
+    }
+
+    public void setPoolArea(String poolArea) {
+        this.poolArea = poolArea;
     }
 }

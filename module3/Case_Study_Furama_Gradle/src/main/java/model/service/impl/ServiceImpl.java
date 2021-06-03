@@ -24,4 +24,9 @@ public class ServiceImpl implements IService {
     public List<RentType> fillAllRentType() {
         return serviceRepository.fillAllRentType();
     }
+
+    @Override
+    public boolean insertIntoService(Service service) {
+        return serviceRepository.inserIntoService(service);
+    }
 }

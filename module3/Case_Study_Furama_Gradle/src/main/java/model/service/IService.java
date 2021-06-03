@@ -10,4 +10,5 @@ public interface IService {
     List<Service> findAll();
     List<ServiceType> findAllServiceType();
     List<RentType> fillAllRentType();
+    boolean insertIntoService(Service service);
 }

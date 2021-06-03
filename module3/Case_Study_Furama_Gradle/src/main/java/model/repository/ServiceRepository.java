@@ -13,8 +13,36 @@ public class ServiceRepository {
     private static final String SELECT_ALL_SERVICE = "select * from service;";
     private static final String SELECT_ALL_SERVICE_TYPE = "select * from service_type;";
     private static final String SELECT_ALL_RENT_TYPE= "select * from rent_type;";
+    private static final String INSER_INTO_SERVICE = "insert into service" +
+            "(service_name,service_area,service_cost,service_max_people," +
+            "rent_type_id,service_type_id,standard_room,description_other_convenience,pool_area,number_of_floor)\n" +
+            "values(?,?,?,?,?,?,?,?,?,?);";
 
     public ServiceRepository() {
+    }
+    public boolean inserIntoService(Service service){
+        boolean rowInsert = false;
+        Connection connection = baseRepository.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSER_INTO_SERVICE);
+            preparedStatement.setString(1,service.getName());
+            preparedStatement.setInt(2,service.getArea());
+            preparedStatement.setDouble(3,service.getCost());
+            preparedStatement.setInt(4,service.getPeopleMax());
+            preparedStatement.setInt(5,service.getRentTypeID());
+            preparedStatement.setInt(6,service.getServiceTypeID());
+            preparedStatement.setString(7,service.getStandardRoom());
+            preparedStatement.setString(8,service.getDescription());
+            preparedStatement.setString(9,service.getPoolArea());
+            preparedStatement.setString(10,service.getNumberFloor());
+            rowInsert = preparedStatement.executeUpdate() > 0 ;
+            preparedStatement.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rowInsert;
     }
 
     public List<ServiceType> findAllServiceType(){
@@ -73,9 +101,9 @@ public class ServiceRepository {
                 int serviceTypeId = resultSet.getInt("service_type_id");
                 String standard = resultSet.getString("standard_room");
                 String description = resultSet.getString("description_other_convenience");
-                double poolArea = resultSet.getDouble("pool_area");
-                int numberFloor = resultSet.getInt("number_of_floor");
-                Service service = new Service(id,name,area,cost,peoplemax,rentTypeID,serviceTypeId,standard,description,numberFloor);
+                String poolArea = resultSet.getString("pool_area");
+                String numberFloor = resultSet.getString("number_of_floor");
+                Service service = new Service(id,name,area,cost,peoplemax,rentTypeID,serviceTypeId,standard,description,numberFloor,poolArea);
                 serviceList.add(service);
             }
             preparedStatement.close();

@@ -20,8 +20,18 @@ public class ServiceServlet extends HttpServlet {
     List<ServiceType> serviceTypeList = serviceImpl.findAllServiceType();
     List<RentType> rentTypeList = serviceImpl.fillAllRentType();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String action = request.getParameter("action");
+        if (action == null){
+            action = "";
+        }
+        switch (action){
+            case "create":
+                createService(request,response);
+                break;
+        }
     }
+
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -56,6 +66,10 @@ public class ServiceServlet extends HttpServlet {
 
     }
     private void showFormCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<ServiceType> serviceTypeList = serviceImpl.findAllServiceType();
+        List<RentType> rentTypeList = serviceImpl.fillAllRentType();
+        request.setAttribute("typeServices",serviceTypeList);
+        request.setAttribute("rentTypes",rentTypeList);
         try {
             request.getRequestDispatcher("/view/service/create.jsp").forward(request,response);
         } catch (ServletException e) {
@@ -63,5 +77,47 @@ public class ServiceServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    //doPost
+    private void createService(HttpServletRequest request, HttpServletResponse response) {
+        boolean check = false;
+        int idTypeService = Integer.parseInt(request.getParameter("typeService"));
+        String serviceName = request.getParameter("name");
+        int area = Integer.parseInt(request.getParameter("area"));
+        double cost = Double.parseDouble(request.getParameter("cost"));
+        int peopleMax = Integer.parseInt(request.getParameter("peopleMax"));
+        int idTypeRent = Integer.parseInt(request.getParameter("rentTypeService"));
+        String standardRoom = request.getParameter("standardRoom");
+        String description = request.getParameter("description");
+        String poolArea = request.getParameter("poolArea");
+        String numberFloor = request.getParameter("numberFloor");
+        if (standardRoom == ""){
+            standardRoom = null;
+        }
+        if (description == ""){
+            description = null;
+        }
+        if (poolArea == ""){
+            poolArea = null;
+        }
+        if (numberFloor == ""){
+            numberFloor = null;
+        }
+        Service service = new Service(serviceName,area,cost,peopleMax,idTypeRent,idTypeService,standardRoom,description,numberFloor,poolArea);
+        check = serviceImpl.insertIntoService(service);
+        if (check){
+            request.setAttribute("message","Create success");
+        }
+        try {
+            request.getRequestDispatcher("/view/service/create.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

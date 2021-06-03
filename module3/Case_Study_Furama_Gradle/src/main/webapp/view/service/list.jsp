@@ -35,7 +35,7 @@
 
 
 <div class="d-flex justify-content-between my-3">
-    <a href="/customers?action=create" class="btn btn-info" style="border-radius: 5px">Create new customer</a>
+    <a href="/services?action=create" class="btn btn-info" style="border-radius: 5px">Create New Service</a>
 
     <form action="/customers?action=search" class="form-inline my-2 my-lg-0 d-flex" method="post">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchName">
