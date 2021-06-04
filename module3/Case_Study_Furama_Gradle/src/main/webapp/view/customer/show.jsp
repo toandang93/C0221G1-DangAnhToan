@@ -38,7 +38,7 @@
         <div class="form-group row">
             <label for="inputType" class="col-sm-3 col-form-label">Type of customer</label>
             <div class="col-sm-6">
-                <input type="text" readonly class="form-control" id="inputType" name="name" value="${customer.name}">
+                <input type="text" readonly class="form-control" id="inputType" name="name" value="${customer.customerTypeName}">
             </div>
         </div>
         <div class="form-group row">

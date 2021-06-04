@@ -12,7 +12,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
 </head>
-<body >
+<body>
 <div class="container-fluid -3 mb-3 d-flex align-items-center justify-content-between"
      style="background: #085F56;height: 60px">
     <div><img src="../../img/FURAMA.png" height="60" width="60"/></div>
@@ -51,8 +51,15 @@
             <label for="inputType" class="col-sm-3 col-form-label">Type of customer</label>
             <div class="col-sm-6">
                 <select name="type" id="inputType" value="customer.customerTypeName">
-                    <c:forEach items="${list}" var="customerName" >
-                        <option value="${customerName[0]}">${customerName[1]}</option>
+                    <c:forEach items="${list}" var="type">
+                        <c:choose>
+                            <c:when test="${type[1] == customer.customerTypeName}">
+                                <option value="${type[0]}" selected>${type[1]}</option>
+                            </c:when>
+                            <c:otherwise>
+                                <option value="${type[0]}">${type[1]}</option>
+                            </c:otherwise>
+                        </c:choose>
                     </c:forEach>
                 </select>
             </div>
@@ -66,10 +73,17 @@
         <div class="form-group row">
             <label for="inputGender" class="col-sm-3 col-form-label">Gender</label>
             <div class="col-sm-6">
-                <select name="gender" id="inputGender" value="${customer.gender}">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                <select name="gender" id="inputGender">
+                    <c:forEach items="${listGender}" var="listGender">
+                        <c:choose>
+                            <c:when test="${customer.gender == listGender}">
+                                <option value="${customer.gender}" selected>${customer.gender}</option>
+                            </c:when>
+                            <c:otherwise>
+                                <option value="${customer.gender}">${customer.gender}</option>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
                 </select>
             </div>
         </div>

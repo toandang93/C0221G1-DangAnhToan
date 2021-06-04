@@ -155,6 +155,8 @@ public class CustomerServlet extends HttpServlet {
         request.setAttribute("customer",customer);
         List<String[]> stringList = customerService.findTypeOfCustomer();
         request.setAttribute("list",stringList);
+        String[] listGenders = {"Male","Female","Other"};
+        request.setAttribute("listGender",listGenders);
         try {
             request.getRequestDispatcher("/view/customer/edit.jsp").forward(request,response);
         } catch (ServletException e) {

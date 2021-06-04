@@ -79,28 +79,36 @@
                 </select>
             </div>
         </div>
-        <div class="form-group row" id="divStandardRoom">
-            <label for="inputEmail" class="col-sm-3 col-form-label">Standard room</label>
-            <div class="col-sm-6">
-                <input type="email" class="form-control" id="inputEmail" name="standardRoom">
+        <div id="divStandardRoom">
+            <div class="form-group row" >
+                <label for="inputEmail" class="col-sm-3 col-form-label">Standard room</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="inputEmail" name="standardRoom">
+                </div>
             </div>
         </div>
-        <div class="form-group row" id="divDescription">
-            <label for="inputType" class="col-sm-3 col-form-label">Description</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputType" name="description">
+        <div id="divDescription">
+            <div class="form-group row" >
+                <label for="inputType" class="col-sm-3 col-form-label">Description</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputType" name="description">
+                </div>
             </div>
         </div>
-        <div class="form-group row" id="divPoolArea">
-            <label for="inputPool" class="col-sm-3 col-form-label">Pool area</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputPool" name="poolArea">
+        <div id="divPoolArea">
+            <div class="form-group row" >
+                <label for="inputPool" class="col-sm-3 col-form-label">Pool area</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputPool" name="poolArea">
+                </div>
             </div>
         </div>
-        <div class="form-group row" id="divNumberFloor">
-            <label for="inpurfloor" class="col-sm-3 col-form-label">Number of floor</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="inpurfloor" name="numberFloor">
+        <div id="divNumberFloor">
+            <div class="form-group row" >
+                <label for="inpurfloor" class="col-sm-3 col-form-label">Number of floor</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inpurfloor" name="numberFloor">
+                </div>
             </div>
         </div>
         <div class="d-flex ">

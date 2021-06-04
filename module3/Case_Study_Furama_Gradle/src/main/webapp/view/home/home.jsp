@@ -23,7 +23,7 @@
 
     <div class="d-flex justify-content-around " style="width: 100%">
         <a href="#" style="color: white">Home</a>
-        <a href="#" style="color: white">Employee</a>
+        <a href="/employees" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="/services" style="color: white">Service</a>
         <a href="#" style="color: white">Contract</a>
