@@ -25,11 +25,11 @@
      style="background: #085F56;height: 60px">
     <div class="d-flex justify-content-around " style="width: 100%">
         <a href="/view/home/home.jsp" style="color: white">Home</a>
-        <a href="#" style="color: white">Employee</a>
+        <a href="/employees" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="/services" style="color: white">Service</a>
-        <a href="#" style="color: white">Contract</a>
-        <a href="#" style="color: white">Contract Detail</a>
+        <a href="/contracts?action=create" style="color: white">Contract</a>
+        <a href="/details?action=create" style="color: white">Contract Detail</a>
     </div>
 </div>
 
@@ -78,8 +78,8 @@
                         <td>${serviceType.name}</td>
                     </c:if>
                 </c:forEach>
-                <td><a class="btn btn-info" href="/customers?action=show&id=${service.id}">Show</a></td>
-                <td><a class="btn btn-warning" href="/customers?action=edit&id=${service.id}">Edit</a></td>
+                <td><a class="btn btn-info" href="/services?action=show&id=${service.id}">Show</a></td>
+                <td><a class="btn btn-warning" href="/services?action=edit&id=${service.id}">Edit</a></td>
                 <td>
                     <button type="button"  class="btn btn-danger buttonDelete" data-toggle="modal"
                             data-target="#exampleModal">

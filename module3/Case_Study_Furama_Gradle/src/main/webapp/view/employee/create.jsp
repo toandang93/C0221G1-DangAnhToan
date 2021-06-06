@@ -21,8 +21,8 @@
         <a href="/employees" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="/services" style="color: white">Service</a>
-        <a href="#" style="color: white">Contract</a>
-        <a href="#" style="color: white">Contract Detail</a>
+        <a href="/contracts?action=create" style="color: white">Contract</a>
+        <a href="/details?action=create" style="color: white">Contract Detail</a>
     </div>
 </div>
 <div class="container-fluid d-flex justify-content-center">

@@ -116,6 +116,12 @@ public class CustomerServlet extends HttpServlet {
         if (check){
             request.setAttribute("message","Edit success");
         }
+        Customer customers =  customerService.findById(id);
+        request.setAttribute("customer",customers);
+        List<String[]> stringList = customerService.findTypeOfCustomer();
+        request.setAttribute("list",stringList);
+        String[] listGenders = {"Male","Female","Other"};
+        request.setAttribute("listGender",listGenders);
         try {
             request.getRequestDispatcher("/view/customer/edit.jsp").forward(request,response);
         } catch (ServletException e) {

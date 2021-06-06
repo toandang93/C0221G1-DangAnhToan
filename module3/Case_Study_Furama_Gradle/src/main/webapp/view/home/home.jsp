@@ -22,12 +22,12 @@
 <div class="container-fluid -3 my-3 d-flex align-items-center justify-content-between" style="background: #085F56;height: 50px">
 
     <div class="d-flex justify-content-around " style="width: 100%">
-        <a href="#" style="color: white">Home</a>
+        <a href="/view/home/home.jsp" style="color: white">Home</a>
         <a href="/employees" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="/services" style="color: white">Service</a>
-        <a href="#" style="color: white">Contract</a>
-        <a href="#" style="color: white">Contract Detail</a>
+        <a href="/contracts?action=create" style="color: white">Contract</a>
+        <a href="/details?action=create" style="color: white">Contract Detail</a>
     </div>
 
 
@@ -75,7 +75,7 @@
 </div>
 
 <div class="d-flex justify-content-center">
-    <img src="../img/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-1.jpg" height="509" width="1200"/>
+    <img src="../../img/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-1.jpg" height="509" width="1200"/>
 </div>
 <!--footer-->
 <div class="container-fluid  d-flex justify-content-center align-items-center bg-danger" style="clear: bottom">

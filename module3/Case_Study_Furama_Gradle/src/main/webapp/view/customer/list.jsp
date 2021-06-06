@@ -25,11 +25,11 @@
      style="background: #085F56;height: 60px">
     <div class="d-flex justify-content-around " style="width: 100%">
         <a href="/view/home/home.jsp" style="color: white">Home</a>
-        <a href="#" style="color: white">Employee</a>
+        <a href="/employees" style="color: white">Employee</a>
         <a href="/customers" style="color: white">Customer</a>
         <a href="/services" style="color: white">Service</a>
-        <a href="#" style="color: white">Contract</a>
-        <a href="#" style="color: white">Contract Detail</a>
+        <a href="/contracts?action=create" style="color: white">Contract</a>
+        <a href="/details?action=create" style="color: white">Contract Detail</a>
     </div>
 </div>
 
@@ -40,6 +40,9 @@
         <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchName">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
     </form>
+</div>
+<div>
+    <a href="/customerUsingServices" class="btn btn-info" style="border-radius: 5px">Customer Using Service</a>
 </div>
 
 <!--content body-->
