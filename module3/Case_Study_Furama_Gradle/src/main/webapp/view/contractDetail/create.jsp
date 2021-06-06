@@ -52,6 +52,7 @@
             <label for="inputType1" class="col-sm-3 col-form-label">Attach Service</label>
             <div class="col-sm-6">
                 <select name="idAttachService" id="inputType1">
+                    <option value="" selected>Không</option>
                     <c:forEach items="${attachLists}" var="attachList">
                         <option value="${attachList.id}">${attachList.name}</option>
                     </c:forEach>
@@ -62,7 +63,7 @@
         <div class="form-group row">
             <label for="inputIdCard" class="col-sm-3 col-form-label">Quantity</label>
             <div class="col-sm-6">
-                <input type="number" class="form-control" id="inputIdCard" name="quantity">
+                <input type="number" class="form-control" id="inputIdCard" name="quantity" value="0">
             </div>
         </div>
 

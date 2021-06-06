@@ -46,7 +46,7 @@ public class ContractDetailRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO_CONTRACTDETAIL);
             preparedStatement.setInt(1,contractDetail.getIdContract());
-            preparedStatement.setInt(2,contractDetail.getIdAttachService());
+            preparedStatement.setString(2,contractDetail.getIdAttachService());
             preparedStatement.setInt(3,contractDetail.getQuantity());
             rowInsert = preparedStatement.executeUpdate()>0;
             preparedStatement.close();

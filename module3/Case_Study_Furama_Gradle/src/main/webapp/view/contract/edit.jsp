@@ -26,7 +26,7 @@
     </div>
 </div>
 <div class="container-fluid d-flex justify-content-center">
-    <h1>Create New Contract</h1>
+    <h1>Edit Contract</h1>
 </div>
 <div>
     <c:if test="${message!=null}">

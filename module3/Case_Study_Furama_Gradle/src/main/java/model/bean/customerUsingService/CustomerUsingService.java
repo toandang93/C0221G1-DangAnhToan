@@ -7,27 +7,28 @@ public class CustomerUsingService {
     private int contractId;
     private String contractStartDate;
     private String contractEndDate;
-    private int serviceId;
     private String serviceName;
-    private String attachServiceName;
-    private int quantity;
 
     public CustomerUsingService() {
     }
 
-    public CustomerUsingService(int customerId, String customerName, String customerPhone, int contractId,
-                                String contractStartDate, String contractEndDate, int serviceId, String serviceName,
-                                String attachServiceName, int quantity) {
+    public CustomerUsingService(int customerId, String customerName, String customerPhone, int contractId, String contractStartDate, String contractEndDate, String serviceName) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.contractId = contractId;
         this.contractStartDate = contractStartDate;
         this.contractEndDate = contractEndDate;
-        this.serviceId = serviceId;
         this.serviceName = serviceName;
-        this.attachServiceName = attachServiceName;
-        this.quantity = quantity;
+    }
+
+    public CustomerUsingService(String customerName, String customerPhone, int contractId, String contractStartDate, String contractEndDate, String serviceName) {
+        this.customerName = customerName;
+        this.customerPhone = customerPhone;
+        this.contractId = contractId;
+        this.contractStartDate = contractStartDate;
+        this.contractEndDate = contractEndDate;
+        this.serviceName = serviceName;
     }
 
     public int getCustomerId() {
@@ -78,35 +79,11 @@ public class CustomerUsingService {
         this.contractEndDate = contractEndDate;
     }
 
-    public int getServiceId() {
-        return serviceId;
-    }
-
-    public void setServiceId(int serviceId) {
-        this.serviceId = serviceId;
-    }
-
     public String getServiceName() {
         return serviceName;
     }
 
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
-    }
-
-    public String getAttachServiceName() {
-        return attachServiceName;
-    }
-
-    public void setAttachServiceName(String attachServiceName) {
-        this.attachServiceName = attachServiceName;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }

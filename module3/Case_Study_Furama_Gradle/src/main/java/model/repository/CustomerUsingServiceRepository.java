@@ -51,12 +51,9 @@ public class CustomerUsingServiceRepository {
                 int contractId = resultSet.getInt("contract_id");
                 String contractStartDate = resultSet.getString("contract_start_date");
                 String contractEndDate = resultSet.getString("contract_end_date");
-                int serviceId = resultSet.getInt("service_id");
                 String serviceName = resultSet.getString("service_name");
-                String attachServiceName = resultSet.getString("attach_service_name");
-                int quantity = resultSet.getInt("quantity");
-                CustomerUsingService customerUsingService = new CustomerUsingService(customerId,customerName,customerPhone,
-                        contractId,contractStartDate,contractEndDate,serviceId,serviceName,attachServiceName,quantity);
+                CustomerUsingService customerUsingService = new CustomerUsingService(customerId,customerName,
+                        customerPhone,contractId,contractStartDate,contractEndDate,serviceName);
                 customerUsingServiceList.add(customerUsingService);
             }
             preparedStatement.close();
@@ -79,12 +76,9 @@ public class CustomerUsingServiceRepository {
                 int contractId = resultSet.getInt("contract_id");
                 String contractStartDate = resultSet.getString("contract_start_date");
                 String contractEndDate = resultSet.getString("contract_end_date");
-                int serviceId = resultSet.getInt("service_id");
                 String serviceName = resultSet.getString("service_name");
-                String attachServiceName = resultSet.getString("attach_service_name");
-                int quantity = resultSet.getInt("quantity");
-                CustomerUsingService customerUsingService = new CustomerUsingService(customerId,customerName,customerPhone,
-                        contractId,contractStartDate,contractEndDate,serviceId,serviceName,attachServiceName,quantity);
+                CustomerUsingService customerUsingService = new CustomerUsingService(customerId,customerName,
+                        customerPhone,contractId,contractStartDate,contractEndDate,serviceName);
                 customerUsingServiceList.add(customerUsingService);
             }
             preparedStatement.close();

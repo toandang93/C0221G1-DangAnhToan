@@ -126,7 +126,8 @@ join contract con on cd.contract_id = con.contract_id;
 
 select * from show_attach_service;
 
-
+select * from customer_using_service
+where customer_name like "%e%";
 
 
 

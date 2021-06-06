@@ -22,7 +22,7 @@ import java.util.List;
 @WebServlet(name = "ContractServlet", urlPatterns = "/contracts")
 public class ContractServlet extends HttpServlet {
     IContractService contractService = new ContractServiceImpl();
-    ContractRepository contractRepository = new ContractRepository();
+//    ContractRepository contractRepository = new ContractRepository();
     CustomerServiceImpl customerService = new CustomerServiceImpl();
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     ServiceImpl serviceimpl = new ServiceImpl();
@@ -73,7 +73,7 @@ public class ContractServlet extends HttpServlet {
         int employeeId = Integer.parseInt(request.getParameter("employee"));
         int serviceId = Integer.parseInt(request.getParameter("service"));
         Contract contract = new Contract(startDate, endDate, deposit, employeeId, customerId, serviceId);
-        check = contractRepository.insertContract(contract);
+        check = contractService.insertContract(contract);
         if (check) {
             request.setAttribute("message", "create success");
         }else {
@@ -96,7 +96,7 @@ public class ContractServlet extends HttpServlet {
 
     private void deleteContract(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("contractId"));
-         contractRepository.deleteContract(id);
+         contractService.deleteContract(id);
         try {
             response.sendRedirect("/customerUsingServices");
         } catch (IOException e) {
@@ -113,7 +113,7 @@ public class ContractServlet extends HttpServlet {
         int employeeId = Integer.parseInt(request.getParameter("employee"));
         int serviceId = Integer.parseInt(request.getParameter("service"));
         Contract contract = new Contract(startDate, endDate, deposit, employeeId, customerId, serviceId);
-        check = contractRepository.updateContractById(contractId,contract);
+        check = contractService.updateContract(contractId,contract);
         if (check) {
             request.setAttribute("message", "create success");
         }else {

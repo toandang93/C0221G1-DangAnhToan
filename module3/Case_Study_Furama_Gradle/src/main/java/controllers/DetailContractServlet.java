@@ -60,8 +60,11 @@ public class DetailContractServlet extends HttpServlet {
     private void createContractDetail(HttpServletRequest request, HttpServletResponse response) {
         boolean check = false;
         int idContract = Integer.parseInt(request.getParameter("idContract"));
-        int idAttachService = Integer.parseInt(request.getParameter("idAttachService"));
+        String idAttachService = request.getParameter("idAttachService");
         int quantity = Integer.parseInt(request.getParameter("quantity"));
+        if (idAttachService == ""){
+            idAttachService = null;
+        }
         ContractDetail contractDetail = new ContractDetail(idContract,idAttachService,quantity);
         check = contractDetailService.insertIntoContractDetail(contractDetail);
         if (check){

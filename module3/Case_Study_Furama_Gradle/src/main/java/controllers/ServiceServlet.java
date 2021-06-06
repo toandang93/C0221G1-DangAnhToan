@@ -110,7 +110,11 @@ public class ServiceServlet extends HttpServlet {
         check = serviceImpl.insertIntoService(service);
         if (check){
             request.setAttribute("message","Create success");
+        }else {
+            request.setAttribute("message","Create fail");
         }
+        request.setAttribute("serviceTypes",serviceTypeList);
+        request.setAttribute("rentTypes",rentTypeList);
         try {
             request.getRequestDispatcher("/view/service/create.jsp").forward(request,response);
         } catch (ServletException e) {

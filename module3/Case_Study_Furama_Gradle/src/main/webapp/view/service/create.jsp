@@ -125,7 +125,7 @@
 
 <script>
     function changeCreate(value) {
-        document.getElementById("divStandardRoom").style.display = "lock";
+        document.getElementById("divStandardRoom").style.display = "block";
         document.getElementById("divDescription").style.display = "block";
         document.getElementById("divNumberFloor").style.display = "block";
         document.getElementById("divPoolArea").style.display = "block";
