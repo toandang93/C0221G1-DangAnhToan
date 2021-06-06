@@ -100,7 +100,7 @@ quantity int
 );
 
 
-drop view customer_using_service;
+drop view if exists customer_using_service;
 create view customer_using_service as
 select cus.customer_id,cus.customer_name,cus.customer_phone,
 con.contract_id,con.contract_start_date,con.contract_end_date,
@@ -118,7 +118,13 @@ select * from customer_using_service;
 delete from customer_using_service
 where customer_id = 5;
 
+create view show_attach_service as
+select att.attach_service_id,att.attach_service_name,con.contract_id,cd.quantity
+from attach_service att 
+join contract_detail cd on att.attach_service_id = cd.attach_service_id
+join contract con on cd.contract_id = con.contract_id;
 
+select * from show_attach_service;
 
 
 

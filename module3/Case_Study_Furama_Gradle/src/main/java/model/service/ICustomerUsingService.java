@@ -8,4 +8,5 @@ import java.util.List;
 public interface ICustomerUsingService {
     List<CustomerUsingService> findAll();
     List<AttachService> findAllAttachService();
+    List<CustomerUsingService> searchByName(String name);
 }

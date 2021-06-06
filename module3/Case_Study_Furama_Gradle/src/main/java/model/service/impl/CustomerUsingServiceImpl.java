@@ -18,4 +18,9 @@ public class CustomerUsingServiceImpl implements ICustomerUsingService {
     public List<AttachService> findAllAttachService() {
         return customerUsingServiceRepository.findAllAttachService();
     }
+
+    @Override
+    public List<CustomerUsingService> searchByName(String name) {
+        return customerUsingServiceRepository.searchByName(name);
+    }
 }
