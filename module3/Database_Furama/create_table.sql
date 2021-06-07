@@ -104,13 +104,10 @@ drop view if exists customer_using_service;
 create view customer_using_service as
 select cus.customer_id,cus.customer_name,cus.customer_phone,
 con.contract_id,con.contract_start_date,con.contract_end_date,
-ser.service_id,ser.service_name,
-att.attach_service_name,cd.quantity
+ser.service_name
 from contract con
 left join customer cus on con.customer_id = cus.customer_id
 left join service ser on con.service_id = ser.service_id
-left join contract_detail cd on con.contract_id = cd.contract_id
-left join attach_service att on cd.attach_service_id = att.attach_service_id
 where now() between con.contract_start_date and con.contract_end_date
 group by cus.customer_id;
 

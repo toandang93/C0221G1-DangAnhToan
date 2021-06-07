@@ -42,6 +42,12 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="inputCode" class="col-sm-3 col-form-label">Customer Code</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputCode" name="code" value="${customer.code}">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="inputName" class="col-sm-3 col-form-label">Customer Name</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inputName" name="name" value="${customer.name}">
@@ -77,10 +83,10 @@
                     <c:forEach items="${listGender}" var="listGender">
                         <c:choose>
                             <c:when test="${customer.gender == listGender}">
-                                <option value="${customer.gender}" selected>${customer.gender}</option>
+                                <option value="${listGender}" selected>${listGender}</option>
                             </c:when>
                             <c:otherwise>
-                                <option value="${customer.gender}">${customer.gender}</option>
+                                <option value="${listGender}">${listGender}</option>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>

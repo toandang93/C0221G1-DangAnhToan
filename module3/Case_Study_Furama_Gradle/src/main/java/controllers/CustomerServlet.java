@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "CustomerServlet",urlPatterns = "/customers")
@@ -68,19 +69,65 @@ public class CustomerServlet extends HttpServlet {
 
     //doPost
     private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
-        boolean check = false;
+        String customerCode = request.getParameter("code");
+        if (customerCode == null){
+            customerCode = "";
+        }
         String name = request.getParameter("name");
+        if (name == null){
+            name = "";
+        }
         int typeCustomer = Integer.parseInt(request.getParameter("type"));
         String date = request.getParameter("date");
+        if (date == null){
+            date = "";
+        }
         String gender = request.getParameter("gender");
         String email = request.getParameter("email");
+        if (email == null){
+            email = "";
+        }
         String idCard = request.getParameter("idCard");
+        if (idCard == null){
+            idCard = "";
+        }
         String phone = request.getParameter("phone");
+        if (phone == null){
+            phone = "";
+        }
         String address = request.getParameter("address");
-        Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
-        check = customerService.insertInto(customer);
-        if (check){
-            request.setAttribute("message","Create success");
+        if (address == null){
+            address = "";
+        }
+        Customer customer = new Customer(customerCode,name,typeCustomer,date,gender,idCard,
+                phone,email,address);
+        try{
+            List<String> errList = customerService.insertInto(customer);
+            int checkFull = 0;
+            boolean check = false;
+            String msgCreate = null;
+            for (String string : errList){
+                if (string.equals("")){
+                    checkFull++;
+                }
+            }
+            if (checkFull == 7){
+                check = true;
+            }
+            if (check){
+                msgCreate = "Create Success";
+            }else {
+                msgCreate = "Create Fail";
+                request.setAttribute("customer",customer);
+            }
+            request.setAttribute("message",msgCreate);
+            for (int i = 0;i<errList.size();i++){
+                request.setAttribute("err"+(i+1),errList.get(i));
+            }
+            List<String[]> stringList = customerService.findTypeOfCustomer();
+            request.setAttribute("list",stringList);
+        }catch (Exception e){
+            e.printStackTrace();
         }
         try {
             request.getRequestDispatcher("/view/customer/create.jsp").forward(request,response);
@@ -103,6 +150,7 @@ public class CustomerServlet extends HttpServlet {
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
         boolean check = false;
         int id = Integer.parseInt(request.getParameter("id"));
+        String code = request.getParameter("code");
         String name = request.getParameter("name");
         int typeCustomer = Integer.parseInt(request.getParameter("type"));
         String date = request.getParameter("date");
@@ -111,7 +159,8 @@ public class CustomerServlet extends HttpServlet {
         String idCard = request.getParameter("idCard");
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
-        Customer customer = new Customer(name,typeCustomer,date,gender,idCard,phone,email,address);
+        Customer customer = new Customer(id,code,name,typeCustomer,date,gender,idCard,phone,
+                email,address);
         check = customerService.updateById(id,customer);
         if (check){
             request.setAttribute("message","Edit success");

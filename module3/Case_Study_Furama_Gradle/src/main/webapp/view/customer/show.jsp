@@ -30,6 +30,18 @@
 <div class="container d-flex ">
     <form action="/customers?action=edit" style="width: 70%;margin-left: 155px" method="post">
         <div class="form-group row">
+            <label for="inputId" class="col-sm-3 col-form-label">Customer Id</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputId" name="id" readonly value="${customer.id}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputCode" class="col-sm-3 col-form-label">Customer Code</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputCode" name="code" readonly value="${customer.code}">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="inputName" class="col-sm-3 col-form-label">Customer Name</label>
             <div class="col-sm-6">
                 <input type="text" readonly class="form-control" id="inputName" name="name" value="${customer.name}">

@@ -2,6 +2,7 @@ package model.bean.customer;
 
 public class Customer {
     private int id;
+    private String code;
     private String name;
     private int customerTypeId;
     private String customerTypeName;
@@ -15,7 +16,22 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String name, int customerTypeId, String birthday, String gender, String idCard, String phone, String email, String address) {
+    public Customer(int id, String code, String name, String customerTypeName, String birthday, String gender, String idCard, String phone, String email, String address) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.customerTypeName = customerTypeName;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+    }
+
+    public Customer(int id, String code, String name, int customerTypeId, String birthday, String gender, String idCard, String phone, String email, String address) {
+        this.id = id;
+        this.code = code;
         this.name = name;
         this.customerTypeId = customerTypeId;
         this.birthday = birthday;
@@ -26,10 +42,11 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(int id, String name, String customerTypeName, String birthday, String gender, String idCard, String phone, String email, String address) {
-        this.id = id;
+    public Customer(String code, String name, int customerTypeId, String birthday,
+                    String gender, String idCard, String phone, String email, String address) {
+        this.code = code;
         this.name = name;
-        this.customerTypeName = customerTypeName;
+        this.customerTypeId = customerTypeId;
         this.birthday = birthday;
         this.gender = gender;
         this.idCard = idCard;
@@ -44,6 +61,14 @@ public class Customer {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {

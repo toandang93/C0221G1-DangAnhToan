@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Customer List</title>
-        <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
     <link rel="stylesheet" href="../../bootraps_min/dataTables.bootstrap.min.css">
 </head>
 <body>
@@ -48,15 +48,15 @@
 <!--content body-->
 <div class="container-fluid">
     <div class="row">
-        <table  id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
+        <table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
             <thead>
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">STT</th>
+                <th scope="col">Customer Code</th>
                 <th scope="col">Name</th>
                 <th scope="col">Type Customer</th>
                 <th scope="col">Date</th>
                 <th scope="col">Gender</th>
-                <th scope="col">Id card</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
                 <th scope="col">Address</th>
@@ -66,25 +66,25 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${customers}" var="customer">
+            <c:forEach items="${customers}" var="customer" varStatus="status">
                 <tr>
-                    <th scope="row">${customer.id}</th>
+                    <th scope="row">${status.count}</th>
+                    <th>${customer.code}</th>
                     <td>${customer.name}</td>
                     <td>${customer.customerTypeName}</td>
                     <td>${customer.birthday}</td>
                     <td>${customer.gender}</td>
-                    <td>${customer.idCard}</td>
                     <td>${customer.phone}</td>
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
                     <td><a class="btn btn-info" href="/customers?action=show&id=${customer.id}">Show</a></td>
                     <td><a class="btn btn-warning" href="/customers?action=edit&id=${customer.id}">Edit</a></td>
                     <td>
-                        <button type="button"  class="btn btn-danger buttonDelete" data-toggle="modal"
-                                data-target="#exampleModal">
+                        <button type="button" class="btn btn-danger buttonDelete" data-toggle="modal"
+                                data-target="#exampleModal" onclick="sendData(${customer.id})">
                             Delete
                         </button>
-                        <input type="hidden" id="idInput" value="${customer.id}">
+                        <input type="hidden" id="idInput" value="${customer.id}" name="idHiden">
                     </td>
                 </tr>
             </c:forEach>
@@ -131,12 +131,16 @@
 
         });
     });
-    $(document).ready(function () {
-        $('.buttonDelete').on('click',function () {
-            let id = $(this).parent().find('#idInput').val();
-            $('#idDelete').val(id);
-        })
-    })
+    // $(document).ready(function () {
+    //     $('.buttonDelete').on('click',function () {
+    //         let id = $(this).parent().find('#idInput').val();
+    //         $('#idDelete').val(id);
+    //     })
+    // })
+    function sendData(id) {
+        document.getElementById("idDelete").value = id;
+
+    }
 </script>
 
 </body>
