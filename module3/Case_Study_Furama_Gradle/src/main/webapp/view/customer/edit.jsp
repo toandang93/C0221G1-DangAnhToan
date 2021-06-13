@@ -80,15 +80,18 @@
             <label for="inputGender" class="col-sm-3 col-form-label">Gender</label>
             <div class="col-sm-6">
                 <select name="gender" id="inputGender">
-                    <c:forEach items="${listGender}" var="listGender">
-                        <c:choose>
-                            <c:when test="${customer.gender == listGender}">
-                                <option value="${listGender}" selected>${listGender}</option>
-                            </c:when>
-                            <c:otherwise>
-                                <option value="${listGender}">${listGender}</option>
-                            </c:otherwise>
-                        </c:choose>
+<%--                    <c:forEach items="${listGender}" var="listGender">--%>
+<%--                        <c:choose>--%>
+<%--                            <c:when test="${customer.gender == listGender}">--%>
+<%--                                <option value="${listGender}" selected>${listGender}</option>--%>
+<%--                            </c:when>--%>
+<%--                            <c:otherwise>--%>
+<%--                                <option value="${listGender}">${listGender}</option>--%>
+<%--                            </c:otherwise>--%>
+<%--                        </c:choose>--%>
+<%--                    </c:forEach>--%>
+                    <c:forEach items="${listGender}" var="temp">
+                        <option value="${temp}" ${temp==customer.gender?"selected":""}>${temp}</option>
                     </c:forEach>
                 </select>
             </div>

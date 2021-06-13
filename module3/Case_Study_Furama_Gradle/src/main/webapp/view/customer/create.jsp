@@ -15,6 +15,7 @@
             color: red;
         }
     </style>
+    <link rel="stylesheet" href="../../datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../bootraps_min/bootstrap.min.css">
 
 </head>
@@ -45,14 +46,14 @@
             <label for="inputCode" class="col-sm-3 col-form-label">Customer Code</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inputCode" name="code" value="${customer.code}">
-                <small>${err1}</small>
+                <small>${errList.get(0)}</small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputName" class="col-sm-3 col-form-label">Customer Name</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inputName" name="name" value="${customer.name}">
-                <small>${err2}</small>
+                <small>${errList.get(1)}</small>
             </div>
         </div>
         <div class="form-group row">
@@ -69,7 +70,7 @@
             <label for="inputDate" class="col-sm-3 col-form-label">Date</label>
             <div class="col-sm-6">
                 <input type="date" class="form-control" id="inputDate" name="date" value="${customer.birthday}">
-                <small>${err3}</small>
+                <small>${errList.get(2)}</small>
             </div>
         </div>
         <div class="form-group row">
@@ -86,28 +87,28 @@
             <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
             <div class="col-sm-6">
                 <input type="email" class="form-control" id="inputEmail" name="email" value="${customer.email}">
-                <small>${err4}</small>
+                <small>${errList.get(3)}</small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputIdCard" class="col-sm-3 col-form-label">Id card</label>
             <div class="col-sm-6">
                 <input type="number" class="form-control" id="inputIdCard" name="idCard" value="${customer.idCard}">
-                <small>${err5}</small>
+                <small>${errList.get(4)}</small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputPhone" class="col-sm-3 col-form-label">Phone</label>
             <div class="col-sm-6">
                 <input type="number" class="form-control" id="inputPhone" name="phone" value="${customer.phone}">
-                <small>${err6}</small>
+                <small>${errList.get(5)}</small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inpurAddress" class="col-sm-3 col-form-label">Address</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="inpurAddress" name="address" value="${customer.address}">
-                <small>${err7}</small>
+                <small>${errList.get(6)}</small>
             </div>
         </div>
         <div class="d-flex ">

@@ -19,7 +19,9 @@ public class Validate {
    public static String checkCustomerCode(String customerCode) {
         boolean check = customerCode.matches(CUSTOMER_CODE);
         String CheckCustomerCode = "";
-        if (!check) {
+        if ("".equals(customerCode)){
+            CheckCustomerCode = "Please input code of customer";
+        }else if (!check) {
             CheckCustomerCode = "Customer Code is form KH-XXXX (X is number from 0-9)";
         }
         Customer checkNull= customerRepository.findByCode(customerCode);
@@ -79,9 +81,12 @@ public class Validate {
    public static String checkName(String name) {
         boolean check = name.matches(NAME);
         String checkName = "";
-        if (!check) {
+       if("".equals(name)){
+           checkName="Please input name";
+       }else if (!check) {
             checkName ="Name invalid";
         }
+
         return checkName;
     }
    public static String checkNull(String string) {

@@ -31,6 +31,7 @@ public class CustomerRepository {
             "customer_address = ?\n" +
             "where customer_id = ?;";
     private static final String SEARCH_BY_NAME = "select * from customer where customer_name like ?" +
+            " or customer_phone like ?" +
             " or customer_id_card  like ?;";
     private static final String SELECT_BY_CODE = "select * from customer where customer_code = ?;";
 
@@ -81,6 +82,7 @@ public class CustomerRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_NAME);
             preparedStatement.setString(1,"%"+name+"%");
             preparedStatement.setString(2,"%"+name+"%");
+            preparedStatement.setString(3,"%"+name+"%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String name_type_customer = null;

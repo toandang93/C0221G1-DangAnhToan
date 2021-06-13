@@ -121,9 +121,10 @@ public class CustomerServlet extends HttpServlet {
                 request.setAttribute("customer",customer);
             }
             request.setAttribute("message",msgCreate);
-            for (int i = 0;i<errList.size();i++){
-                request.setAttribute("err"+(i+1),errList.get(i));
-            }
+//            for (int i = 0;i<errList.size();i++){
+//                request.setAttribute("err"+(i+1),errList.get(i));
+//            }
+            request.setAttribute("errList",errList);
             List<String[]> stringList = customerService.findTypeOfCustomer();
             request.setAttribute("list",stringList);
         }catch (Exception e){
