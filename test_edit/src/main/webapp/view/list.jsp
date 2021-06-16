@@ -40,7 +40,7 @@
         <tr id="abc${student.id}">
                 <th>${status.count}</th>
                 <th>
-                    <input type="text" readOnly name="name" value="${student.name}" id="name${student.id}">
+                    <input type="text" readonly name="name" value="${student.name}" id="name${student.id}">
                 </th>
                 <th>
                     <input type="number" readonly name="age" value="${student.age}" id="age${student.id}">
@@ -53,11 +53,9 @@
                 <th>
                     <button id="btEdit${student.id}" onclick="editStudent('${student.id}')">Edit</button>
 
-<%--                    <div id="saveEdit${student.id}" style="display: none">--%>
-<%--                        <input--%>
-<%--                                type="submit"--%>
-<%--                                value="Save">--%>
-<%--                    </div>--%>
+                    <div id="saveEdit${student.id}" style="display: none">
+                        <input type="submit" value="Save">
+                    </div>
                 </th>
                 <th><a href="">Delete</a></th>
         </tr>
@@ -67,15 +65,11 @@
 </table>
 
 <script>
-    function test() {
-        document.getElementById("test123").readOnly = false;
-    }
-
-    function editStudent(id) {
+       function editStudent(id) {
         document.getElementById("name" + id).readOnly = false;
         document.getElementById("age" + id).readOnly = false;
         document.getElementById("btEdit" + id).style.display = "none";
-        // document.getElementById("saveEdit" + id).style.display = "block";
+        document.getElementById("saveEdit" + id).style.display = "block";
 
     }
 </script>
