@@ -16,15 +16,7 @@
 <div>
     <a href="/students?action=create">Create student</a>
 </div>
-<%--<div>--%>
-<%--    <p>Bạn có muốn lưu thay đổi không</p>--%>
-<%--    <form action="">--%>
-<%--        <input type="hidden" id="sendName" name="sendName">--%>
-<%--        <input type="hidden" id="sendAge" name="sendAge">--%>
-<%--        <a href="/students">Không</a>--%>
-<%--        <input type="submit" value="Có">--%>
-<%--    </form>--%>
-<%--</div>--%>
+
 <table border="1">
     <tr>
         <th>STT</th>
@@ -54,7 +46,7 @@
                     <button id="btEdit${student.id}" onclick="editStudent('${student.id}')">Edit</button>
 
                     <div id="saveEdit${student.id}" style="display: none">
-                        <input type="submit" value="Save">
+                       <button onclick="sendData('${student.id}')">Save</button>
                     </div>
                 </th>
                 <th><a href="">Delete</a></th>
@@ -63,14 +55,26 @@
     </c:forEach>
 
 </table>
+<form action="/students?action=edit" method="post" id="autoEdit" hiden>
+    <input type="text" id="receive1" name="receive1" hidden>
+    <input type="text" id="receive2" name="receive2" hidden>
+    <input type="text" id="receive3" name="receive3" hidden>
 
+</form>
 <script>
        function editStudent(id) {
         document.getElementById("name" + id).readOnly = false;
         document.getElementById("age" + id).readOnly = false;
         document.getElementById("btEdit" + id).style.display = "none";
         document.getElementById("saveEdit" + id).style.display = "block";
-
+    }
+    function sendData(id) {
+           let name = document.getElementById("name"+id).value;
+           let age = document.getElementById("age"+id).value;
+           document.getElementById("receive1").value = id;
+           document.getElementById("receive2").value = name;
+           document.getElementById("receive3").value = age;
+           document.getElementById("autoEdit").submit();
     }
 </script>
 

@@ -13,28 +13,34 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "StudentServlet",urlPatterns = {"","/students"})
+@WebServlet(name = "StudentServlet", urlPatterns = {"", "/students"})
 public class StudentServlet extends HttpServlet {
     IStudentService studentService = new StudentServiceImpl();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action =  request.getParameter("action");
-        if (action == null){
+        String action = request.getParameter("action");
+        if (action == null) {
             action = "";
         }
         switch (action){
             case "edit":
-                editStudent(request,response);
-                break;
-            default:
-                showList(request,response);
+                editStudent(request, response);
                 break;
         }
     }
 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+
+            default:
+                showList(request, response);
+                break;
+        }
+    }
 
 
     //doGet
@@ -42,20 +48,21 @@ public class StudentServlet extends HttpServlet {
         List<Student> studentList = studentService.findAllStudent();
         List<Class> classList = studentService.findAllClass();
 
-        request.setAttribute("students",studentList);
-        request.setAttribute("classlist",classList);
+        request.setAttribute("students", studentList);
+        request.setAttribute("classlist", classList);
         try {
-            request.getRequestDispatcher("/view/list.jsp").forward(request,response);
+            request.getRequestDispatcher("/view/list.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     private void editStudent(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        int age = Integer.parseInt(request.getParameter("age"));
-        String abc = null;
+        int id = Integer.parseInt(request.getParameter("receive1"));
+        String name = request.getParameter("receive2");
+        int age = Integer.parseInt(request.getParameter("receive3"));
+
     }
 }
