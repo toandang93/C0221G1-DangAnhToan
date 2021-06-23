@@ -10,6 +10,12 @@
     <input type="text" th:field="*{name}">
     <p>Content</p>
     <textarea th:field="*{content}" cols="30"></textarea>
+    <select  th:field="*{category}">
+        <option  th:each="cate : ${category}"
+                        th:text="${cate.name}"
+                        th:value="${cate.id}">
+        </option>
+    </select>
     <input type="submit" value="create">
 
 </form>

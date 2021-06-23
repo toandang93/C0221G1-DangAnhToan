@@ -1,6 +1,7 @@
 package com.example.blog.model.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "blog")
@@ -11,6 +12,27 @@ public class Blog {
     private Integer id;
     private String name;
     private String content;
+    private Date date=new Date(System.currentTimeMillis());
+
+    @ManyToOne
+    @JoinColumn(name = "category_id",referencedColumnName = "id")
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Blog() {
     }
