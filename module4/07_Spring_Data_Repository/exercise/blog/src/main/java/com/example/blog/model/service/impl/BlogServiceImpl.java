@@ -5,8 +5,11 @@ import com.example.blog.model.entity.Category;
 import com.example.blog.model.repository.IBlogRepository;
 import com.example.blog.model.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +42,16 @@ public class BlogServiceImpl implements IBlogService {
         iBlogRepository.deleteById(id);
     }
 
-//    public Iterable<Blog> findAllByCategory(Category category){
-//        return iBlogRepository.findAllByCategory(category);
-//    }
+    @Override
+    public Page<Blog> findAllByNameContaining(String name, Pageable pageable) {
+        return iBlogRepository.findAllByNameContaining(name,pageable);
+    }
+
+
+    @Override
+    public Page<Blog> findAll(Pageable pageable) {
+        return iBlogRepository.findAll(pageable);
+    }
+
+
 }

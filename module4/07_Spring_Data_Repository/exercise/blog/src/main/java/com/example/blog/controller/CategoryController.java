@@ -5,10 +5,7 @@ import com.example.blog.model.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/category")
@@ -32,5 +29,17 @@ public class CategoryController {
         this.categoryService.save(category);
         model.addAttribute("msg","Create Successfully");
         return "/category/create";
+    }
+
+    @GetMapping(value = "/edit")
+    public String showFormEdit(@RequestParam long id, Model model){
+        model.addAttribute("category",this.categoryService.findById(id));
+        return "/category/edit";
+    }
+
+    @PostMapping(value = "edit")
+    public String editCategory(@ModelAttribute Category category){
+        this.categoryService.save(category);
+        return "redirect:/category";
     }
 }

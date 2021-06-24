@@ -2,16 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Create</title>
+  <title>Edit</title>
 </head>
 <body>
 <a href="/category">Back To List</a>
 <span th:text="${msg}"></span>
-<form th:action="@{/category/create}" th:object="${category}" method="post">
+<form th:action="@{/category/edit}" th:object="${category}" method="post">
+  <input type="hidden" th:field="*{id}">
   <p>Name</p>
   <input type="text" th:field="*{name}">
 
-  <input type="submit" value="create">
+  <input type="submit" value="Edit">
 
 </form>
 </body>

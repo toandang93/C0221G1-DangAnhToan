@@ -5,6 +5,7 @@
     <title>Create</title>
 </head>
 <body>
+<a href="/blog">Back To List</a>
 <form th:action="@{/blog/create}" th:object="${blog}" method="post">
     <p>Name</p>
     <input type="text" th:field="*{name}">

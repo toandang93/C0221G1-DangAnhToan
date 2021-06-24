@@ -19,9 +19,9 @@
     <tr th:each="c,loop : ${category}">
         <td th:text="${loop.count}"></td>
         <td th:text="${c.name}"></td>
-        <td><a th:href="@{/blog/edit(id=${c.id})}">Edit</a></td>
-        <td><a th:href="@{/blog/show(id=${c.id})}">Show</a></td>
-        <td><a th:href="@{/blog/delete(id=${c.id})}">Delete</a></td>
+        <td><a th:href="@{/category/edit(id=${c.id})}">Edit</a></td>
+        <td><a th:href="@{/category/show(id=${c.id})}">Show</a></td>
+        <td><a th:href="@{/category/delete(id=${c.id})}">Delete</a></td>
 
     </tr>
 </table>
