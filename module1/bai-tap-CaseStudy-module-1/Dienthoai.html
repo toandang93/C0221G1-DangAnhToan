@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .iphone1 {
+            height: 300px;
+            width: 200px;
+            border-radius: 10px;
+            background: #008eff;
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Iphone massenger</title>
+</head>
+<body>
+<div style="display: flex;justify-content: space-around">
+    <div class="iphone1">
+        <h3 style="text-align: center">Iphone1</h3>
+        <textarea id="dt1" cols="22" rows="13" style="margin-left: 8px"></textarea>
+        <button onclick="send1()" style="margin-left: 70px;background: greenyellow;border-radius: 10px">Send</button>
+    </div>
+    <div class="iphone1">
+        <h3 style="text-align: center">Iphone2</h3>
+        <textarea id="dt2" cols="22" rows="13" style="margin-left: 8px"></textarea>
+        <button onclick="send2()" style="margin-left: 70px;background: greenyellow;border-radius: 10px">Send</button>
+    </div>
+</div>
+
+<script>
+    function send1() {
+        let a = document.getElementById("dt1").value;
+        document.getElementById("dt2").innerText = a;
+    }
+
+    function send2() {
+        let a = document.getElementById("dt2").value;
+        document.getElementById("dt1").innerText = a;
+    }
+</script>
+</body>
+
+</html>

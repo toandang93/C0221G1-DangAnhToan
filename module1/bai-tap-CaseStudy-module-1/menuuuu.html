@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="margin-left:200px">Menu : Quán Trà Đá</h3>
+<div><input type="button" value="Thêm Thức Uống" onclick="addDrink()"></div>
+<div id="display"></div>
+
+<script>
+    class Drinks {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+            this.value = 0;
+            this.monney = 0;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        getValue() {
+            return this.value;
+        }
+
+        getMoney() {
+            return this.monney;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        setValue(value) {
+            this.value += value;
+        }
+
+        setMoney(money) {
+            this.monney = money;
+        }
+    }
+
+    function display(arr) {
+        let result = 0;
+        let tableString = "<table border=\"1\">\n" +
+            "    <tr>\n" +
+            "        <td>Tên thức uống</td>\n" +
+            "        <td>Đơn giá</td>\n" +
+            "        <td>Chọn</td>\n" +
+            "        <td>Số lượng</td>\n" +
+            "        <td>Thành tiền</td>\n" +
+            "        <td>Sửa</td>\n" +
+            "        <td>Xóa</td>\n" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            tableString += " <tr>\n" +
+                "        <td><input type=\"text\" value=\"" + arr[i].getName() + "\" readonly></td>\n" +
+                "        <td><input type=\"text\" value=\"" + arr[i].getPrice() + "\" readonly></td>\n" +
+                "        <td><input type=\"button\" value=\"-\"  onclick='giam(" + i + ")'>" +
+                "<input type=\"button\" value=\"+\"  onclick='tang(" + i + ")'></td>\n" +
+                "        <td><input type=\"text\" value=\"" + arr[i].getValue() + "\" readonly ></td>\n" +
+                "        <td><input type=\"text\" value=\"" + arr[i].getMoney() + "\" readonly ></td>\n" +
+                "<td><input type=\"button\" value=\"sửa\"  onclick='edit(" + i + ")'></td>\n" +
+                "<td><input type=\"button\" value=\"xóa\"  onclick='dele(" + i + ")'></td>\n" +
+                "    </tr>"
+            result += arr[i].getMoney();
+        }
+        tableString += " <tr>\n" +
+            "        <th colspan='4'>Tổng tiền:</th>\n" +
+            "        <td colspan='3'>" + result + "</td>\n" +
+            "    </tr>"
+        tableString += "</table>";
+
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    let sp1 = new Drinks("cafe", 7000)
+    let sp2 = new Drinks("nước cam", 14000)
+    let sp3 = new Drinks("nước dừa", 15000)
+    let arr = [sp1, sp2, sp3];
+    display(arr);
+
+    function tang(index) {
+        arr[index].setValue(1);
+        let result = arr[index].getPrice() * arr[index].getValue();
+        arr[index].setMoney(result);
+        display(arr);
+    }
+
+    function giam(index) {
+        if (arr[index].getValue() > 0) {
+            arr[index].setValue(-1);
+            let result = arr[index].getPrice() * arr[index].getValue();
+            arr[index].setMoney(result);
+            display(arr);
+        }
+    }
+
+    function edit(index) {
+        let check = true;
+        do {
+            let n = prompt("Chọn mục bạn muốn sửa:\n" +
+                "1.Tên\n" +
+                "2.Đơn giá\n" +
+                "3.Thoát.")
+            switch (n) {
+            case "1":
+                arr[index].setName(prompt("Nhập tên mới"));
+                break;
+            case "2":
+                arr[index].setPrice(prompt('Nhập đơn giá mới'));
+                break;
+            default:
+                check = false;
+            }
+                if (check == false) {
+                    break;
+                }
+        } while (true);
+        display(arr);
+
+    }
+    function dele(index) {
+        let n=confirm("bạn có muốn xóa " + arr[index].getName() +" không???");
+        if(n){
+            arr.splice(index,1);
+        }
+        display(arr);
+
+    }
+    function addDrink() {
+        let name;
+
+        name=prompt('Nhập tên thức uống');
+        if(name==null){
+            return;
+        }
+
+        let price=prompt('Nhập đơn giá');
+        if(price==null){
+            return;
+        }
+        let thucUong=new Drinks(name,price);
+        arr.push(thucUong);
+        display(arr);
+
+    }
+
+</script>
+</body>
+</html>

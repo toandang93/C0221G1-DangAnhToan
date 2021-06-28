@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th {
+            padding: 0;
+        }
+
+        button {
+            magin: 0;
+            padding: 0;
+            height: 150px;
+            width: 250px;
+        }
+
+        input {
+            width: 250px;
+        }
+
+        table {
+            background: #ffd329;
+
+        }
+
+    </style>
+</head>
+<body style="background: #16d6d6">
+
+<form action="" >
+    <h1 style=";text-align: center">Máy tính</h1>
+    <div style="display: flex ;justify-content: center">
+        <table border="1" style="width: 500px;height: 300px;box-shadow: 5px 5px black ">
+
+            <tr>
+
+                <th><input type="number" id="so1" placeholder="Nhập số thứ nhất"></th>
+                <th><input type="number" id="so2" placeholder="Nhập số thứ hai"></th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="cong()" style="background:#ff000a;border-radius: 10px ">+</button>
+                </th>
+                <th>
+                    <button onclick="tru()" style="background: chartreuse;border-radius: 10px">-</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="nhan()" style="background: #a05906;border-radius: 10px">x</button>
+                </th>
+                <th>
+                    <button onclick="chia()" style="background: gray; border-radius: 10px">:</button>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">Kết quả :<span id="ketQua"></span></td>
+            </tr>
+
+
+        </table>
+    </div>
+</form>
+
+
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let c = a + b;
+        document.getElementById("ketQua").innerText = c;
+    }
+
+    function tru() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let c = a - b;
+        document.getElementById("ketQua").innerText = c;
+    }
+
+    function nhan() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let c = a * b;
+        document.getElementById("ketQua").innerText = c;
+    }
+
+    function chia() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let c = a / b;
+        document.getElementById("ketQua").innerText = c;
+    }
+
+
+</script>
+
+</body>
+</html>
+<textarea name="" id="" cols="30" rows="10"></textarea>
