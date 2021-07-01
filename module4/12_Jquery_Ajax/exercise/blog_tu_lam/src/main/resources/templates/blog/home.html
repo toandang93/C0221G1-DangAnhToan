@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css">
+
+
+</head>
+<body>
+
+<a href="/blog/create">Create Blog</a>
+
+
+    <input id="searchName" type="text" name="search" placeholder="Search by name">
+    <input type="submit" value="Search" id="submitSearch">
+<button id="showMore">Show more</button>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Content</th>
+        <th scope="col">Category</th>
+        <th scope="col">Date</th>
+    </tr>
+    </thead>
+
+    <tbody id="tableBodyStudent">
+    </tbody>
+</table>
+<!--<span th:text="${msg}" style="color: blue"></span>-->
+<!--<table id="blogList" border="1">-->
+
+
+<!--</table>-->
+<!--<div>-->
+<!--    <a th:href="@{'/blog'(page=${blog.number - 1},search=${search})}" th:if="${blog.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${blog.number + 1}"></span>/<span th:text="${blog.totalPages}"></span>-->
+<!--    <a th:href="@{'/blog'(page=${blog.number + 1},search=${search})}" th:if="${blog.hasNext()}">Next</a>-->
+<!--</div>-->
+<script src="../../static/jquery/jquery-3.6.0.min.js"></script>
+
+<script src="../../static/js/bootstrap.js"></script>
+<script type="text/javascript">
+    let page=0;
+    let stt=0;
+    $(document).ready(function () {
+
+        // $('#showMore').click(function () {
+        //     $.ajax({
+        //         headers: {
+        //             'Accept': 'application/json',
+        //             'Content-Type': 'application/json'
+        //         },
+        //         type: "Get",
+        //
+        //         //tên API
+        //         url: `/api/blogs`,
+        //         //xử lý khi thành công
+        //         success: function (data) {
+        //             // hien thi danh sach o day
+        //             let content = ' <tr>\n' +
+        //                 '        <td>#</td>\n' +
+        //                 '        <td>Name</td>\n' +
+        //                 '        <td>Content</td>\n' +
+        //                 '        <td>Category</td>\n' +
+        //                 '        <td>Edit</td>\n' +
+        //                 '        <td>Show</td>\n' +
+        //                 '        <td>Delete</td>\n' +
+        //                 '    </tr>';
+        //             for (let i = 0; i < data.length; i++) {
+        //
+        //                     content += showObj(data[i], (i + 1));
+        //
+        //             }
+        //             // document.getElementById('blogList').innerHTML = content;
+        //             $('#blogList').html(content);
+        //         }
+        //
+        //     });
+        // })
+        $('#submitSearch').click(function () {
+            page = 0;
+            let name = $('#searchName').val();
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "GET", //GET, DELETE, PUT...
+                url: "http://localhost:8080/api/blogs/list?page="+page+"&name="+name,
+                success: function(resultSuccess){
+                    console.log("Success");
+                    let list=resultSuccess.content
+                    let resultHTML = "";
+                    for (let i = 0; i < list.length; i++) {
+                        resultHTML += "<tr>";
+                        resultHTML += "<th scope='row'>" + (stt) + "</th>";
+                        resultHTML += "<td>" + list[i].name + "</td>";
+                        resultHTML += "<td>" + list[i].content + "</td>";
+                        resultHTML += "<td>" + list[i].category.name + "</td>";
+                        resultHTML += "<td>" + list[i].date + "</td>";
+                        resultHTML += "</tr>";
+                        stt++
+                    }
+                    console.log(resultHTML);
+                    // innerHTML
+                    $("#tableBodyStudent").html(resultHTML);
+                },
+                error: function(resultError) {
+                    console.log("Error: ");
+                    console.log(resultError);
+                }
+            });
+            // $.ajax({
+            //     headers: {
+            //         'Accept': 'application/json',
+            //         'Content-Type': 'application/json'
+            //     },
+            //     type: "Get",
+            //
+            //     //tên API
+            //     url: `/api/blogs/search/${name}`,
+            //     //xử lý khi thành công
+            //     success: function (data) {
+            //         // hien thi danh sach o day
+            //         let content = ' <tr>\n' +
+            //             '        <td>#</td>\n' +
+            //             '        <td>Name</td>\n' +
+            //             '        <td>Content</td>\n' +
+            //             '        <td>Category</td>\n' +
+            //             '        <td>Edit</td>\n' +
+            //             '        <td>Show</td>\n' +
+            //             '        <td>Delete</td>\n' +
+            //             '    </tr>';
+            //         for (let i = 0; i < data.length; i++) {
+            //             content += showObj(data[i], (i + 1));
+            //         }
+            //         // document.getElementById('blogList').innerHTML = content;
+            //         $('#blogList').html(content);
+            //     },
+            //     error : function (data){
+            //     }
+            //
+            // });
+        })
+        $('#showMore').click(function () {
+            page++;
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "GET", //GET, DELETE, PUT...
+                url: "http://localhost:8080/api/blogs/list?page="+page,
+                success: function(resultSuccess){
+                    console.log("Success");
+                    let list=resultSuccess.content
+                    let resultHTML = "";
+                    for (let i = 0; i < list.length; i++) {
+                        resultHTML += "<tr>";
+                        resultHTML += "<th scope='row'>" + (i+1) + "</th>";
+                        resultHTML += "<td>" + list[i].name + "</td>";
+                        resultHTML += "<td>" + list[i].content + "</td>";
+                        resultHTML += "<td>" + list[i].category.name + "</td>";
+                        resultHTML += "<td>" + list[i].date + "</td>";
+                        resultHTML += "</tr>";
+                        stt++
+                    }
+                    console.log(resultHTML);
+                    // innerHTML
+                    $("#tableBodyStudent").append(resultHTML);
+                },
+                error: function(resultError) {
+                    console.log("Error: ");
+                    console.log(resultError);
+                }
+            });
+        })
+
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: "http://localhost:8080/api/blogs/list?page="+page,
+            success: function(resultSuccess){
+                console.log("Success");
+                let list=resultSuccess.content
+                let resultHTML = "";
+                for (let i = 0; i < list.length; i++) {
+                    resultHTML += "<tr>";
+                    resultHTML += "<th scope='row'>" + (stt) + "</th>";
+                    resultHTML += "<td>" + list[i].name + "</td>";
+                    resultHTML += "<td>" + list[i].content + "</td>";
+                    resultHTML += "<td>" + list[i].category.name + "</td>";
+                    resultHTML += "<td>" + list[i].date + "</td>";
+                    resultHTML += "</tr>";
+                    stt++
+                }
+                console.log(resultHTML);
+                // innerHTML
+                $("#tableBodyStudent").html(resultHTML);
+            },
+            error: function(resultError) {
+                console.log("Error: ");
+                console.log(resultError);
+            }
+        });
+        // $.ajax({
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     type: "Get",
+        //
+        //     //tên API
+        //     url: "http://localhost:8080/blogs/list/?page="+page,
+        //     //xử lý khi thành công
+        //     success: function (data) {
+        //         // hien thi danh sach o day
+        //         let content = ' <tr>\n' +
+        //             '        <td>#</td>\n' +
+        //             '        <td>Name</td>\n' +
+        //             '        <td>Content</td>\n' +
+        //             '        <td>Category</td>\n' +
+        //             '        <td>Edit</td>\n' +
+        //             '        <td>Show</td>\n' +
+        //             '        <td>Delete</td>\n' +
+        //             '    </tr>';
+        //         for (let i = 0; i < data.length; i++) {
+        //             if (i <2){
+        //                 content += showObj(data[i], (i + 1));
+        //             }
+        //         }
+        //         // document.getElementById('blogList').innerHTML = content;
+        //         $('#blogList').html(content);
+        //     }
+        //
+        // });
+    })
+
+    // function showObj(blog, loop) {
+    //     return `<tr>
+    //                     <td >${loop}</td>
+    //                     <td >${blog.name}</td>
+    //                     <td >${blog.content}</td>
+    //                     <td >${blog.category.name}</td>` +
+    //         `<td><a class="editBLog" href="${blog.id}">Edit</a></td> `+
+    //         `<td><a class="showBlog" href="${blog.id}">Show</a></td> `+
+    //         `<td><a class="deleteBlog" href="${blog.id}">Delete</a></td>
+    //                     </tr>`;
+    // }
+
+</script>
+</body>
+</html>
