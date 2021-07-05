@@ -1,0 +1,14 @@
+#num1{
+    border-radius: 5px;
+}
+#num2{
+    border-radius: 5px;
+}
+button{
+    background: green;
+    color: white;
+    border-radius: 5px;
+}
+#result{
+    color: #d61b06;
+}

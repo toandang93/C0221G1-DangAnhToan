@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<input type="number" id="num1" placeholder="nhập số thứ nhất">
+<input type="number" id="num2" placeholder="nhập số thứ hai" style=" ">
+<button onclick="tinh()">Tính lãi xuất</button>
+
+<lable id="result">Kết quả :</lable>
+<script src="main.js"></script>
 <script>
+    let a = 5;
+    let b = 10;
+    alert("2 số a và b là :" + a + " , " + b);
 
-    let a = prompt(" nhập")
-   let b = a.split("");
-    alert(typeof b[0]);
-        function kiemTra(a){
-
+    function tong(a, b) {
+        document.getElementById("result")
+        if (a > 0) {
+            return a;
+        } else {
+            return b;
         }
 
-
+    }
 </script>
-
 </body>
 </html>

@@ -1,0 +1,32 @@
+#img1{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0.4;
+    position: relative;
+
+}
+#create{
+    text-decoration: underline;
+    position: absolute;
+
+
+}
+#form1{
+    margin-top: 100px;
+    z-index: 10;
+    width: 300px;
+}
+.form-control{
+    width: 350px;
+}
+#span1-body2{
+    font-size: 30px;
+    color: darkred;
+    font-weight: bold;
+}
+#span2-body2{
+    font-size: 30px;
+    color: navy;
+    font-weight: bold;
+}
