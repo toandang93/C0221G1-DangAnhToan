@@ -1,8 +1,10 @@
 package com.model.entity.employee;
 
+import com.model.entity.contract.Contract;
 import com.sun.org.apache.xpath.internal.operations.Div;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Employee {
@@ -24,16 +26,20 @@ public class Employee {
     private boolean flag;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "divisionId",nullable = false)
+    @JoinColumn(referencedColumnName = "divisionId",nullable = false,name = "division_id")
     private Division division;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "educationId",nullable = false)
+    @JoinColumn(referencedColumnName = "educationId",nullable = false,name = "education_id")
     private Education education;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "positionId",nullable = false)
+    @JoinColumn(referencedColumnName = "positionId",nullable = false,name = "position_id")
     private Position position;
+
+    @OneToMany(mappedBy = "employee")
+    private List<Contract> contractList;
+
 
     public Employee() {
     }

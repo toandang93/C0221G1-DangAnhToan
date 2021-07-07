@@ -1,5 +1,7 @@
 package com.model.entity.contractDetail;
 
+import com.model.entity.contract.Contract;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,6 +15,10 @@ public class ContractDetail {
 
     @OneToMany(mappedBy = "contractDetail")
     private List<AttachService> attachServiceList;
+
+    @ManyToOne
+    @JoinColumn(name = "contract_id")
+    private Contract contract;
 
     public ContractDetail() {
     }

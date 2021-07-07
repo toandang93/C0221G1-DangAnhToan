@@ -1,6 +1,9 @@
 package com.model.entity.service;
 
+import com.model.entity.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Service {
@@ -26,6 +29,10 @@ public class Service {
     @ManyToOne
     @JoinColumn(referencedColumnName = "serviceTypeId",nullable = false)
     private ServiceType serviceType;
+
+    @OneToMany(mappedBy = "service")
+    private List<Contract> contractList;
+
 
     public Service() {
     }
