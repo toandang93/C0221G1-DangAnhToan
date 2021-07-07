@@ -22,7 +22,7 @@
             <label  class="col-sm-3 col-form-label">Type Service </label>
             <div class="col-sm-6">
                 <select id="serviceTypeId" th:field="*{serviceType}"
-                        th:onchange="changeCreate()" >
+                        onchange="changeCreate(this.value)" >
                     <option th:each="s : ${serviceTypes}"
                     th:value="${s.serviceTypeId}"
                     th:text="${s.serviceTypeName}"></option>
@@ -115,14 +115,12 @@
 <script src="/bootraps_min/popper.min.js"></script>
 <script src="/bootraps_min/bootstrap.min.js"></script>
 <script>
-    function changeCreate() {
-
+    function changeCreate(value) {
         document.getElementById("divStandardRoom").style.display = "block";
         document.getElementById("divDescription").style.display = "block";
         document.getElementById("divNumberFloor").style.display = "block";
         document.getElementById("divPoolArea").style.display = "block";
-        let value = document.getElementById("service_type_id").value;
-        alert("hello");
+
         if (value == 2){
             document.getElementById("divPoolArea").style.display = "none";
         }
