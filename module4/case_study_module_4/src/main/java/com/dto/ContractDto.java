@@ -1,10 +1,15 @@
 package com.dto;
 
+import com.model.entity.contract.Contract;
 import com.model.entity.customer.Customer;
 import com.model.entity.employee.Employee;
 import com.model.entity.service.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ContractDto implements Validator {
 
@@ -100,6 +105,18 @@ public class ContractDto implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
+        ContractDto contractDto = (ContractDto) target;
+        Date sDate= null;
+        try {
+            sDate = new SimpleDateFormat("yyyy-MM-dd").parse(contractDto.contractStartDate);
+            Date eDate= new SimpleDateFormat("yyyy-MM-dd").parse(contractDto.contractEndDate);
+            if (eDate.getTime()<sDate.getTime()){
+                errors.rejectValue("contractEndDate", "endDate.valid", "End date must be more start date");
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }

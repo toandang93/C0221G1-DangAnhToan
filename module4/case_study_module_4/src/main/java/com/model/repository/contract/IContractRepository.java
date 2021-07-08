@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IContractRepository extends JpaRepository<Contract,Long> {
     @Query(value = "select * from contract ct join customer c on ct.customer_id = c.customer_id " +
-            "where c.customer_name like %?1% && ct.flag=1", nativeQuery = true)
+            "where c.customer_name like %?1% and ct.flag=1 ", nativeQuery = true)
     Page<Contract> findAllByKeyWord(String keyWord, Pageable pageable);
 }
