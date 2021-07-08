@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -52,7 +53,8 @@ public class EmployeeController {
 
     @GetMapping(value = "create")
     public ModelAndView showFormCreate(){
-        ModelAndView modelAndView = new ModelAndView("employee/create","employeeDto",new EmployeeDto());
+        ModelAndView modelAndView = new ModelAndView("employee/create",
+                "employeeDto",new EmployeeDto());
         return modelAndView;
     }
 
@@ -68,6 +70,37 @@ public class EmployeeController {
         BeanUtils.copyProperties(employeeDto,employee);
         this.employeeService.save(employee);
         redirectAttributes.addFlashAttribute("msg","create successfully");
+        return "redirect:/employees";
+    }
+
+    @GetMapping(value = "edit")
+    public String showFormEdit(@RequestParam Long id, Model model){
+        Employee employee = this.employeeService.findById(id);
+        EmployeeDto employeeDto = new EmployeeDto();
+        BeanUtils.copyProperties(employee,employeeDto);
+        model.addAttribute("employeeDto",employeeDto);
+        return "employee/edit";
+    }
+
+    @PostMapping(value = "edit")
+    public String editEmployee(@ModelAttribute @Valid EmployeeDto employeeDto,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes){
+        new EmployeeDto().validate(employeeDto,bindingResult);
+        if (bindingResult.hasErrors()){
+            return "employee/edit";
+        }
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDto,employee);
+        this.employeeService.save(employee);
+        redirectAttributes.addFlashAttribute("msg","edit successfully");
+        return "redirect:/employees";
+    }
+
+    @PostMapping(value = "delete")
+    public String deleteEmployee(@RequestParam Long id,RedirectAttributes redirectAttributes){
+        this.employeeService.remove(id);
+        redirectAttributes.addFlashAttribute("msg","delete successfully");
         return "redirect:/employees";
     }
 }

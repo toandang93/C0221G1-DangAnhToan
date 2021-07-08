@@ -16,9 +16,8 @@ public class AttachService {
     private Integer unit;
     private String status;
 
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "contractDetailId")
-    private ContractDetail contractDetail;
+   @OneToMany(mappedBy = "attachService")
+    private List<ContractDetail> contractDetailList;
 
     public AttachService() {
     }
@@ -63,11 +62,11 @@ public class AttachService {
         this.status = status;
     }
 
-    public ContractDetail getContractDetail() {
-        return contractDetail;
+    public List<ContractDetail> getContractDetailList() {
+        return contractDetailList;
     }
 
-    public void setContractDetail(ContractDetail contractDetail) {
-        this.contractDetail = contractDetail;
+    public void setContractDetailList(List<ContractDetail> contractDetailList) {
+        this.contractDetailList = contractDetailList;
     }
 }

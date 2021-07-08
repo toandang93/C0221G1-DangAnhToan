@@ -53,7 +53,8 @@
                 <td><a class="btn btn-warning" th:href="@{/employees/edit(id=${e.employeeId})}">Edit</a></td>
                 <td>
                     <button type="button"  class="btn btn-danger buttonDelete" data-toggle="modal"
-                            data-target="#exampleModal" onclick="sendData('${employee.id}','${employee.name}')">
+                            data-target="#exampleModal" th:data1="${e.employeeId}" th:data2="${e.name}"
+                            onclick="sendData(this.getAttribute('data1'),this.getAttribute('data2'))">
                         Delete
                     </button>
                 </td>
@@ -66,7 +67,7 @@
      aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="/employees?action=delete" method="post">
+            <form action="/employees/delete" method="post">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete employee</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -79,7 +80,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Delete</button>
-                    <input type="hidden" id="idDelete" name="employeeId">
+                    <input type="hidden" id="employeeId" name="id">
                 </div>
             </form>
         </div>
@@ -90,6 +91,12 @@
     <span th:text="${employees.number+1}"></span>/<span th:text="${employees.totalPages}"></span>
     <a class="btn btn-info" th:href="@{/employees(page=${employees.number + 1},keyWord=${keyWord})}" th:if="${employees.hasNext()}">Next</a>
 </div>
+<script>
+    function sendData(id,name){
+        document.getElementById("employeeId").value = id;
+        document.getElementById("employeeName").innerText = name;
+    }
+</script>
 <script src="/bootraps_min/jquery-3.6.0.min.js"></script>
 <script src="/bootraps_min/popper.min.js"></script>
 <script src="/bootraps_min/bootstrap.min.js"></script>

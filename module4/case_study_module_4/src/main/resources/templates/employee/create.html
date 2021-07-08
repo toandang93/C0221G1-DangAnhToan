@@ -13,7 +13,7 @@
 </style>
 <div th:insert="layout :: header" ></div>
 <div class="container-fluid d-flex justify-content-center">
-  <h1>Create New Service</h1>
+  <h1>Create New Employee</h1>
 </div>
 
 <div class="container d-flex ">
@@ -21,50 +21,50 @@
     <div class="form-group row">
       <label for="inputName" class="col-sm-3 col-form-label">Employee Name</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" id="inputName" th:field="*{employeeName}">
-        <small th:errors="*{employeeName}"></small>
+        <input type="text" class="form-control" id="inputName" th:field="*{name}">
+        <small th:errors="*{name}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inputDate" class="col-sm-3 col-form-label">Date</label>
       <div class="col-sm-6">
-        <input type="date" class="form-control" id="inputDate" th:field="*{employeeBirthday}">
-        <small th:errors="*{employeeBirthday}"></small>
+        <input type="date" class="form-control" id="inputDate" th:field="*{birthday}">
+        <small th:errors="*{birthday}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inputIdCard" class="col-sm-3 col-form-label">Id card</label>
       <div class="col-sm-6">
-        <input type="number" class="form-control" id="inputIdCard" th:field="*{employeeIdCard}">
-        <small th:errors="*{employeeIdCard}"></small>
+        <input type="number" class="form-control" id="inputIdCard" th:field="*{idCard}">
+        <small th:errors="*{idCard}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inputSalary" class="col-sm-3 col-form-label">Salary</label>
       <div class="col-sm-6">
-        <input type="number" class="form-control" id="inputSalary" th:field="*{employeeSalary}">
-        <small th:errors="*{employeeSalary}"></small>
+        <input type="number" class="form-control" id="inputSalary" th:field="*{salary}">
+        <small th:errors="*{salary}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inputPhone" class="col-sm-3 col-form-label">Phone</label>
       <div class="col-sm-6">
-        <input type="number" class="form-control" id="inputPhone" th:field="*{employeePhone}">
-        <small th:errors="*{employeePhone}"></small>
+        <input type="number" class="form-control" id="inputPhone" th:field="*{phone}">
+        <small th:errors="*{phone}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
       <div class="col-sm-6">
-        <input type="email" class="form-control" id="inputEmail" th:field="*{employeeEmail}">
-        <small th:errors="*{employeeEmail}"></small>
+        <input type="email" class="form-control" id="inputEmail" th:field="*{email}">
+        <small th:errors="*{email}"></small>
       </div>
     </div>
     <div class="form-group row">
       <label for="inpurAddress" class="col-sm-3 col-form-label">Address</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" id="inpurAddress" th:field="*{employeeAddress}">
-        <small th:errors="*{employeeAddress}"></small>
+        <input type="text" class="form-control" id="inpurAddress" th:field="*{address}">
+        <small th:errors="*{address}"></small>
       </div>
     </div>
     <div class="form-group row">

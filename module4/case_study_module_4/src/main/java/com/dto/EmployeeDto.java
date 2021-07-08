@@ -4,30 +4,33 @@ import com.model.entity.employee.Division;
 import com.model.entity.employee.Education;
 import com.model.entity.employee.Position;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 public class EmployeeDto implements Validator {
-    private Long id;
+    private Long employeeId;
     @NotBlank
-    private String employeeName;
+    private String name;
     @NotBlank
-    private String employeeBirthday;
+    private String birthday;
     @NotBlank
-    private String employeeIdCard;
+    private String idCard;
+   @NotBlank
+    private String salary;
     @NotBlank
-    private String employeeSalary;
-    @NotBlank
-    private String employeePhone;
+    private String phone;
     @Email
-    private String employeeEmail;
-    private String employeeAddress;
-    @NotBlank
-    private String username;
+    private String email;
+    private String address;
+
+//    private String username;
     private Position position;
     private Division division;
     private Education education;
@@ -36,77 +39,68 @@ public class EmployeeDto implements Validator {
     public EmployeeDto() {
     }
 
-    public Long getId() {
-        return id;
+    public Long getEmployeeId() {
+        return employeeId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getName() {
+        return name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-
-    public String getEmployeeBirthday() {
-        return employeeBirthday;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setEmployeeBirthday(String employeeBirthday) {
-        this.employeeBirthday = employeeBirthday;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 
-    public String getEmployeeIdCard() {
-        return employeeIdCard;
+    public String getIdCard() {
+        return idCard;
     }
 
-    public void setEmployeeIdCard(String employeeIdCard) {
-        this.employeeIdCard = employeeIdCard;
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
     }
 
-    public String getEmployeeSalary() {
-        return employeeSalary;
+    public String getSalary() {
+        return salary;
     }
 
-    public void setEmployeeSalary(String employeeSalary) {
-        this.employeeSalary = employeeSalary;
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
 
-    public String getEmployeePhone() {
-        return employeePhone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setEmployeePhone(String employeePhone) {
-        this.employeePhone = employeePhone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getEmployeeEmail() {
-        return employeeEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmployeeEmail(String employeeEmail) {
-        this.employeeEmail = employeeEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getEmployeeAddress() {
-        return employeeAddress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setEmployeeAddress(String employeeAddress) {
-        this.employeeAddress = employeeAddress;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Position getPosition() {
@@ -150,16 +144,16 @@ public class EmployeeDto implements Validator {
     public void validate(Object target, Errors errors) {
         EmployeeDto employeeDto = (EmployeeDto) target;
 
-        if (!employeeDto.getEmployeePhone().matches("^(090|091)[0-9]{7}$")) {
-            errors.rejectValue("employeePhone", "employee.validPhone", "Employee phone format 091xxxxxxx or 090xxxxxxx");
+        if (!employeeDto.phone.matches("^(090|091)[0-9]{7}$")) {
+            errors.rejectValue("phone", "employee.validPhone", "Employee phone format 091xxxxxxx or 090xxxxxxx");
         }
-        if (!employeeDto.getEmployeeIdCard().matches("^[0-9]{9,10}$")) {
-            errors.rejectValue("employeeIdCard", "employee.validIdCard", "Employee id card format XXXXXXXXX or XXXXXXXXXXXX ");
+        if (!employeeDto.idCard.matches("^[0-9]{9,10}$")) {
+            errors.rejectValue("idCard", "employee.validIdCard", "Employee id card format XXXXXXXXX or XXXXXXXXXXXX ");
         }
-        if (!employeeDto.getEmployeeSalary().matches("^[0-9]+$")) {
-            errors.rejectValue("employeeSalary", "employee.validSalary", "Employee salary format number");
-        } else if (Integer.parseInt(employeeDto.getEmployeeSalary()) < 0) {
-            errors.rejectValue("employeeSalary", "employee.validSalary", "Employee salary great 0");
+        if (!employeeDto.salary.matches("^[0-9]+$")) {
+            errors.rejectValue("salary", "employee.validSalary", "Employee salary format number");
+        } else if (Integer.parseInt(employeeDto.salary) < 0) {
+            errors.rejectValue("salary", "employee.validSalary", "Employee salary great 0");
         }
     }
 }

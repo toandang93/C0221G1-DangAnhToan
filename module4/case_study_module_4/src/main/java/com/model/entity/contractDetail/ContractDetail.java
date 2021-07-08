@@ -13,11 +13,12 @@ public class ContractDetail {
     @Column(nullable = false)
     private Integer quantity;
 
-    @OneToMany(mappedBy = "contractDetail")
-    private List<AttachService> attachServiceList;
+    @ManyToOne
+    @JoinColumn(name = "attach_service_id",nullable = false)
+    private AttachService attachService;
 
     @ManyToOne
-    @JoinColumn(name = "contract_id")
+    @JoinColumn(name = "contract_id",nullable = false)
     private Contract contract;
 
     public ContractDetail() {
@@ -39,11 +40,19 @@ public class ContractDetail {
         this.quantity = quantity;
     }
 
-    public List<AttachService> getAttachServiceList() {
-        return attachServiceList;
+    public AttachService getAttachService() {
+        return attachService;
     }
 
-    public void setAttachServiceList(List<AttachService> attachServiceList) {
-        this.attachServiceList = attachServiceList;
+    public void setAttachService(AttachService attachService) {
+        this.attachService = attachService;
+    }
+
+    public Contract getContract() {
+        return contract;
+    }
+
+    public void setContract(Contract contract) {
+        this.contract = contract;
     }
 }

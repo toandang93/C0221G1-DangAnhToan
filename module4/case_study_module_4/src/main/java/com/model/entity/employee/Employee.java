@@ -25,6 +25,14 @@ public class Employee {
     private String address;
     private boolean flag;
 
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
+    }
+
     @ManyToOne
     @JoinColumn(referencedColumnName = "divisionId",nullable = false,name = "division_id")
     private Division division;

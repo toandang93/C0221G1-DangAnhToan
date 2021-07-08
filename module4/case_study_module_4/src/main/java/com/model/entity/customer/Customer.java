@@ -1,5 +1,6 @@
 package com.model.entity.customer;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.model.entity.contract.Contract;
 
 import javax.persistence.*;
@@ -34,6 +35,14 @@ public class Customer {
     @OneToMany(mappedBy = "customer")
     private List<Contract> contractList;
 
+
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
+    }
 
     public Customer() {
     }

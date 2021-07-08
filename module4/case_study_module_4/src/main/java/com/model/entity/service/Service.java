@@ -26,6 +26,14 @@ public class Service {
     @JoinColumn(referencedColumnName = "rentTypeId",nullable = false)
     private RentType rentType;
 
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
+    }
+
     @ManyToOne
     @JoinColumn(referencedColumnName = "serviceTypeId",nullable = false)
     private ServiceType serviceType;

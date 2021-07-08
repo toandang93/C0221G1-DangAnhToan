@@ -7,22 +7,23 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 
 public class ServiceDto implements Validator {
-    private Long id;
+    private Long serviceId;
     @NotBlank
     private String serviceName;
     @NotBlank
-    private String serviceArea;
+    private String area;
+    @NotNull
+    private Double cost;
     @NotBlank
-    private String serviceCost;
-    @NotBlank
-    private String serviceMaxPeople;
+    private String maxPeople;
     private String standardRoom;
-    private String descriptionOtherConvenience;
-    private String poolArea;
-    private String numberOfFloors;
+    private String description;
+    private Double poolArea;
+    private String numberFloor;
     private RentType rentType;
     private ServiceType serviceType;
     private boolean flag=true;
@@ -30,12 +31,12 @@ public class ServiceDto implements Validator {
     public ServiceDto() {
     }
 
-    public Long getId() {
-        return id;
+    public Long getServiceId() {
+        return serviceId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setServiceId(Long serviceId) {
+        this.serviceId = serviceId;
     }
 
     public String getServiceName() {
@@ -46,28 +47,36 @@ public class ServiceDto implements Validator {
         this.serviceName = serviceName;
     }
 
-    public String getServiceArea() {
-        return serviceArea;
+    public String getArea() {
+        return area;
     }
 
-    public void setServiceArea(String serviceArea) {
-        this.serviceArea = serviceArea;
+    public void setArea(String area) {
+        this.area = area;
     }
 
-    public String getServiceCost() {
-        return serviceCost;
+    public Double getCost() {
+        return cost;
     }
 
-    public void setServiceCost(String serviceCost) {
-        this.serviceCost = serviceCost;
+    public void setCost(Double cost) {
+        this.cost = cost;
     }
 
-    public String getServiceMaxPeople() {
-        return serviceMaxPeople;
+    public Double getPoolArea() {
+        return poolArea;
     }
 
-    public void setServiceMaxPeople(String serviceMaxPeople) {
-        this.serviceMaxPeople = serviceMaxPeople;
+    public void setPoolArea(Double poolArea) {
+        this.poolArea = poolArea;
+    }
+
+    public String getMaxPeople() {
+        return maxPeople;
+    }
+
+    public void setMaxPeople(String maxPeople) {
+        this.maxPeople = maxPeople;
     }
 
     public String getStandardRoom() {
@@ -78,28 +87,22 @@ public class ServiceDto implements Validator {
         this.standardRoom = standardRoom;
     }
 
-    public String getDescriptionOtherConvenience() {
-        return descriptionOtherConvenience;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescriptionOtherConvenience(String descriptionOtherConvenience) {
-        this.descriptionOtherConvenience = descriptionOtherConvenience;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getPoolArea() {
-        return poolArea;
+
+
+    public String getNumberFloor() {
+        return numberFloor;
     }
 
-    public void setPoolArea(String poolArea) {
-        this.poolArea = poolArea;
-    }
-
-    public String getNumberOfFloors() {
-        return numberOfFloors;
-    }
-
-    public void setNumberOfFloors(String numberOfFloors) {
-        this.numberOfFloors = numberOfFloors;
+    public void setNumberFloor(String numberFloor) {
+        this.numberFloor = numberFloor;
     }
 
     public RentType getRentType() {
@@ -134,16 +137,16 @@ public class ServiceDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         ServiceDto serviceDto = (ServiceDto) target;
-        if (!serviceDto.getServiceCost().matches("^[0-9]+$")) {
-            errors.rejectValue("serviceCost", "service.validCost", "Service cost format number");
-        } else if (Integer.parseInt(serviceDto.getServiceCost()) < 0) {
-            errors.rejectValue("serviceCost", "service.validCost", "Service cost great 0");
-        }
-        if(serviceDto.getNumberOfFloors() != null){
-            if (!serviceDto.getNumberOfFloors().matches("^[0-9]+$")) {
-                errors.rejectValue("numberOfFloors", "service.validFloor", "Service number of floors format number");
-            } else if (Integer.parseInt(serviceDto.getNumberOfFloors()) <= 0) {
-                errors.rejectValue("numberOfFloors", "service.validFloor", "Number of floors great 0");
+//        if (!serviceDto.cost.matches("^[0-9]+$")) {
+//            errors.rejectValue("cost", "service.validCost", "Service cost format number");
+//        } else if (Integer.parseInt(serviceDto.cost) < 0) {
+//            errors.rejectValue("cost", "service.validCost", "Service cost great 0");
+//        }
+        if(!serviceDto.numberFloor.equals("")){
+            if (!serviceDto.numberFloor.matches("^[0-9]+$")) {
+                errors.rejectValue("numberFloor", "service.validFloor", "Service number of floors format number");
+            } else if (Integer.parseInt(serviceDto.numberFloor) <= 0) {
+                errors.rejectValue("numberFloor", "service.validFloor", "Number of floors great 0");
             }
         }
     }

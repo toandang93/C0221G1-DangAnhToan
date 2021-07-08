@@ -35,9 +35,6 @@
 </div>
 <div class="container d-flex ">
     <form action="/details?action=create" style="width: 70%;margin-left: 155px" method="post">
-
-
-
         <div class="form-group row">
             <label for="inputType" class="col-sm-3 col-form-label">Id Contract</label>
             <div class="col-sm-6">

@@ -39,22 +39,22 @@
         <div class="form-group row">
             <label for="inputDate" class="col-sm-3 col-form-label">Area</label>
             <div class="col-sm-6">
-                <input type="number" class="form-control" id="inputDate" th:field="*{serviceArea}">
-                <small th:errors="*{serviceArea}"></small>
+                <input type="number" class="form-control" id="inputDate" th:field="*{area}">
+                <small th:errors="*{area}"></small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputGender" class="col-sm-3 col-form-label">Cost</label>
             <div class="col-sm-6">
-                <input type="number" class="form-control" id="inputGender" th:field="*{serviceCost}">
-                <small th:errors="*{serviceCost}"></small>
+                <input type="number" class="form-control" id="inputGender" th:field="*{cost}">
+                <small th:errors="*{cost}"></small>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputIdCard" class="col-sm-3 col-form-label">Max people</label>
             <div class="col-sm-6">
-                <input type="number" class="form-control" id="inputIdCard" th:field="*{serviceMaxPeople}">
-                <small th:errors="*{serviceMaxPeople}"></small>
+                <input type="number" class="form-control" id="inputIdCard" th:field="*{maxPeople}">
+                <small th:errors="*{maxPeople}"></small>
             </div>
         </div>
         <div class="form-group row">
@@ -71,7 +71,7 @@
             <div class="form-group row" >
                 <label for="inputEmail" class="col-sm-3 col-form-label">Standard room</label>
                 <div class="col-sm-6">
-                    <input type="email" class="form-control" id="inputEmail" th:field="*{standardRoom}">
+                    <input type="text" class="form-control" id="inputEmail" th:field="*{standardRoom}">
                     <small th:errors="*{standardRoom}"></small>
                 </div>
             </div>
@@ -80,8 +80,8 @@
             <div class="form-group row" >
                 <label for="inputType" class="col-sm-3 col-form-label">Description</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputType" th:field="*{descriptionOtherConvenience}">
-                    <small th:errors="*{descriptionOtherConvenience}"></small>
+                    <input type="text" class="form-control" id="inputType" th:field="*{description}">
+                    <small th:errors="*{description}"></small>
                 </div>
             </div>
         </div>
@@ -98,8 +98,8 @@
             <div class="form-group row" >
                 <label for="inpurfloor" class="col-sm-3 col-form-label">Number of floor</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inpurfloor" th:field="*{numberOfFloors}">
-                    <small th:errors="*{numberOfFloors}"></small>
+                    <input type="text" class="form-control" id="inpurfloor" th:field="*{numberFloor}">
+                    <small th:errors="*{numberFloor}"></small>
                 </div>
             </div>
         </div>
