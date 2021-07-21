@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootraps_min/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56;height: 60px">
+    <div class=""><img src="../../img/codegym.png" style="width: 200px;height: 200px"/></div>
+    <H3 style="color: white">FINAL MODULE 4</H3>
+    <p class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
+</div>
+<div class="container-fluid d-flex justify-content-center">
+    <h3>Danh Sách Câu Hỏi</h3>
+</div>
+<h4 th:text="${msg}" style="color: #0b2e13"></h4>
+<div class="container-fluid d-flex justify-content-between">
+    <div>
+        <a class="btn btn-success" href="/question/create">Tạo Câu Hỏi</a>
+    </div>
+    <div>
+        <form action="">
+            <input type="text" name="name" placeholder="Tiêu Đề">
+            <select name="questionType">
+                <option value="">--Chọn loại câu hỏi--</option>
+                <option th:each="qt : ${questionTypes}"
+                        th:value="${qt.id}"
+                        th:text="${qt.name}"></option>
+            </select>
+            <input type="submit" value="Tìm Kiếm">
+        </form>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
+            <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tiêu Đề</th>
+                <th scope="col">Loại Câu Hỏi</th>
+                <th scope="col">Ngày Đăng</th>
+                <th scope="col">Tình Trạng</th>
+                <th scope="col">Cập Nhật</th>
+                <th scope="col">Xem Chi Tiết</th>
+                <th scope="col">Xóa</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="q,status : ${questions}">
+                <th scope="row" th:text="${status.count+questions.number*questions.size}"></th>
+                <th th:text="${q.title}"></th>
+                <td th:text="${q.questionType.name}"></td>
+                <td th:text="${q.dateCreate}"></td>
+                <td th:text="${q.status}"></td>
+                <td><a class="btn btn-warning" th:href="@{/question/edit(id=${q.id})}">Cập Nhật</a></td>
+                <td>
+                    <button type="button" class="btn btn-success buttonDelete" data-toggle="modal"
+                            data-target="#modalShow"
+                            th:data11="${q.id}" th:data22="${q.title}"
+                            onclick="sendData(this.getAttribute('data1'),this.getAttribute('data2'))">
+                        Xem
+                    </button>
+
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger buttonDelete" data-toggle="modal"
+                            data-target="#exampleModal"
+                            th:data1="${q.id}" th:data2="${q.title}"
+                            onclick="sendData(this.getAttribute('data1'),this.getAttribute('data2'))">
+                        Xóa
+                    </button>
+
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal delete -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/question/delete" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Question</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Do you want to delete <span style="color: red" id="questionName"></span>???
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                    <input type="hidden" id="modalid" name="id">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal show -->
+<div class="modal fade" id="modalShow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/customers/delete" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Delete customer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                    <input type="hidden" id="customerId" name="id">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a class="btn btn-outline-dark  text-black"
+       th:href="@{'/question'(page=${questions.number - 1},name=${name},questionType=${questionType})}"
+       th:if="${questions.hasPrevious()}"> <span style="font-weight: bold"> < </span>
+    </a>
+    <span th:each="p : ${#numbers.sequence(0,questions.totalPages -1)}" th:if="${questions.hasContent()}">
+          <a class="btn btn-outline-dark" style="text-decoration: none"
+             th:href="@{'/question'(page=${p},name=${name},questionType=${questionType})}"
+             th:text="${p +1}"
+             th:if="${(p >(questions.number)-2)&&(p <(questions.number+2))}"
+          ></a>
+    </span>
+    <a class="btn btn-outline-dark   text-black"
+       th:href="@{'/question'(page=${questions.number + 1},name=${name},questionType=${questionType})}"
+       th:if="${questions.hasNext()}">
+        <span style="font-weight: bold"> > </span>
+    </a>
+</div>
+</div>
+<!--<div>-->
+<!--    <a class="btn btn-info" th:href="@{/customers(page=${customers.number - 1},keyWord=${keyWord})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${customers.number+1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+<!--    <a class="btn btn-info" th:href="@{/customers(page=${customers.number + 1},keyWord=${keyWord})}" th:if="${customers.hasNext()}">Next</a>-->
+<!--</div>-->
+<script>
+    function sendData(id,title){
+        document.getElementById("questionName").innerText = title;
+        document.getElementById("modalid").value = id;
+    }
+</script>
+<script src="/bootraps_min/jquery-3.6.0.min.js"></script>
+<script src="/bootraps_min/popper.min.js"></script>
+<script src="/bootraps_min/bootstrap.min.js"></script>
+</body>
+</html>

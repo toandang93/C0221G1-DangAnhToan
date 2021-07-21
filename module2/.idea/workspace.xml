@@ -2,31 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fe2020-3aeb-442a-b7c3-7ce7c2034034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/1_call_store_procedure.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/controllers/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/model/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/model/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/model/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/model/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/src/model/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/web/view/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/web/view/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module3/13_JDBC_querying_transaction/pratice/1_call_store_procedure/web/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/test/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/test/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/entity/employee/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/entity/employee/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/entity/employee/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/repository/employee/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/repository/employee/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/model/utils/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/loginPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/controllers/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/controllers/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/WEB-INF/classes/model/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/artifacts/user_management_war_exploded/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/controllers/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/controllers/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/out/production/user_management/model/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/controllers/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/controllers/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/src/model/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/web/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/12_JDBC_CRUD/exercise/user_management/web/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/test/data/WriteAndRead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/test/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/commons/CanBoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/commons/GhiDocFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/controllers/DanhMuc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/controllers/QuanLyChucNang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/controllers/QuanLyNhapDuLieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/data/nganhdaotao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/models/CanBo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/models/CongNhan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/models/KySu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/models/NhanVien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/out/production/demo/view/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/commons/CanBoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/commons/GhiDocFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/controllers/DanhMuc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/controllers/QuanLyChucNang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/controllers/QuanLyNhapDuLieu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/data/canbo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/data/nganhdaotao.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/models/CanBo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/models/CongNhan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/models/KySu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/models/NhanVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/src/view/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quanLyPhuongTien/data/phuongtien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/quanLyPhuongTien/data/phuongtien.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/01_Spring_MVC_overview/pratice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/01_Spring_MVC_overview/pratice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/02_Spring_Controllers/pratice/03_customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/02_Spring_Controllers/pratice/03_customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/05_CSDL_ORM/pratice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/05_CSDL_ORM/pratice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/Gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/Gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/case_study_module_4/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/case_study_module_4/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/java/com/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/case_study_module_4/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +77,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -63,13 +92,13 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.main.Main" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ExchangeMoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai_1_introduction_java.bai_tap.ExchangeMoney" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.main.*" />
+          <option name="PATTERN" value="bai_1_introduction_java.bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="caseStudy.views.Main" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.main.Main" />
       <module name="module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="caseStudy.views.*" />
+          <option name="PATTERN" value="test.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,16 +171,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ExchangeMoney" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -206,105 +247,22 @@
       <workItem from="1621827225384" duration="1805000" />
       <workItem from="1622000962562" duration="349000" />
       <workItem from="1622539436708" duration="733000" />
+      <workItem from="1625883245873" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="233" y="20" key="#Auto_Import" timestamp="1619439720802">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="233" y="20" key="#Auto_Import/0.0.1280.720@0.0.1280.720" timestamp="1619439720802" />
-    <state x="233" y="20" key="#Project_Structure" timestamp="1618538616404">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="233" y="20" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1618538616404" />
-    <state x="233" y="20" key="#Tomcat_Server" timestamp="1622001215913">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="233" y="20" key="#Tomcat_Server/0.0.1280.720@0.0.1280.720" timestamp="1622001215913" />
-    <state x="420" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619147138349">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="420" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1619147138349" />
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1620307818018">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="446" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1620307818018" />
-    <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617785115027">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1617785115027" />
-    <state x="438" y="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1619148608653">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="438" y="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.720@0.0.1280.720" timestamp="1619148608653" />
-    <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1620029293104">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1620029293104" />
-    <state x="421" y="102" key="FileChooserDialogImpl" timestamp="1622001284447">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1617785132870" />
-    <state x="421" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1622001284447" />
-    <state width="1237" height="220" key="GridCell.Tab.0.bottom" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state width="1237" height="220" key="GridCell.Tab.0.center" timestamp="1621837337327">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1621837337327" />
-    <state width="1237" height="220" key="GridCell.Tab.0.left" timestamp="1621837337327">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1621837337327" />
-    <state width="1237" height="220" key="GridCell.Tab.0.right" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state width="1237" height="220" key="GridCell.Tab.1.center" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state width="1237" height="220" key="GridCell.Tab.1.left" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state width="1237" height="220" key="GridCell.Tab.1.right" timestamp="1621837337328">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="220" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1621837337328" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1618538692297">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1618538692297" />
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1622000964712">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="337" y="186" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1622000964712" />
-    <state x="371" y="117" key="extract.method.dialog" timestamp="1619075644295">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="371" y="117" key="extract.method.dialog/0.0.1280.720@0.0.1280.720" timestamp="1619075644295" />
-    <state x="91" y="0" key="new project wizard" timestamp="1622001309618">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1622001309618" />
-    <state x="297" y="161" key="run.anything.popup" timestamp="1620270124589">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1620270124589" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620475242887">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620475242887" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

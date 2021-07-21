@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/bootraps_min/bootstrap.min.css">
+    <script src="/bootraps_min/bootstrap.min.js"></script>
+    <script src="/bootraps_min/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<style>
+    small{
+        color: red;
+    }
+</style>
+<div class="container-fluid align-items-center justify-content-between d-flex" style="background: #085F56;height: 60px">
+    <div class=""><img src="../../img/codegym.png" style="width: 200px;height: 200px"/></div>
+    <H3 style="color: white">FINAL MODULE 4</H3>
+    <p class="mr-4" style="color: white;font-size: larger">Đặng Anh Toàn</p>
+</div>
+<div class="container-fluid d-flex justify-content-center">
+    <h3>Edit Question</h3>
+</div>
+<div class="container d-flex ">
+    <form action="/question/edit" style="width: 70%;margin-left: 155px" method="post" th:object="${questionDto}">
+        <div class="form-group row">
+            <label for="inputCode" class="col-sm-3 col-form-label">Tiêu Đề</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputCode" th:field="*{title}">
+                <small th:errors="*{title}"></small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="questionid" class="col-sm-3 col-form-label">Câu hỏi</label>
+            <div class="col-sm-6">
+                <textarea col="31" row="10" class="form-control" id="questionid" th:field="*{question}"></textarea>
+                <small th:errors="*{question}"></small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputType" class="col-sm-3 col-form-label">Loại Câu Hỏi</label>
+            <div class="col-sm-6">
+                <select  id="inputType" th:field="*{questionType}">
+                    <option th:each="q : ${questionTypes}" th:value="${q.id}"
+                            th:text="${q.name}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="answerid" class="col-sm-3 col-form-label">Trả Lời</label>
+            <div class="col-sm-6">
+                <textarea col="30" row="20" class="form-control" id="answerid" th:field="*{answer}"></textarea>
+                <small th:errors="*{answer}"></small>
+            </div>
+        </div>
+
+        <div class="d-flex ">
+            <a href="/question" class="btn btn-secondary" style="margin-left: 200px">Back to list</a>
+            <input type="submit" class="btn btn-success" style="margin-left: 174px;width: 100px" value="Edit">
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
