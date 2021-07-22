@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/../../module4/02_Spring_Controllers/pratice/03_customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controllers/pratice/03_customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module4/05_CSDL_ORM/pratice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/05_CSDL_ORM/pratice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module4/Gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/Gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercises" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practice" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\C0221G1-DangAnhToan\module5\03_Agular\exercises\node_modules\typescript\lib" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -38,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1626833511505</updated>
       <workItem from="1626833512616" duration="364000" />
+      <workItem from="1626873882602" duration="690000" />
     </task>
     <servers />
   </component>
@@ -45,9 +49,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="116" key="FileChooserDialogImpl" timestamp="1626833879595">
+    <state x="417" y="116" key="FileChooserDialogImpl" timestamp="1626874578922">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="417" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1626833879595" />
+    <state x="417" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1626874578922" />
   </component>
 </project>

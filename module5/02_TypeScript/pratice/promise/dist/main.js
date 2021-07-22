@@ -1,6 +1,6 @@
-let money = 10000;
+let money = 0;
 const buyACar = (car) => {
-    return new Promise(((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (money >= 10000) {
                 resolve("can buy " + car);
@@ -9,9 +9,9 @@ const buyACar = (car) => {
                 reject("Do not enough money");
             }
         }, 100);
-    }));
+    });
 };
-money = 1000001;
+money = 10000;
 const promise = buyACar("Vinfast").then(value => {
     console.log(value);
 }, error => {
