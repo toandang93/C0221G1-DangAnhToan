@@ -1,0 +1,10 @@
+<h1> Rating bar </h1>
+<h1>{{choose - 1}}</h1>
+
+<div style="display: flex" >
+  <div id="div" *ngFor="let number of arr"
+       (click)="getChoose(number)"
+       [style]="{background : choose <= number ? '#a9a9a9' : 'blue'} ">
+    <h1>{{number}}</h1>
+  </div>
+</div>
