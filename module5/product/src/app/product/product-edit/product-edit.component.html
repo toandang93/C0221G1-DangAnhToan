@@ -1,0 +1,17 @@
+<form [formGroup]="productForm" (ngSubmit)="edit()" >
+  <lable>ID:</lable>
+  <input type="text" formControlName="id">
+  <small *ngIf="productForm.get('id')?.hasError('required') &&
+   productForm.get('id')?.touched">Please input</small>
+  <small *ngIf="productForm.get('id')?.hasError('pattern')
+&& productForm.get('id')?.touched">AAAA</small>
+  <lable>Name : </lable>
+  <input type="text" formControlName="name">
+  <lable>price : </lable>
+  <input type="text" formControlName="price">
+  <lable>Description</lable>
+  <input type="text" formControlName="description">
+  <button type="submit">Edit</button>
+
+</form>
+<a routerLink="/product/list">Back</a>
